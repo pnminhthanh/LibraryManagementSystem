@@ -7,3 +7,6 @@ C:\Users\Minh Thanh\Documents\Visual Studio 2017\Projects\QuanLyThuVien\QuanLyTh
 C:\Users\Minh Thanh\Documents\Visual Studio 2017\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CoreCompileInputs.cache
 C:\Users\Minh Thanh\Documents\Visual Studio 2017\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
 C:\Users\Minh Thanh\Documents\Visual Studio 2017\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
+C:\Users\Minh Thanh\Documents\Visual Studio 2017\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.DanhSachUSPL.resources
+C:\Users\Minh Thanh\Documents\Visual Studio 2017\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.SachPL.resources
+C:\Users\Minh Thanh\Documents\Visual Studio 2017\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ChinhSuaSachUSPL.resources

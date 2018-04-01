@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyThuVien.PL
 {
-    public partial class SachPL : Form
+    public partial class LeftPanel : Form
     {
-        public SachPL()
+        public LeftPanel()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

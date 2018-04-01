@@ -50,17 +50,124 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PL\ChinhSuaPhieuMuonUSPL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\ChinhSuaPhieuMuonUSPL.Designer.cs">
+      <DependentUpon>ChinhSuaPhieuMuonUSPL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\ChinhSuaSachUSPL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\ChinhSuaSachUSPL.Designer.cs">
+      <DependentUpon>ChinhSuaSachUSPL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\ChinhSuaThanhVienUSPL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\ChinhSuaThanhVienUSPL.Designer.cs">
+      <DependentUpon>ChinhSuaThanhVienUSPL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\DanhSachPhieuUSPL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\DanhSachPhieuUSPL.Designer.cs">
+      <DependentUpon>DanhSachPhieuUSPL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\DanhSachUSPL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\DanhSachUSPL.Designer.cs">
+      <DependentUpon>DanhSachUSPL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\DanhSachViPhamPL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\DanhSachViPhamPL.Designer.cs">
+      <DependentUpon>DanhSachViPhamPL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\DSThanhVienUSPL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\DSThanhVienUSPL.Designer.cs">
+      <DependentUpon>DSThanhVienUSPL.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\MainPL.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PL\MainPL.Designer.cs">
       <DependentUpon>MainPL.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\SachPL.cs" />
+    <Compile Include="PL\MuonTraSachPL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\MuonTraSachPL.Designer.cs">
+      <DependentUpon>MuonTraSachPL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\SachPL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\SachPL.Designer.cs">
+      <DependentUpon>SachPL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\TaoPhieuViPhamPL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\TaoPhieuViPhamPL.Designer.cs">
+      <DependentUpon>TaoPhieuViPhamPL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\ThanhVienPL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\ThanhVienPL.Designer.cs">
+      <DependentUpon>ThanhVienPL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\ThemBanSaoPL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\ThemBanSaoPL.Designer.cs">
+      <DependentUpon>ThemBanSaoPL.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PL\ChinhSuaPhieuMuonUSPL.resx">
+      <DependentUpon>ChinhSuaPhieuMuonUSPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\ChinhSuaSachUSPL.resx">
+      <DependentUpon>ChinhSuaSachUSPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\ChinhSuaThanhVienUSPL.resx">
+      <DependentUpon>ChinhSuaThanhVienUSPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\DanhSachPhieuUSPL.resx">
+      <DependentUpon>DanhSachPhieuUSPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\DanhSachUSPL.resx">
+      <DependentUpon>DanhSachUSPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\DanhSachViPhamPL.resx">
+      <DependentUpon>DanhSachViPhamPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\DSThanhVienUSPL.resx">
+      <DependentUpon>DSThanhVienUSPL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\MainPL.resx">
       <DependentUpon>MainPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\MuonTraSachPL.resx">
+      <DependentUpon>MuonTraSachPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\SachPL.resx">
+      <DependentUpon>SachPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\TaoPhieuViPhamPL.resx">
+      <DependentUpon>TaoPhieuViPhamPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\ThanhVienPL.resx">
+      <DependentUpon>ThanhVienPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\ThemBanSaoPL.resx">
+      <DependentUpon>ThemBanSaoPL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
