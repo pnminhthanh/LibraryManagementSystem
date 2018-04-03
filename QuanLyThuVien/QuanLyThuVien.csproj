@@ -32,17 +32,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Bunifu Technologies\Bunifu Framework Manager\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,90 +50,125 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BanSao.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
+    <Compile Include="PL\ChinhSuaPhieuMuonUSPL.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="BLL\BanSaoBLL.cs" />
-    <Compile Include="BLL\DocGiaBLL.cs" />
-    <Compile Include="BLL\KeSachBLL.cs" />
-    <Compile Include="BLL\KhoChuaBLL.cs" />
-    <Compile Include="BLL\PhieuMuonBLL.cs" />
-    <Compile Include="BLL\PhieuViPhamBLL.cs" />
-    <Compile Include="BLL\SachBLL.cs" />
-    <Compile Include="BLL\TacGiaBLL.cs" />
-    <Compile Include="BLL\TheLoaiBLL.cs" />
-    <Compile Include="DAL\BanSaoDAL.cs" />
-    <Compile Include="DAL\DocGiaDAL.cs" />
-    <Compile Include="DAL\KeSachDAL.cs" />
-    <Compile Include="DAL\KhoChuaDAL.cs" />
-    <Compile Include="DAL\LoaiViPhamDAL.cs" />
-    <Compile Include="DAL\PhieuMuonDAL.cs" />
-    <Compile Include="DAL\PhieuViPhamDAL.cs" />
-    <Compile Include="DAL\SachDAL.cs" />
-    <Compile Include="DAL\TacGiaDAL.cs" />
-    <Compile Include="DAL\TheLoaiDAL.cs" />
-    <Compile Include="DataModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataModel.Context.tt</DependentUpon>
+    <Compile Include="PL\ChinhSuaPhieuMuonUSPL.Designer.cs">
+      <DependentUpon>ChinhSuaPhieuMuonUSPL.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataModel.tt</DependentUpon>
+    <Compile Include="PL\ChinhSuaSachUSPL.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DataModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataModel.edmx</DependentUpon>
+    <Compile Include="PL\ChinhSuaSachUSPL.Designer.cs">
+      <DependentUpon>ChinhSuaSachUSPL.cs</DependentUpon>
     </Compile>
-    <Compile Include="DocGia.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
+    <Compile Include="PL\ChinhSuaThanhVienUSPL.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="PL\ChinhSuaThanhVienUSPL.Designer.cs">
+      <DependentUpon>ChinhSuaThanhVienUSPL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\DanhSachPhieuUSPL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\DanhSachPhieuUSPL.Designer.cs">
+      <DependentUpon>DanhSachPhieuUSPL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\DanhSachUSPL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\DanhSachUSPL.Designer.cs">
+      <DependentUpon>DanhSachUSPL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\DanhSachViPhamPL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\DanhSachViPhamPL.Designer.cs">
+      <DependentUpon>DanhSachViPhamPL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\DSThanhVienUSPL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\DSThanhVienUSPL.Designer.cs">
+      <DependentUpon>DSThanhVienUSPL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\MainPL.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="PL\MainPL.Designer.cs">
+      <DependentUpon>MainPL.cs</DependentUpon>
     </Compile>
-    <Compile Include="KeSach.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
+    <Compile Include="PL\MuonTraSachPL.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KhoSach.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
+    <Compile Include="PL\MuonTraSachPL.Designer.cs">
+      <DependentUpon>MuonTraSachPL.cs</DependentUpon>
     </Compile>
-    <Compile Include="NoiQuyViPham.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
+    <Compile Include="PL\SachPL.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PhieuMuonSach.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
+    <Compile Include="PL\SachPL.Designer.cs">
+      <DependentUpon>SachPL.cs</DependentUpon>
     </Compile>
-    <Compile Include="PhieuViPham.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
+    <Compile Include="PL\TaoPhieuViPhamPL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\TaoPhieuViPhamPL.Designer.cs">
+      <DependentUpon>TaoPhieuViPhamPL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\ThanhVienPL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\ThanhVienPL.Designer.cs">
+      <DependentUpon>ThanhVienPL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\ThemBanSaoPL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\ThemBanSaoPL.Designer.cs">
+      <DependentUpon>ThemBanSaoPL.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sach.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TacGia.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TheLoai.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ThuThu.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="PL\ChinhSuaPhieuMuonUSPL.resx">
+      <DependentUpon>ChinhSuaPhieuMuonUSPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\ChinhSuaSachUSPL.resx">
+      <DependentUpon>ChinhSuaSachUSPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\ChinhSuaThanhVienUSPL.resx">
+      <DependentUpon>ChinhSuaThanhVienUSPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\DanhSachPhieuUSPL.resx">
+      <DependentUpon>DanhSachPhieuUSPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\DanhSachUSPL.resx">
+      <DependentUpon>DanhSachUSPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\DanhSachViPhamPL.resx">
+      <DependentUpon>DanhSachViPhamPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\DSThanhVienUSPL.resx">
+      <DependentUpon>DSThanhVienUSPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\MainPL.resx">
+      <DependentUpon>MainPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\MuonTraSachPL.resx">
+      <DependentUpon>MuonTraSachPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\SachPL.resx">
+      <DependentUpon>SachPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\TaoPhieuViPhamPL.resx">
+      <DependentUpon>TaoPhieuViPhamPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\ThanhVienPL.resx">
+      <DependentUpon>ThanhVienPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\ThemBanSaoPL.resx">
+      <DependentUpon>ThemBanSaoPL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -147,14 +178,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="DataModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DataModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="DataModel.edmx.diagram">
-      <DependentUpon>DataModel.edmx</DependentUpon>
-    </None>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -169,19 +192,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DataModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DataModel.edmx</DependentUpon>
-      <LastGenOutput>DataModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DataModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DataModel.edmx</DependentUpon>
-      <LastGenOutput>DataModel.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Folder Include="BLL\" />
+    <Folder Include="DAL\" />
+    <Folder Include="DTO\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

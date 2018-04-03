@@ -1,14 +1,12 @@
-C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config
-C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe
-C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\bin\Debug\QuanLyThuVien.pdb
-C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\bin\Debug\EntityFramework.dll
-C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\bin\Debug\EntityFramework.xml
-C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.csprojResolveAssemblyReference.cache
-C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.Properties.Resources.resources
-C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.GenerateResource.cache
-C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CoreCompileInputs.cache
-C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CopyComplete
-C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
-C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
+C:\Users\Minh Thanh\Documents\Visual Studio 2017\Projects\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config
+C:\Users\Minh Thanh\Documents\Visual Studio 2017\Projects\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe
+C:\Users\Minh Thanh\Documents\Visual Studio 2017\Projects\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.pdb
+C:\Users\Minh Thanh\Documents\Visual Studio 2017\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.MainForm.resources
+C:\Users\Minh Thanh\Documents\Visual Studio 2017\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Properties.Resources.resources
+C:\Users\Minh Thanh\Documents\Visual Studio 2017\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.GenerateResource.Cache
+C:\Users\Minh Thanh\Documents\Visual Studio 2017\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CoreCompileInputs.cache
+C:\Users\Minh Thanh\Documents\Visual Studio 2017\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
+C:\Users\Minh Thanh\Documents\Visual Studio 2017\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
+C:\Users\Minh Thanh\Documents\Visual Studio 2017\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.DanhSachUSPL.resources
+C:\Users\Minh Thanh\Documents\Visual Studio 2017\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.SachPL.resources
+C:\Users\Minh Thanh\Documents\Visual Studio 2017\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ChinhSuaSachUSPL.resources
