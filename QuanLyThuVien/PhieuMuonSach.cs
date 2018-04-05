@@ -17,7 +17,6 @@ namespace QuanLyThuVien
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PhieuMuonSach()
         {
-            this.PhieuViPhams = new HashSet<PhieuViPham>();
             this.BanSaos = new HashSet<BanSao>();
         }
     
@@ -28,11 +27,10 @@ namespace QuanLyThuVien
         public System.DateTime HanTraSach { get; set; }
         public System.DateTime NgayTraSach { get; set; }
         public int TienDatCoc { get; set; }
+        public string PhiThue { get; set; }
     
         public virtual DocGia DocGia { get; set; }
         public virtual ThuThu ThuThu { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PhieuViPham> PhieuViPhams { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BanSao> BanSaos { get; set; }
     }

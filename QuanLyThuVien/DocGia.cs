@@ -23,11 +23,12 @@ namespace QuanLyThuVien
         public string MaDocGia { get; set; }
         public string TenDocGia { get; set; }
         public string GioiTinh { get; set; }
-        public decimal SoDienThoai { get; set; }
-        public decimal SoCMND { get; set; }
+        public string SoDienThoai { get; set; }
+        public string SoCMND { get; set; }
         public string DiaChi { get; set; }
         public System.DateTime NgayBatDau { get; set; }
         public System.DateTime NgayKetThuc { get; set; }
+        public Nullable<System.DateTime> NgaySinh { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhieuMuonSach> PhieuMuonSaches { get; set; }

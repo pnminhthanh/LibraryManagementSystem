@@ -6,7 +6,7 @@ namespace QuanLyThuVien.DAL
     class BanSaoDAL
     {
         public List<BanSao> LayDSBanSao()
-        {
+        {          
             using (QLThuVienEntities ThuVienDS = new QLThuVienEntities())
             {
                 var ListBanSao = from banSao in ThuVienDS.BanSaos
@@ -15,11 +15,14 @@ namespace QuanLyThuVien.DAL
             }
         }
 
-        public bool ThemBanSao(BanSao banSao)
+        public bool ThemBanSao(List<BanSao> ListBanSao)
         {
             using (QLThuVienEntities ThuVienDS = new QLThuVienEntities())
             {
-                ThuVienDS.BanSaos.Add(banSao);
+                foreach  (var banSao in ListBanSao)
+                {
+                    ThuVienDS.BanSaos.Add(banSao);
+                }                
             }
             return true;
         }
@@ -55,10 +58,17 @@ namespace QuanLyThuVien.DAL
                     listBanSao = listBanSao.Where<BanSao>(c => c.MaBanSao.Contains(banSao.MaBanSao));
                 if (banSao.Sach.TenSach != "none")
                     listBanSao = listBanSao.Where<BanSao>(c => c.Sach.TenSach.Contains(banSao.Sach.TenSach));
-                if (banSao.TrangThai != 0)
-                    listBanSao = listBanSao.Where<BanSao>(c => c.TrangThai == banSao.TrangThai);
-                if (banSao.CoTheMuon != false)
-                    listBanSao = listBanSao.Where<BanSao>(c => c.CoTheMuon == banSao.CoTheMuon);
+                if (banSao.TrangThai != ETrangThai.None)
+                    listBanSao = listBanSao.Where<BanSao>(c => c.TrangThai == banSao.TrangThai);                
+                return listBanSao.ToList();
+            }
+        }
+
+        public List<BanSao> LocBSTheoSach(string maSach)
+        {
+            using (QLThuVienEntities ThuVienDS = new QLThuVienEntities())
+            {
+                var listBanSao = ThuVienDS.BanSaos.Where<BanSao>(c => c.MaSach == maSach);
                 return listBanSao.ToList();
             }
         }

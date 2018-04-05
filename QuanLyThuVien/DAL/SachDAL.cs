@@ -26,7 +26,7 @@ namespace QuanLyThuVien.DAL
             return true;
         }
 
-        public bool CapNhatach(Sach sach)
+        public bool CapNhatSach(Sach sach)
         {
             using (QLThuVienEntities ThuVienDS = new QLThuVienEntities())
             {
@@ -37,38 +37,43 @@ namespace QuanLyThuVien.DAL
             return true;
         }
 
-        public bool XoaSach(Sach sach)
+        public bool XoaSach(string maSach)
         {
             using (QLThuVienEntities ThuVienDs = new QLThuVienEntities())
             {
-                var s = ThuVienDs.Saches.Find(sach.MaSach);
+                var s = ThuVienDs.Saches.Find(maSach);
                 ThuVienDs.Saches.Remove(s);
                 ThuVienDs.SaveChanges();
             }
             return true;
         }
 
-        public List<Sach> TimKiemSach(Sach sach)
+        public List<Sach> TimKiemSachTheoTen(string tenSach)
         {
             using (QLThuVienEntities ThuVienDS = new QLThuVienEntities())
             {
-                var listSach = from r in ThuVienDS.Saches select r;
-                if (sach.MaSach != "none")
-                    listSach = listSach.Where<Sach>(c => c.MaSach.Contains(sach.MaSach));
-                if (sach.TenSach != "none")
-                    listSach = listSach.Where<Sach>(c => c.TenSach.Contains(sach.TenSach));
-                if (sach.MaTacGia != "none")
-                    listSach = listSach.Where<Sach>(c => c.MaTacGia.Contains(sach.MaTacGia));
+                var listSach = from r in ThuVienDS.Saches select r;                
+                if (tenSach != "")
+                    listSach = listSach.Where<Sach>(c => c.TenSach.Contains(tenSach));                                    
                 return listSach.ToList();
             }
         }
 
-        public List<Sach> LayDSSachTheoTacGia(int maTacGia)
+        public List<Sach> TKSachTheoTenTacGia(string tenTacGia)
         {
             using (QLThuVienEntities ThuVienDS = new QLThuVienEntities())
             {
-                TacGia tGia = ThuVienDS.TacGias.Find(maTacGia);
-                var listSach = from b in ThuVienDS.Saches where b.TacGias.Contains(tGia) select b;
+                var listSach = ThuVienDS.Saches.Where<Sach>(c => c.TacGia.TenTacGia.Contains(tenTacGia));                
+                return listSach.ToList();
+            }
+                
+        }
+
+        public List<Sach> LayDSSachTheoTacGia(string maTacGia)
+        {
+            using (QLThuVienEntities ThuVienDS = new QLThuVienEntities())
+            {
+                var listSach = ThuVienDS.Saches.Where(b => b.TacGia.MaTacGia == maTacGia); 
                 return listSach.ToList();
             }
         }

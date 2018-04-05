@@ -22,8 +22,7 @@ namespace QuanLyThuVien
     
         public string MaBanSao { get; set; }
         public string MaSach { get; set; }
-        public int TrangThai { get; set; }
-        public bool CoTheMuon { get; set; }
+        public ETrangThai TrangThai { get; set; }
     
         public virtual Sach Sach { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

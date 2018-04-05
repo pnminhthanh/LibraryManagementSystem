@@ -15,11 +15,46 @@ namespace QuanLyThuVien.PL
         public SachPL()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+        }
+        private void btnDanhSach_Click(object sender, EventArgs e)
+        {
+            SidePanel.Height = btnDanhSach.Height;
+            SidePanel.Top = btnDanhSach.Top;
+            DanhSachUSPL.BringToFront();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnChinhSua_Click(object sender, EventArgs e)
         {
+            SidePanel.Height = btnChinhSua.Height;
+            SidePanel.Top = btnChinhSua.Top;
+            chinhSuaSachUSPL1.BringToFront();
+        }
 
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            SidePanel.Height = btnTimKiem.Height;
+            SidePanel.Top = btnTimKiem.Top;
+            timKiemSachPL1.BringToFront();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormState.PreviousForm.Show();
+            
+        }
+
+        private void btnThunho_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc muốn thoát ra không?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                Application.Exit();
+            else { };
         }
     }
 }

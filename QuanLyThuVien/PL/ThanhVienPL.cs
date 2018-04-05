@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyThuVien.PL
 {
-    public partial class LeftPanel : Form
+    public partial class ThanhVienPL : Form
     {
-        public LeftPanel()
+        public ThanhVienPL()
         {
             InitializeComponent();
         }

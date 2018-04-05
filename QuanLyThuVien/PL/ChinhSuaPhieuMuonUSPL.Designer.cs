@@ -34,7 +34,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtMaPhieuMuon = new System.Windows.Forms.TextBox();
             this.txtMaDocGia = new System.Windows.Forms.TextBox();
-            this.txtMaNguoiTao = new System.Windows.Forms.TextBox();
+            this.txtMaThuThu = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dtpNgayMuon = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
@@ -42,6 +42,12 @@
             this.lbNgayTra = new System.Windows.Forms.Label();
             this.lbNgayHetHan = new System.Windows.Forms.Label();
             this.dgvDSMuon = new System.Windows.Forms.DataGridView();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaBanSao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DaTra = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.lbViPham = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -51,14 +57,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtTienCoc = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtMaBanSao = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaBanSao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DaTra = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSMuon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,12 +113,12 @@
             this.txtMaDocGia.Size = new System.Drawing.Size(184, 23);
             this.txtMaDocGia.TabIndex = 5;
             // 
-            // txtMaNguoiTao
+            // txtMaThuThu
             // 
-            this.txtMaNguoiTao.Location = new System.Drawing.Point(172, 132);
-            this.txtMaNguoiTao.Name = "txtMaNguoiTao";
-            this.txtMaNguoiTao.Size = new System.Drawing.Size(184, 23);
-            this.txtMaNguoiTao.TabIndex = 6;
+            this.txtMaThuThu.Location = new System.Drawing.Point(172, 132);
+            this.txtMaThuThu.Name = "txtMaThuThu";
+            this.txtMaThuThu.Size = new System.Drawing.Size(184, 23);
+            this.txtMaThuThu.TabIndex = 6;
             // 
             // label5
             // 
@@ -188,6 +188,44 @@
             this.dgvDSMuon.RowHeadersVisible = false;
             this.dgvDSMuon.Size = new System.Drawing.Size(553, 166);
             this.dgvDSMuon.TabIndex = 19;
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.Width = 40;
+            // 
+            // MaBanSao
+            // 
+            this.MaBanSao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.MaBanSao.HeaderText = "Mã Bản Sao";
+            this.MaBanSao.Name = "MaBanSao";
+            this.MaBanSao.Width = 108;
+            // 
+            // TenSach
+            // 
+            this.TenSach.HeaderText = "Tên Sách";
+            this.TenSach.Name = "TenSach";
+            this.TenSach.Width = 180;
+            // 
+            // TacGia
+            // 
+            this.TacGia.HeaderText = "Tác Giả";
+            this.TacGia.Name = "TacGia";
+            this.TacGia.Width = 120;
+            // 
+            // SL
+            // 
+            this.SL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.SL.HeaderText = "SL";
+            this.SL.Name = "SL";
+            this.SL.Width = 45;
+            // 
+            // DaTra
+            // 
+            this.DaTra.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DaTra.HeaderText = "Đã Trả";
+            this.DaTra.Name = "DaTra";
             // 
             // lbViPham
             // 
@@ -267,12 +305,12 @@
             this.label9.TabIndex = 15;
             this.label9.Text = "MÃ BẢN SAO:";
             // 
-            // textBox4
+            // txtMaBanSao
             // 
-            this.textBox4.Location = new System.Drawing.Point(169, 221);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(184, 23);
-            this.textBox4.TabIndex = 16;
+            this.txtMaBanSao.Location = new System.Drawing.Point(169, 221);
+            this.txtMaBanSao.Name = "txtMaBanSao";
+            this.txtMaBanSao.Size = new System.Drawing.Size(184, 23);
+            this.txtMaBanSao.TabIndex = 16;
             // 
             // button1
             // 
@@ -282,44 +320,6 @@
             this.button1.TabIndex = 17;
             this.button1.Text = "THÊM";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            this.STT.Width = 40;
-            // 
-            // MaBanSao
-            // 
-            this.MaBanSao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.MaBanSao.HeaderText = "Mã Bản Sao";
-            this.MaBanSao.Name = "MaBanSao";
-            this.MaBanSao.Width = 108;
-            // 
-            // TenSach
-            // 
-            this.TenSach.HeaderText = "Tên Sách";
-            this.TenSach.Name = "TenSach";
-            this.TenSach.Width = 180;
-            // 
-            // TacGia
-            // 
-            this.TacGia.HeaderText = "Tác Giả";
-            this.TacGia.Name = "TacGia";
-            this.TacGia.Width = 120;
-            // 
-            // SL
-            // 
-            this.SL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.SL.HeaderText = "SL";
-            this.SL.Name = "SL";
-            this.SL.Width = 45;
-            // 
-            // DaTra
-            // 
-            this.DaTra.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DaTra.HeaderText = "Đã Trả";
-            this.DaTra.Name = "DaTra";
             // 
             // ChinhSuaPhieuMuonUSPL
             // 
@@ -334,7 +334,7 @@
             this.Controls.Add(this.lbViPham);
             this.Controls.Add(this.dgvDSMuon);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtMaBanSao);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.lbNgayHetHan);
             this.Controls.Add(this.lbNgayTra);
@@ -344,7 +344,7 @@
             this.Controls.Add(this.dtpNgayHetHan);
             this.Controls.Add(this.dtpNgayMuon);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtMaNguoiTao);
+            this.Controls.Add(this.txtMaThuThu);
             this.Controls.Add(this.txtMaDocGia);
             this.Controls.Add(this.txtMaPhieuMuon);
             this.Controls.Add(this.label4);
@@ -369,7 +369,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtMaPhieuMuon;
         private System.Windows.Forms.TextBox txtMaDocGia;
-        private System.Windows.Forms.TextBox txtMaNguoiTao;
+        private System.Windows.Forms.TextBox txtMaThuThu;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dtpNgayMuon;
         private System.Windows.Forms.Label label6;
@@ -386,7 +386,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtTienCoc;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtMaBanSao;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaBanSao;

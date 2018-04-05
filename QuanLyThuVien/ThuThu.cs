@@ -18,20 +18,17 @@ namespace QuanLyThuVien
         public ThuThu()
         {
             this.PhieuMuonSaches = new HashSet<PhieuMuonSach>();
-            this.PhieuViPhams = new HashSet<PhieuViPham>();
         }
     
         public string MaThuThu { get; set; }
         public string TenThuThu { get; set; }
         public string GioiTinh { get; set; }
         public System.DateTime NgaySinh { get; set; }
-        public decimal SoDienThoai { get; set; }
-        public decimal SoCMND { get; set; }
+        public string SoDienThoai { get; set; }
+        public string SoCMND { get; set; }
         public string DiaChi { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhieuMuonSach> PhieuMuonSaches { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PhieuViPham> PhieuViPhams { get; set; }
     }
 }

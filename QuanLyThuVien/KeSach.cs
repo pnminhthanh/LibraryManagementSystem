@@ -21,10 +21,8 @@ namespace QuanLyThuVien
         }
     
         public string MaKeSach { get; set; }
-        public string MaKhoSach { get; set; }
         public string TenTheLoai { get; set; }
     
-        public virtual KhoSach KhoSach { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Sach> Saches { get; set; }
     }

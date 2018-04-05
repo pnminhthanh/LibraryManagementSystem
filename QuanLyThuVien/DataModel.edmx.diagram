@@ -4,30 +4,23 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="7ada5e756911469da92fe16ae31f3cf7" Name="Diagram1">
-        <EntityTypeShape EntityType="QLThuVienModel.BanSao" Width="1.5" PointX="7.5" PointY="6.875" />
-        <EntityTypeShape EntityType="QLThuVienModel.DocGia" Width="1.5" PointX="7.5" PointY="13.25" />
-        <EntityTypeShape EntityType="QLThuVienModel.KeSach" Width="1.5" PointX="3" PointY="4.375" />
-        <EntityTypeShape EntityType="QLThuVienModel.KhoSach" Width="1.5" PointX="0.75" PointY="4.5" />
-        <EntityTypeShape EntityType="QLThuVienModel.NoiQuyViPham" Width="1.5" PointX="9.75" PointY="2.875" />
-        <EntityTypeShape EntityType="QLThuVienModel.PhieuMuonSach" Width="1.5" PointX="9.75" PointY="6.25" />
-        <EntityTypeShape EntityType="QLThuVienModel.PhieuViPham" Width="1.5" PointX="12" PointY="6.625" />
-        <EntityTypeShape EntityType="QLThuVienModel.Sach" Width="1.5" PointX="5.25" PointY="3.875" />
-        <EntityTypeShape EntityType="QLThuVienModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="QLThuVienModel.TacGia" Width="1.5" PointX="7.5" PointY="4.125" />
-        <EntityTypeShape EntityType="QLThuVienModel.TheLoai" Width="1.5" PointX="7.5" PointY="1.75" />
-        <EntityTypeShape EntityType="QLThuVienModel.ThuThu" Width="1.5" PointX="7.5" PointY="9.75" />
-        <AssociationConnector Association="QLThuVienModel.FK_BanSao_Sach" />
-        <AssociationConnector Association="QLThuVienModel.FK_PhieuMuonSach_DocGia" />
-        <AssociationConnector Association="QLThuVienModel.FK_KeSach_KhoSach" />
-        <AssociationConnector Association="QLThuVienModel.FK_Sach_KeSach" />
-        <AssociationConnector Association="QLThuVienModel.FK_PhieuViPham_NoiQuyViPham" />
-        <AssociationConnector Association="QLThuVienModel.FK_PhieuMuonSach_ThuThu" />
-        <AssociationConnector Association="QLThuVienModel.FK_PhieuViPham_PhieuMuonSach" />
-        <AssociationConnector Association="QLThuVienModel.FK_PhieuViPham_ThuThu" />
-        <AssociationConnector Association="QLThuVienModel.ChiTietPhieuMuon" />
-        <AssociationConnector Association="QLThuVienModel.ChiTietTacGia" />
-        <AssociationConnector Association="QLThuVienModel.ChiTietTheLoai" />
+      <Diagram DiagramId="4405c5ab6cf14fb8b4545a919122c2ac" Name="Diagram1">
+        <EntityTypeShape EntityType="QLThuVienModel.BanSao" Width="1.5" PointX="7.5" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuVienModel.DocGia" Width="1.5" PointX="7.5" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuVienModel.KeSach" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuVienModel.PhieuMuonSach" Width="1.5" PointX="9.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuVienModel.Sach" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuVienModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuVienModel.TacGia" Width="1.5" PointX="7.5" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuVienModel.TheLoai" Width="1.5" PointX="7.5" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLThuVienModel.ThuThu" Width="1.5" PointX="7.5" PointY="13.75" IsExpanded="true" />
+        <AssociationConnector Association="QLThuVienModel.FK_BanSao_Sach" ManuallyRouted="false" />
+        <AssociationConnector Association="QLThuVienModel.FK_PhieuMuonSach_DocGia" ManuallyRouted="false" />
+        <AssociationConnector Association="QLThuVienModel.FK_Sach_KeSach" ManuallyRouted="false" />
+        <AssociationConnector Association="QLThuVienModel.FK_PhieuMuonSach_ThuThu" ManuallyRouted="false" />
+        <AssociationConnector Association="QLThuVienModel.ChiTietPhieuMuon" ManuallyRouted="false" />
+        <AssociationConnector Association="QLThuVienModel.ChiTietTheLoai" ManuallyRouted="false" />
+        <AssociationConnector Association="QLThuVienModel.FK_Sach_TacGia" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

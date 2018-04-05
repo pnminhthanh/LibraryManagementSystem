@@ -17,7 +17,7 @@ namespace QuanLyThuVien
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public TacGia()
         {
-            this.Saches = new HashSet<Sach>();
+            this.Saches1 = new HashSet<Sach>();
         }
     
         public string MaTacGia { get; set; }
@@ -26,6 +26,6 @@ namespace QuanLyThuVien
         public Nullable<System.DateTime> NgaySinh { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Sach> Saches { get; set; }
+        public virtual ICollection<Sach> Saches1 { get; set; }
     }
 }

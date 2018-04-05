@@ -35,11 +35,11 @@ namespace QuanLyThuVien.DAL
             return true;
         }
 
-        public bool XoaDocGia(DocGia docGia)
+        public bool XoaDocGia(string maDocGia)
         {
             using (QLThuVienEntities ThuVienDs = new QLThuVienEntities())
             {
-                var dGia = ThuVienDs.DocGias.Find(docGia.MaDocGia);
+                var dGia = ThuVienDs.DocGias.Find(maDocGia);
                 ThuVienDs.DocGias.Remove(dGia);
                 ThuVienDs.SaveChanges();
             }
@@ -57,10 +57,18 @@ namespace QuanLyThuVien.DAL
                     listDocGia = listDocGia.Where<DocGia>(c => c.TenDocGia.Contains(docGia.TenDocGia));
                 if (docGia.GioiTinh != "none")
                     listDocGia = listDocGia.Where<DocGia>(c => c.GioiTinh == docGia.GioiTinh);
-                if (docGia.SoDienThoai != 0)
+                if (docGia.SoDienThoai != "none")
                     listDocGia = listDocGia.Where<DocGia>(c => c.SoDienThoai == docGia.SoDienThoai);
-                if (docGia.SoCMND != 0)
+                if (docGia.SoCMND != "none")
                     listDocGia = listDocGia.Where<DocGia>(c => c.SoCMND == docGia.SoCMND);
+                if (docGia.DiaChi != "none")
+                    listDocGia = listDocGia.Where<DocGia>(c => c.DiaChi == docGia.DiaChi);
+                if (docGia.NgayBatDau != Convert.ToDateTime(01/01/01))
+                    listDocGia = listDocGia.Where<DocGia>(c => c.NgayBatDau == docGia.NgayBatDau);
+                if (docGia.NgayKetThuc != Convert.ToDateTime(01 / 01 / 01))
+                    listDocGia = listDocGia.Where<DocGia>(c => c.NgayKetThuc == docGia.NgayKetThuc);
+                if (docGia.NgaySinh != Convert.ToDateTime(01/01/01))
+                    listDocGia = listDocGia.Where<DocGia>(c => c.NgaySinh == docGia.NgaySinh);
                 return listDocGia.ToList();
             }
         }
@@ -74,14 +82,5 @@ namespace QuanLyThuVien.DAL
             }                
         }
 
-        public List<PhieuViPham> LayDSPhieuVP(string maDocGia)
-        {
-            using (QLThuVienEntities ThuVienDS = new QLThuVienEntities())
-            {
-                var listPhieuVP = from p in ThuVienDS.PhieuViPhams
-                                  where p.PhieuMuonSach.MaNguoiMuon == maDocGia select p;
-                return listPhieuVP.ToList();
-            }
-        }
     }
 }

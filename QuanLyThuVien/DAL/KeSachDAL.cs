@@ -54,9 +54,7 @@ namespace QuanLyThuVien.DAL
             {
                 var listKeSach = from ke in ThuVienDS.KeSaches select ke;
                 if (keSach.MaKeSach != "none")
-                    listKeSach = listKeSach.Where<KeSach>(c => c.MaKeSach.Contains(keSach.MaKeSach));
-                if (keSach.MaKhoSach != "none")
-                    listKeSach = listKeSach.Where<KeSach>(c => c.MaKhoSach.Contains(keSach.MaKhoSach));
+                    listKeSach = listKeSach.Where<KeSach>(c => c.MaKeSach.Contains(keSach.MaKeSach));                
                 return listKeSach.ToList();
             }
         }

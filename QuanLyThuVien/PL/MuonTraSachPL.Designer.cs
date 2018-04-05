@@ -46,14 +46,14 @@
             this.TopPanel.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.TopPanel.Controls.Add(this.btnThunho);
             this.TopPanel.Controls.Add(this.btnThoat);
-            this.TopPanel.Location = new System.Drawing.Point(180, 0);
+            this.TopPanel.Location = new System.Drawing.Point(200, 0);
             this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(720, 40);
+            this.TopPanel.Size = new System.Drawing.Size(800, 50);
             this.TopPanel.TabIndex = 0;
             // 
             // btnThunho
             // 
-            this.btnThunho.Location = new System.Drawing.Point(808, 5);
+            this.btnThunho.Location = new System.Drawing.Point(722, 10);
             this.btnThunho.Name = "btnThunho";
             this.btnThunho.Size = new System.Drawing.Size(30, 30);
             this.btnThunho.TabIndex = 1;
@@ -62,7 +62,7 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(856, 5);
+            this.btnThoat.Location = new System.Drawing.Point(758, 10);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(30, 30);
             this.btnThoat.TabIndex = 0;
@@ -79,7 +79,7 @@
             this.LeftPanel.Controls.Add(this.SidePanel);
             this.LeftPanel.Location = new System.Drawing.Point(0, 0);
             this.LeftPanel.Name = "LeftPanel";
-            this.LeftPanel.Size = new System.Drawing.Size(180, 500);
+            this.LeftPanel.Size = new System.Drawing.Size(200, 600);
             this.LeftPanel.TabIndex = 1;
             // 
             // btnBack
@@ -101,9 +101,9 @@
             this.btViPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btViPham.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btViPham.ForeColor = System.Drawing.Color.White;
-            this.btViPham.Location = new System.Drawing.Point(10, 273);
+            this.btViPham.Location = new System.Drawing.Point(12, 335);
             this.btViPham.Name = "btViPham";
-            this.btViPham.Size = new System.Drawing.Size(170, 80);
+            this.btViPham.Size = new System.Drawing.Size(190, 100);
             this.btViPham.TabIndex = 1;
             this.btViPham.Text = "VI PHẠM";
             this.btViPham.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -116,9 +116,9 @@
             this.btnTao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTao.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTao.ForeColor = System.Drawing.Color.White;
-            this.btnTao.Location = new System.Drawing.Point(10, 193);
+            this.btnTao.Location = new System.Drawing.Point(12, 235);
             this.btnTao.Name = "btnTao";
-            this.btnTao.Size = new System.Drawing.Size(170, 80);
+            this.btnTao.Size = new System.Drawing.Size(190, 100);
             this.btnTao.TabIndex = 1;
             this.btnTao.Text = "TẠO PHIẾU";
             this.btnTao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -131,9 +131,9 @@
             this.btnDanhSach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDanhSach.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDanhSach.ForeColor = System.Drawing.Color.White;
-            this.btnDanhSach.Location = new System.Drawing.Point(10, 113);
+            this.btnDanhSach.Location = new System.Drawing.Point(12, 135);
             this.btnDanhSach.Name = "btnDanhSach";
-            this.btnDanhSach.Size = new System.Drawing.Size(170, 80);
+            this.btnDanhSach.Size = new System.Drawing.Size(190, 100);
             this.btnDanhSach.TabIndex = 1;
             this.btnDanhSach.Text = "DANH SÁCH";
             this.btnDanhSach.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -142,16 +142,16 @@
             // SidePanel
             // 
             this.SidePanel.BackColor = System.Drawing.SystemColors.WindowText;
-            this.SidePanel.Location = new System.Drawing.Point(0, 113);
+            this.SidePanel.Location = new System.Drawing.Point(2, 135);
             this.SidePanel.Name = "SidePanel";
-            this.SidePanel.Size = new System.Drawing.Size(10, 80);
+            this.SidePanel.Size = new System.Drawing.Size(10, 100);
             this.SidePanel.TabIndex = 0;
             // 
             // MuonTraSachPL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 500);
+            this.ClientSize = new System.Drawing.Size(1000, 600);
             this.Controls.Add(this.LeftPanel);
             this.Controls.Add(this.TopPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
