@@ -37,11 +37,11 @@ namespace QuanLyThuVien.DAL
             return true;
         }
 
-        public bool XoaPhieuMuon(PhieuMuonSach phieuMuon)
+        public bool XoaPhieuMuon(string maPhieuMuon)
         {
             using (QLThuVienEntities ThuVienDs = new QLThuVienEntities())
             {
-                var pMuon = ThuVienDs.PhieuMuonSaches.Find(phieuMuon.MaPhieuMuon);
+                var pMuon = ThuVienDs.PhieuMuonSaches.Find(maPhieuMuon);
                 ThuVienDs.PhieuMuonSaches.Remove(pMuon);
                 ThuVienDs.SaveChanges();
             }

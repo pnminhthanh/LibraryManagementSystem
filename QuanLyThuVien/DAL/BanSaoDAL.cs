@@ -38,11 +38,11 @@ namespace QuanLyThuVien.DAL
             return true;
         }
 
-        public bool XoaBanSao(BanSao banSao)
+        public bool XoaBanSao(string maBanSao)
         {
             using (QLThuVienEntities ThuVienDs = new QLThuVienEntities())
             {
-                var bSao = ThuVienDs.BanSaos.Find(banSao.MaBanSao);
+                var bSao = ThuVienDs.BanSaos.Find(maBanSao);
                 ThuVienDs.BanSaos.Remove(bSao);
                 ThuVienDs.SaveChanges();
             }
@@ -61,6 +61,15 @@ namespace QuanLyThuVien.DAL
                 if (banSao.TrangThai != ETrangThai.None)
                     listBanSao = listBanSao.Where<BanSao>(c => c.TrangThai == banSao.TrangThai);                
                 return listBanSao.ToList();
+            }
+        }
+
+        public BanSao TKBanSaoTheoMa(string maBanSao)
+        {
+            using (QLThuVienEntities ThuVienDs = new QLThuVienEntities())
+            {
+                var banSao = ThuVienDs.BanSaos.Find(maBanSao);
+                return banSao;
             }
         }
 

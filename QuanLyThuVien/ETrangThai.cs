@@ -14,6 +14,7 @@ namespace QuanLyThuVien
     public enum ETrangThai : short
     {
         DaChoThue = 1,
-        CoSan = 2
+        CoSan = 2,
+        None = 3
     }
 }

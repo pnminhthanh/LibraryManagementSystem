@@ -12,9 +12,16 @@ namespace QuanLyThuVien.BLL
     {
         private ThuThuDAL thuThuDAL = new ThuThuDAL();
 
-        public void HienThiDSThuThu(DataGridView dgvListThuThu)
+        public void HienThiDataGridView(DataGridView dgvListThuThu)
         {
             dgvListThuThu.DataSource = thuThuDAL.LayDSthuThu();
+        }
+
+        public void HienThiComboBox(ComboBox cbThuThu)
+        {
+            cbThuThu.DataSource = thuThuDAL.LayDSthuThu();
+            cbThuThu.DisplayMember = "TenThuThu";
+            cbThuThu.ValueMember = "MaThuThu";
         }
 
         public void TKthuThu(TextBox txtMaThuThu, TextBox txtTenThuThu, DateTimePicker dpNgaySinh, RadioButton rbGioiTinh, TextBox txtSDT, TextBox txtCMND, TextBox txtDiaChi, DataGridView dgvListThuThu)

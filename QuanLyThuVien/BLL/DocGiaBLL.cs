@@ -60,7 +60,7 @@ namespace QuanLyThuVien.BLL
             docGia.DiaChi = txtDiaChi.Text;
             docGia.NgayBatDau = DateTime.Now.Date;
             docGia.NgayKetThuc = docGia.NgayBatDau.AddYears(1).Date;
-            docGiaDAL.ThemDocGia(docGia);
+            docGiaDAL.CapNhatDocGia(docGia);
             return true;
         }
 

@@ -12,9 +12,18 @@ namespace QuanLyThuVien.BLL
     {
         private BanSaoDAL banSaoDAL = new BanSaoDAL();
 
-        public void HienThiDS(DataGridView dgvBanSao)
+        public void HienThiDatagridView(DataGridView dgvBanSao)
         {
             dgvBanSao.DataSource = banSaoDAL.LayDSBanSao();
+        }
+
+        public void HienThiDataGridViewPhieuMuon(DataGridView dgvBanSao, TextBox txtMaBanSao)
+        {
+            var banSao = banSaoDAL.TKBanSaoTheoMa(txtMaBanSao.Text);
+            int newRowIndex = dgvBanSao.NewRowIndex;
+            dgvBanSao.Rows[newRowIndex].Cells[0].Value = banSao.MaBanSao;
+            dgvBanSao.Rows[newRowIndex].Cells[1].Value = banSao.Sach.TenSach;
+            dgvBanSao.Rows[newRowIndex].Cells[2].Value = banSao.Sach.GiaTien;
         }
 
         public void HienThiBSTheoSach(DataGridView dgvBanSao, DataGridViewRow dgvrBanSao)
@@ -46,6 +55,18 @@ namespace QuanLyThuVien.BLL
             banSao.MaBanSao = txtMaBanSao.Text;
             banSao.MaSach = txtMaSach.Text;
             banSao.TrangThai = (ETrangThai)(Convert.ToInt16(cbTrangThai.ValueMember));
+            return true;
+        }
+
+        public bool XoaBanSao(DataGridViewRow dgvrBanSao)
+        {
+            banSaoDAL.XoaBanSao(dgvrBanSao.Cells[0].ToString());
+            return true;
+        }
+
+        public bool CapNhatTrangThaiSach(DataGridView dgvBanSao)
+        {
+
             return true;
         }
     }

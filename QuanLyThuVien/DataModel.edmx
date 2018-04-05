@@ -4,87 +4,87 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="QLThuVienModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Alias="Self" Namespace="QLThuVienModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012">
         <EntityType Name="BanSao">
           <Key>
             <PropertyRef Name="MaBanSao" />
           </Key>
-          <Property Name="MaBanSao" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="MaSach" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="TrangThai" Type="int" Nullable="false" />
+          <Property Name="MaBanSao" Nullable="false" MaxLength="10" Type="nchar" />
+          <Property Name="MaSach" Nullable="false" MaxLength="10" Type="nchar" />
+          <Property Name="TrangThai" Nullable="false" Type="int" />
         </EntityType>
         <EntityType Name="ChiTietPhieuMuon">
           <Key>
             <PropertyRef Name="MaPhieuMuon" />
             <PropertyRef Name="MaBanSao" />
           </Key>
-          <Property Name="MaPhieuMuon" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="MaBanSao" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="MaPhieuMuon" Nullable="false" MaxLength="10" Type="nchar" />
+          <Property Name="MaBanSao" Nullable="false" MaxLength="10" Type="nchar" />
         </EntityType>
         <EntityType Name="ChiTietTheLoai">
           <Key>
             <PropertyRef Name="MaSach" />
             <PropertyRef Name="MaTheLoai" />
           </Key>
-          <Property Name="MaSach" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="MaTheLoai" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="MaSach" Nullable="false" MaxLength="10" Type="nchar" />
+          <Property Name="MaTheLoai" Nullable="false" MaxLength="10" Type="nchar" />
         </EntityType>
         <EntityType Name="DocGia">
           <Key>
             <PropertyRef Name="MaDocGia" />
           </Key>
-          <Property Name="MaDocGia" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="TenDocGia" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MaDocGia" Nullable="false" MaxLength="10" Type="nchar" />
+          <Property Name="TenDocGia" Nullable="false" MaxLength="50" Type="nvarchar" />
           <Property Name="NgaySinh" Type="date" />
-          <Property Name="GioiTinh" Type="nvarchar" MaxLength="9" Nullable="false" />
-          <Property Name="SoDienThoai" Type="nchar" MaxLength="11" Nullable="false" />
-          <Property Name="SoCMND" Type="nchar" MaxLength="11" Nullable="false" />
-          <Property Name="DiaChi" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="NgayBatDau" Type="date" Nullable="false" />
-          <Property Name="NgayKetThuc" Type="date" Nullable="false" />
+          <Property Name="GioiTinh" Nullable="false" MaxLength="9" Type="nvarchar" />
+          <Property Name="SoDienThoai" Nullable="false" MaxLength="11" Type="nchar" />
+          <Property Name="SoCMND" Nullable="false" MaxLength="11" Type="nchar" />
+          <Property Name="DiaChi" Nullable="false" MaxLength="100" Type="nvarchar" />
+          <Property Name="NgayBatDau" Nullable="false" Type="date" />
+          <Property Name="NgayKetThuc" Nullable="false" Type="date" />
         </EntityType>
         <EntityType Name="KeSach">
           <Key>
             <PropertyRef Name="MaKeSach" />
           </Key>
-          <Property Name="MaKeSach" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="TenTheLoai" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MaKeSach" Nullable="false" MaxLength="10" Type="nchar" />
+          <Property Name="TenTheLoai" Nullable="false" MaxLength="50" Type="nvarchar" />
         </EntityType>
         <EntityType Name="PhieuMuonSach">
           <Key>
             <PropertyRef Name="MaPhieuMuon" />
           </Key>
-          <Property Name="MaPhieuMuon" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="MaNguoiMuon" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="MaThuThu" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="NgayMuonSach" Type="date" Nullable="false" />
-          <Property Name="HanTraSach" Type="date" Nullable="false" />
-          <Property Name="NgayTraSach" Type="date" Nullable="false" />
-          <Property Name="PhiThue" Type="nchar" MaxLength="10" />
-          <Property Name="TienDatCoc" Type="int" Nullable="false" />
+          <Property Name="MaPhieuMuon" Nullable="false" MaxLength="10" Type="nchar" />
+          <Property Name="MaNguoiMuon" Nullable="false" MaxLength="10" Type="nchar" />
+          <Property Name="MaThuThu" Nullable="false" MaxLength="10" Type="nchar" />
+          <Property Name="NgayMuonSach" Nullable="false" Type="date" />
+          <Property Name="HanTraSach" Nullable="false" Type="date" />
+          <Property Name="NgayTraSach" Nullable="false" Type="date" />
+          <Property Name="PhiThue" MaxLength="10" Type="nchar" />
+          <Property Name="TienDatCoc" Nullable="false" Type="int" />
         </EntityType>
         <EntityType Name="Sach">
           <Key>
             <PropertyRef Name="MaSach" />
           </Key>
-          <Property Name="MaSach" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="TenSach" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="MaTacGia" Type="nchar" MaxLength="10" />
-          <Property Name="MaKeSach" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="GiaTien" Type="int" Nullable="false" />
-          <Property Name="TomTatNoiDung" Type="nvarchar" MaxLength="1000" Nullable="false" />
-          <Property Name="NamXuatBan" Type="int" Nullable="false" />
-          <Property Name="NgonNgu" Type="nvarchar" MaxLength="20" />
-          <Property Name="NhaXuatBan" Type="nvarchar" MaxLength="50" />
-          <Property Name="TenAnhBia" Type="nvarchar" MaxLength="50" />
+          <Property Name="MaSach" Nullable="false" MaxLength="10" Type="nchar" />
+          <Property Name="TenSach" Nullable="false" MaxLength="100" Type="nvarchar" />
+          <Property Name="MaTacGia" MaxLength="10" Type="nchar" />
+          <Property Name="MaKeSach" Nullable="false" MaxLength="10" Type="nchar" />
+          <Property Name="GiaTien" Nullable="false" Type="int" />
+          <Property Name="TomTatNoiDung" Nullable="false" MaxLength="1000" Type="nvarchar" />
+          <Property Name="NamXuatBan" Nullable="false" Type="int" />
+          <Property Name="NgonNgu" MaxLength="20" Type="nvarchar" />
+          <Property Name="NhaXuatBan" MaxLength="50" Type="nvarchar" />
+          <Property Name="TenAnhBia" MaxLength="50" Type="nvarchar" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
           </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Nullable="false" MaxLength="128" Type="nvarchar" />
+          <Property Name="principal_id" Nullable="false" Type="int" />
+          <Property Name="diagram_id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
@@ -92,33 +92,33 @@
           <Key>
             <PropertyRef Name="MaTacGia" />
           </Key>
-          <Property Name="MaTacGia" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="TenTacGia" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="GioiTinh" Type="nchar" MaxLength="10" />
+          <Property Name="MaTacGia" Nullable="false" MaxLength="10" Type="nchar" />
+          <Property Name="TenTacGia" Nullable="false" MaxLength="50" Type="nvarchar" />
+          <Property Name="GioiTinh" MaxLength="10" Type="nchar" />
           <Property Name="NgaySinh" Type="date" />
         </EntityType>
         <EntityType Name="TheLoai">
           <Key>
             <PropertyRef Name="MaTheLoai" />
           </Key>
-          <Property Name="MaTheLoai" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="TenTheLoai" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MaTheLoai" Nullable="false" MaxLength="10" Type="nchar" />
+          <Property Name="TenTheLoai" Nullable="false" MaxLength="20" Type="nvarchar" />
         </EntityType>
         <EntityType Name="ThuThu">
           <Key>
             <PropertyRef Name="MaThuThu" />
           </Key>
-          <Property Name="MaThuThu" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="TenThuThu" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="GioiTinh" Type="nvarchar" MaxLength="3" Nullable="false" />
-          <Property Name="NgaySinh" Type="date" Nullable="false" />
-          <Property Name="SoDienThoai" Type="nchar" MaxLength="11" Nullable="false" />
-          <Property Name="SoCMND" Type="nchar" MaxLength="11" Nullable="false" />
-          <Property Name="DiaChi" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="MaThuThu" Nullable="false" MaxLength="10" Type="nchar" />
+          <Property Name="TenThuThu" Nullable="false" MaxLength="50" Type="nvarchar" />
+          <Property Name="GioiTinh" Nullable="false" MaxLength="3" Type="nvarchar" />
+          <Property Name="NgaySinh" Nullable="false" Type="date" />
+          <Property Name="SoDienThoai" Nullable="false" MaxLength="11" Type="nchar" />
+          <Property Name="SoCMND" Nullable="false" MaxLength="11" Type="nchar" />
+          <Property Name="DiaChi" Nullable="false" Type="nvarchar(max)" />
         </EntityType>
         <Association Name="FK_BanSao_Sach">
-          <End Role="Sach" Type="Self.Sach" Multiplicity="1" />
-          <End Role="BanSao" Type="Self.BanSao" Multiplicity="*" />
+          <End Type="Self.Sach" Multiplicity="1" Role="Sach" />
+          <End Type="Self.BanSao" Multiplicity="*" Role="BanSao" />
           <ReferentialConstraint>
             <Principal Role="Sach">
               <PropertyRef Name="MaSach" />
@@ -129,8 +129,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ChiTietPhieuMuon_BanSao">
-          <End Role="BanSao" Type="Self.BanSao" Multiplicity="1" />
-          <End Role="ChiTietPhieuMuon" Type="Self.ChiTietPhieuMuon" Multiplicity="*" />
+          <End Type="Self.BanSao" Multiplicity="1" Role="BanSao" />
+          <End Type="Self.ChiTietPhieuMuon" Multiplicity="*" Role="ChiTietPhieuMuon" />
           <ReferentialConstraint>
             <Principal Role="BanSao">
               <PropertyRef Name="MaBanSao" />
@@ -141,8 +141,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ChiTietPhieuMuon_PhieuMuonSach">
-          <End Role="PhieuMuonSach" Type="Self.PhieuMuonSach" Multiplicity="1" />
-          <End Role="ChiTietPhieuMuon" Type="Self.ChiTietPhieuMuon" Multiplicity="*" />
+          <End Type="Self.PhieuMuonSach" Multiplicity="1" Role="PhieuMuonSach" />
+          <End Type="Self.ChiTietPhieuMuon" Multiplicity="*" Role="ChiTietPhieuMuon" />
           <ReferentialConstraint>
             <Principal Role="PhieuMuonSach">
               <PropertyRef Name="MaPhieuMuon" />
@@ -153,8 +153,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ChiTietTheLoai_Sach">
-          <End Role="Sach" Type="Self.Sach" Multiplicity="1" />
-          <End Role="ChiTietTheLoai" Type="Self.ChiTietTheLoai" Multiplicity="*" />
+          <End Type="Self.Sach" Multiplicity="1" Role="Sach" />
+          <End Type="Self.ChiTietTheLoai" Multiplicity="*" Role="ChiTietTheLoai" />
           <ReferentialConstraint>
             <Principal Role="Sach">
               <PropertyRef Name="MaSach" />
@@ -165,8 +165,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ChiTietTheLoai_TheLoai">
-          <End Role="TheLoai" Type="Self.TheLoai" Multiplicity="1" />
-          <End Role="ChiTietTheLoai" Type="Self.ChiTietTheLoai" Multiplicity="*" />
+          <End Type="Self.TheLoai" Multiplicity="1" Role="TheLoai" />
+          <End Type="Self.ChiTietTheLoai" Multiplicity="*" Role="ChiTietTheLoai" />
           <ReferentialConstraint>
             <Principal Role="TheLoai">
               <PropertyRef Name="MaTheLoai" />
@@ -177,8 +177,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PhieuMuonSach_DocGia">
-          <End Role="DocGia" Type="Self.DocGia" Multiplicity="1" />
-          <End Role="PhieuMuonSach" Type="Self.PhieuMuonSach" Multiplicity="*" />
+          <End Type="Self.DocGia" Multiplicity="1" Role="DocGia" />
+          <End Type="Self.PhieuMuonSach" Multiplicity="*" Role="PhieuMuonSach" />
           <ReferentialConstraint>
             <Principal Role="DocGia">
               <PropertyRef Name="MaDocGia" />
@@ -189,8 +189,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PhieuMuonSach_ThuThu">
-          <End Role="ThuThu" Type="Self.ThuThu" Multiplicity="1" />
-          <End Role="PhieuMuonSach" Type="Self.PhieuMuonSach" Multiplicity="*" />
+          <End Type="Self.ThuThu" Multiplicity="1" Role="ThuThu" />
+          <End Type="Self.PhieuMuonSach" Multiplicity="*" Role="PhieuMuonSach" />
           <ReferentialConstraint>
             <Principal Role="ThuThu">
               <PropertyRef Name="MaThuThu" />
@@ -201,8 +201,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Sach_KeSach">
-          <End Role="KeSach" Type="Self.KeSach" Multiplicity="1" />
-          <End Role="Sach" Type="Self.Sach" Multiplicity="*" />
+          <End Type="Self.KeSach" Multiplicity="1" Role="KeSach" />
+          <End Type="Self.Sach" Multiplicity="*" Role="Sach" />
           <ReferentialConstraint>
             <Principal Role="KeSach">
               <PropertyRef Name="MaKeSach" />
@@ -213,8 +213,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Sach_TacGia">
-          <End Role="TacGia" Type="Self.TacGia" Multiplicity="0..1" />
-          <End Role="Sach" Type="Self.Sach" Multiplicity="*" />
+          <End Type="Self.TacGia" Multiplicity="0..1" Role="TacGia" />
+          <End Type="Self.Sach" Multiplicity="*" Role="Sach" />
           <ReferentialConstraint>
             <Principal Role="TacGia">
               <PropertyRef Name="MaTacGia" />
@@ -237,40 +237,40 @@
           <EntitySet Name="TheLoai" EntityType="Self.TheLoai" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ThuThu" EntityType="Self.ThuThu" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_BanSao_Sach" Association="Self.FK_BanSao_Sach">
-            <End Role="Sach" EntitySet="Sach" />
-            <End Role="BanSao" EntitySet="BanSao" />
+            <End EntitySet="Sach" Role="Sach" />
+            <End EntitySet="BanSao" Role="BanSao" />
           </AssociationSet>
           <AssociationSet Name="FK_ChiTietPhieuMuon_BanSao" Association="Self.FK_ChiTietPhieuMuon_BanSao">
-            <End Role="BanSao" EntitySet="BanSao" />
-            <End Role="ChiTietPhieuMuon" EntitySet="ChiTietPhieuMuon" />
+            <End EntitySet="BanSao" Role="BanSao" />
+            <End EntitySet="ChiTietPhieuMuon" Role="ChiTietPhieuMuon" />
           </AssociationSet>
           <AssociationSet Name="FK_ChiTietPhieuMuon_PhieuMuonSach" Association="Self.FK_ChiTietPhieuMuon_PhieuMuonSach">
-            <End Role="PhieuMuonSach" EntitySet="PhieuMuonSach" />
-            <End Role="ChiTietPhieuMuon" EntitySet="ChiTietPhieuMuon" />
+            <End EntitySet="PhieuMuonSach" Role="PhieuMuonSach" />
+            <End EntitySet="ChiTietPhieuMuon" Role="ChiTietPhieuMuon" />
           </AssociationSet>
           <AssociationSet Name="FK_ChiTietTheLoai_Sach" Association="Self.FK_ChiTietTheLoai_Sach">
-            <End Role="Sach" EntitySet="Sach" />
-            <End Role="ChiTietTheLoai" EntitySet="ChiTietTheLoai" />
+            <End EntitySet="Sach" Role="Sach" />
+            <End EntitySet="ChiTietTheLoai" Role="ChiTietTheLoai" />
           </AssociationSet>
           <AssociationSet Name="FK_ChiTietTheLoai_TheLoai" Association="Self.FK_ChiTietTheLoai_TheLoai">
-            <End Role="TheLoai" EntitySet="TheLoai" />
-            <End Role="ChiTietTheLoai" EntitySet="ChiTietTheLoai" />
+            <End EntitySet="TheLoai" Role="TheLoai" />
+            <End EntitySet="ChiTietTheLoai" Role="ChiTietTheLoai" />
           </AssociationSet>
           <AssociationSet Name="FK_PhieuMuonSach_DocGia" Association="Self.FK_PhieuMuonSach_DocGia">
-            <End Role="DocGia" EntitySet="DocGia" />
-            <End Role="PhieuMuonSach" EntitySet="PhieuMuonSach" />
+            <End EntitySet="DocGia" Role="DocGia" />
+            <End EntitySet="PhieuMuonSach" Role="PhieuMuonSach" />
           </AssociationSet>
           <AssociationSet Name="FK_PhieuMuonSach_ThuThu" Association="Self.FK_PhieuMuonSach_ThuThu">
-            <End Role="ThuThu" EntitySet="ThuThu" />
-            <End Role="PhieuMuonSach" EntitySet="PhieuMuonSach" />
+            <End EntitySet="ThuThu" Role="ThuThu" />
+            <End EntitySet="PhieuMuonSach" Role="PhieuMuonSach" />
           </AssociationSet>
           <AssociationSet Name="FK_Sach_KeSach" Association="Self.FK_Sach_KeSach">
-            <End Role="KeSach" EntitySet="KeSach" />
-            <End Role="Sach" EntitySet="Sach" />
+            <End EntitySet="KeSach" Role="KeSach" />
+            <End EntitySet="Sach" Role="Sach" />
           </AssociationSet>
           <AssociationSet Name="FK_Sach_TacGia" Association="Self.FK_Sach_TacGia">
-            <End Role="TacGia" EntitySet="TacGia" />
-            <End Role="Sach" EntitySet="Sach" />
+            <End EntitySet="TacGia" Role="TacGia" />
+            <End EntitySet="Sach" Role="Sach" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -283,7 +283,7 @@
           </Key>
           <Property Name="MaBanSao" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="MaSach" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="TrangThai" Type="QLThuVienModel.ETrangThai" Nullable="false" />
+          <Property Name="TrangThai" Nullable="false" Type="QLThuVienModel.ETrangThai" />
           <NavigationProperty Name="Sach" Relationship="Self.FK_BanSao_Sach" FromRole="BanSao" ToRole="Sach" />
           <NavigationProperty Name="PhieuMuonSaches" Relationship="Self.ChiTietPhieuMuon" FromRole="BanSao" ToRole="PhieuMuonSach" />
         </EntityType>
@@ -496,6 +496,7 @@
         <EnumType Name="ETrangThai" UnderlyingType="Int16">
           <Member Name="DaChoThue" Value="1" />
           <Member Name="CoSan" Value="2" />
+          <Member Name="None" Value="3" />
         </EnumType>
       </Schema>
     </edmx:ConceptualModels>
