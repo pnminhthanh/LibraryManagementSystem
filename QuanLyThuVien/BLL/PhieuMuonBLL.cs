@@ -72,7 +72,7 @@ namespace QuanLyThuVien.BLL
             return true;
         }
 
-        public bool CapNhatPhieuMuon(TextBox txtMaPhieuMuon, TextBox txtMaNguoiMuon, ComboBox cbThuThu, DateTimePicker dpNgayMuon, DateTimePicker dpNgayTra, DateTimePicker dpHanTra, DataGridView dgvListPhieuMuon)
+        public bool CapNhatPhieuMuon(TextBox txtMaPhieuMuon, TextBox txtMaNguoiMuon, ComboBox cbThuThu, DateTimePicker dpNgayMuon, DateTimePicker dpNgayTra, DateTimePicker dpHanTra, DataGridView dgvListBanSao)
         {
             PhieuMuonSach phieuMuon = new PhieuMuonSach();
             phieuMuon.MaPhieuMuon = txtMaPhieuMuon.Text;
@@ -81,6 +81,12 @@ namespace QuanLyThuVien.BLL
             phieuMuon.NgayMuonSach = dpNgayMuon.Value.Date;
             phieuMuon.NgayTraSach = dpNgayTra.Value.Date;
             phieuMuon.HanTraSach = dpHanTra.Value.Date;
+            for (int i = 0; i < dgvListBanSao.RowCount; i++)
+            {
+                BanSao banSao = new BanSao();
+                banSao.MaBanSao = dgvListBanSao.Rows[i].Cells[0].ToString();
+                phieuMuon.BanSaos.Add(banSao);
+            }
             phieuMuonDAL.CapNhatPhieuMuon(phieuMuon);
             return true;
         }

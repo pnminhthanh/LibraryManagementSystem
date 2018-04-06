@@ -37,11 +37,11 @@ namespace QuanLyThuVien.DAL
             return true;
         }
 
-        public bool XoaTacGia(TacGia tacGia)
+        public bool XoaTacGia(string maTacGia)
         {
             using (QLThuVienEntities ThuVienDs = new QLThuVienEntities())
             {
-                var tGia = ThuVienDs.TacGias.Find(tacGia.MaTacGia);
+                var tGia = ThuVienDs.TacGias.Find(maTacGia);
                 ThuVienDs.TacGias.Remove(tGia);
                 ThuVienDs.SaveChanges();
             }

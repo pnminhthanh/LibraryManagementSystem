@@ -35,18 +35,6 @@ namespace QuanLyThuVien.BLL
             dgvListSach.DataSource = sachDAL.LayDSSachTheoTheLoai(listMaTL);
         }
 
-        public void TimKiemSach(ComboBox cbChuDe, TextBox txtTuKhoa, DataGridView dgvListSach)
-        {
-            if (cbChuDe.ValueMember == "Sach")
-            {
-                dgvListSach.DataSource = sachDAL.TimKiemSachTheoTen(txtTuKhoa.Text);
-            }
-            else if (cbChuDe.ValueMember == "TacGia")
-            {
-                dgvListSach.DataSource = sachDAL.TKSachTheoTenTacGia(txtTuKhoa.Text);
-            }            
-        }
-
         public bool ThemSachMoi(TextBox txtMaSach, TextBox txtTenSach, TextBox txtNXB, TextBox txtGia, TextBox txtNamXB, ComboBox cbTacGia, List<ComboBox> listCbTheLoai, TextBox txtTomTat, OpenFileDialog ofdBiaSach)
         {
             Sach sach = new Sach();
@@ -61,10 +49,11 @@ namespace QuanLyThuVien.BLL
             }
             sach.NamXuatBan = namXB;
             sach.MaTacGia = cbTacGia.ValueMember;
-            foreach (var item in sach.TheLoais)
+            foreach (var item in listCbTheLoai)
             {
-                int i = 0;
-                item.MaTheLoai = listCbTheLoai[i].ValueMember;
+                TheLoai theLoai = new TheLoai();
+                theLoai.MaTheLoai = item.ValueMember;
+                sach.TheLoais.Add(theLoai);
             }
             sach.TomTatNoiDung = txtTomTat.Text;
             if (ofdBiaSach.FileName != "openFileDialog1")
