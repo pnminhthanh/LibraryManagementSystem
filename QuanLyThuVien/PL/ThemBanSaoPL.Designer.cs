@@ -34,14 +34,13 @@
             this.txtMaSach = new System.Windows.Forms.TextBox();
             this.txtMaBanSao = new System.Windows.Forms.TextBox();
             this.dgvDSBS = new System.Windows.Forms.DataGridView();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaBanSao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaKe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaBanSao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSBS)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,13 +93,58 @@
             this.dgvDSBS.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
             this.MaSach,
-            this.MaBanSao,
-            this.MaKe});
-            this.dgvDSBS.Location = new System.Drawing.Point(49, 223);
+            this.MaBanSao});
+            this.dgvDSBS.Location = new System.Drawing.Point(32, 205);
             this.dgvDSBS.Name = "dgvDSBS";
             this.dgvDSBS.RowHeadersVisible = false;
-            this.dgvDSBS.Size = new System.Drawing.Size(494, 150);
+            this.dgvDSBS.Size = new System.Drawing.Size(470, 150);
             this.dgvDSBS.TabIndex = 5;
+            // 
+            // btnThem
+            // 
+            this.btnThem.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnThem.FlatAppearance.BorderSize = 0;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.Location = new System.Drawing.Point(108, 152);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(85, 30);
+            this.btnThem.TabIndex = 10;
+            this.btnThem.Text = "THÊM";
+            this.btnThem.UseVisualStyleBackColor = false;
+            // 
+            // btnSua
+            // 
+            this.btnSua.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnSua.FlatAppearance.BorderSize = 0;
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSua.Location = new System.Drawing.Point(234, 152);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(85, 30);
+            this.btnSua.TabIndex = 11;
+            this.btnSua.Text = "SỬA";
+            this.btnSua.UseVisualStyleBackColor = false;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnXoa.FlatAppearance.BorderSize = 0;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.Location = new System.Drawing.Point(350, 152);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(85, 30);
+            this.btnXoa.TabIndex = 11;
+            this.btnXoa.Text = "XÓA";
+            this.btnXoa.UseVisualStyleBackColor = false;
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Location = new System.Drawing.Point(472, 19);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(30, 30);
+            this.btnThoat.TabIndex = 14;
+            this.btnThoat.Text = "X";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // STT
             // 
@@ -116,66 +160,16 @@
             // 
             // MaBanSao
             // 
+            this.MaBanSao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.MaBanSao.HeaderText = "Mã Bản Sao";
             this.MaBanSao.Name = "MaBanSao";
-            this.MaBanSao.Width = 120;
-            // 
-            // MaKe
-            // 
-            this.MaKe.HeaderText = "Mã Kệ";
-            this.MaKe.Name = "MaKe";
-            // 
-            // btnThem
-            // 
-            this.btnThem.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnThem.FlatAppearance.BorderSize = 0;
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.Location = new System.Drawing.Point(126, 164);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(85, 30);
-            this.btnThem.TabIndex = 10;
-            this.btnThem.Text = "THÊM";
-            this.btnThem.UseVisualStyleBackColor = false;
-            // 
-            // btnSua
-            // 
-            this.btnSua.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnSua.FlatAppearance.BorderSize = 0;
-            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSua.Location = new System.Drawing.Point(252, 164);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(85, 30);
-            this.btnSua.TabIndex = 11;
-            this.btnSua.Text = "SỬA";
-            this.btnSua.UseVisualStyleBackColor = false;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnXoa.FlatAppearance.BorderSize = 0;
-            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.Location = new System.Drawing.Point(368, 164);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(85, 30);
-            this.btnXoa.TabIndex = 11;
-            this.btnXoa.Text = "XÓA";
-            this.btnXoa.UseVisualStyleBackColor = false;
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.Location = new System.Drawing.Point(541, 8);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(30, 30);
-            this.btnThoat.TabIndex = 14;
-            this.btnThoat.Text = "X";
-            this.btnThoat.UseVisualStyleBackColor = true;
             // 
             // ThemBanSaoPL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(583, 397);
+            this.ClientSize = new System.Drawing.Size(536, 381);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
@@ -191,6 +185,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ThemBanSaoPL";
             this.Text = "ThemBanSaoPL";
+            this.Load += new System.EventHandler(this.ThemBanSaoPL_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSBS)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -212,6 +207,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaBanSao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaKe;
     }
 }

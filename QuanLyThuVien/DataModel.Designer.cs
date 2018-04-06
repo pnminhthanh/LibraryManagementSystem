@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\DataModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\DataModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

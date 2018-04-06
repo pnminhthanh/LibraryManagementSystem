@@ -178,17 +178,29 @@
     <Compile Include="PL\ThemBanSaoPL.designer.cs">
       <DependentUpon>ThemBanSaoPL.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\ThongTinPhieuPL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\ThongTinPhieuPL.Designer.cs">
+      <DependentUpon>ThongTinPhieuPL.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\ThongTinSachPL.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PL\ThongTinSachPL.designer.cs">
       <DependentUpon>ThongTinSachPL.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\ThongTinTV.cs">
+    <Compile Include="PL\ThongTinTVPL.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\ThongTinTV.designer.cs">
-      <DependentUpon>ThongTinTV.cs</DependentUpon>
+    <Compile Include="PL\ThongTinTVPL.designer.cs">
+      <DependentUpon>ThongTinTVPL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\TimKiemPhieu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\TimKiemPhieu.Designer.cs">
+      <DependentUpon>TimKiemPhieu.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\TimKiemSachPL.cs">
       <SubType>UserControl</SubType>
@@ -249,11 +261,17 @@
     <EmbeddedResource Include="PL\ThemBanSaoPL.resx">
       <DependentUpon>ThemBanSaoPL.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\ThongTinPhieuPL.resx">
+      <DependentUpon>ThongTinPhieuPL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\ThongTinSachPL.resx">
       <DependentUpon>ThongTinSachPL.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\ThongTinTV.resx">
-      <DependentUpon>ThongTinTV.cs</DependentUpon>
+    <EmbeddedResource Include="PL\ThongTinTVPL.resx">
+      <DependentUpon>ThongTinTVPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\TimKiemPhieu.resx">
+      <DependentUpon>TimKiemPhieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\TimKiemSachPL.resx">
       <DependentUpon>TimKiemSachPL.cs</DependentUpon>

@@ -15,6 +15,17 @@ namespace QuanLyThuVien.PL
         public ThemBanSaoPL()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        private void ThemBanSaoPL_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

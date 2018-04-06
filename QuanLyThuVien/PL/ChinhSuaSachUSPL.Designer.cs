@@ -38,16 +38,19 @@
             this.cbTacGia = new System.Windows.Forms.ComboBox();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
+            this.btnTaoBanSao = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnTimAnh = new System.Windows.Forms.Button();
             this.pbBiaSach = new System.Windows.Forms.PictureBox();
             this.rtxtNoiDung = new System.Windows.Forms.RichTextBox();
+            this.txtSoBanSao = new System.Windows.Forms.TextBox();
             this.txtNamXuatBan = new System.Windows.Forms.TextBox();
             this.txtGiaTien = new System.Windows.Forms.TextBox();
             this.txtNhaXuatBan = new System.Windows.Forms.TextBox();
             this.txtTenSach = new System.Windows.Forms.TextBox();
             this.txtMaSach = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -105,9 +108,6 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtSoBanSao = new System.Windows.Forms.TextBox();
-            this.btnTaoBanSao = new System.Windows.Forms.Button();
             this.tabChinhSua.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBiaSach)).BeginInit();
@@ -256,6 +256,20 @@
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnThem_Click);
             // 
+            // btnTaoBanSao
+            // 
+            this.btnTaoBanSao.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnTaoBanSao.FlatAppearance.BorderSize = 0;
+            this.btnTaoBanSao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTaoBanSao.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTaoBanSao.Location = new System.Drawing.Point(338, 248);
+            this.btnTaoBanSao.Name = "btnTaoBanSao";
+            this.btnTaoBanSao.Size = new System.Drawing.Size(95, 28);
+            this.btnTaoBanSao.TabIndex = 23;
+            this.btnTaoBanSao.Text = "TẠO";
+            this.btnTaoBanSao.UseVisualStyleBackColor = false;
+            this.btnTaoBanSao.Click += new System.EventHandler(this.btnThem_Click);
+            // 
             // btnThem
             // 
             this.btnThem.BackColor = System.Drawing.Color.SkyBlue;
@@ -300,6 +314,14 @@
             this.rtxtNoiDung.Size = new System.Drawing.Size(430, 171);
             this.rtxtNoiDung.TabIndex = 21;
             this.rtxtNoiDung.Text = "";
+            // 
+            // txtSoBanSao
+            // 
+            this.txtSoBanSao.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoBanSao.Location = new System.Drawing.Point(174, 248);
+            this.txtSoBanSao.Name = "txtSoBanSao";
+            this.txtSoBanSao.Size = new System.Drawing.Size(121, 26);
+            this.txtSoBanSao.TabIndex = 17;
             // 
             // txtNamXuatBan
             // 
@@ -350,6 +372,16 @@
             this.label10.Size = new System.Drawing.Size(151, 20);
             this.label10.TabIndex = 9;
             this.label10.Text = "TÓM TẮT NỘI DUNG:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(30, 251);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(100, 20);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "SỐ BẢN SAO:";
             // 
             // label28
             // 
@@ -613,10 +645,10 @@
             // rbtnNu
             // 
             this.rbtnNu.AutoSize = true;
-            this.rbtnNu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnNu.Location = new System.Drawing.Point(270, 190);
+            this.rbtnNu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnNu.Location = new System.Drawing.Point(269, 161);
             this.rbtnNu.Name = "rbtnNu";
-            this.rbtnNu.Size = new System.Drawing.Size(49, 25);
+            this.rbtnNu.Size = new System.Drawing.Size(43, 21);
             this.rbtnNu.TabIndex = 18;
             this.rbtnNu.TabStop = true;
             this.rbtnNu.Text = "Nữ";
@@ -625,10 +657,10 @@
             // rbtnNam
             // 
             this.rbtnNam.AutoSize = true;
-            this.rbtnNam.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnNam.Location = new System.Drawing.Point(184, 190);
+            this.rbtnNam.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnNam.Location = new System.Drawing.Point(183, 161);
             this.rbtnNam.Name = "rbtnNam";
-            this.rbtnNam.Size = new System.Drawing.Size(66, 25);
+            this.rbtnNam.Size = new System.Drawing.Size(58, 21);
             this.rbtnNam.TabIndex = 18;
             this.rbtnNam.TabStop = true;
             this.rbtnNam.Text = "Nam";
@@ -639,8 +671,8 @@
             this.btnXoaTG.BackColor = System.Drawing.Color.SkyBlue;
             this.btnXoaTG.FlatAppearance.BorderSize = 0;
             this.btnXoaTG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoaTG.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaTG.Location = new System.Drawing.Point(283, 247);
+            this.btnXoaTG.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaTG.Location = new System.Drawing.Point(265, 195);
             this.btnXoaTG.Name = "btnXoaTG";
             this.btnXoaTG.Size = new System.Drawing.Size(105, 30);
             this.btnXoaTG.TabIndex = 15;
@@ -652,8 +684,8 @@
             this.btnSuaTG.BackColor = System.Drawing.Color.SkyBlue;
             this.btnSuaTG.FlatAppearance.BorderSize = 0;
             this.btnSuaTG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuaTG.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuaTG.Location = new System.Drawing.Point(159, 247);
+            this.btnSuaTG.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaTG.Location = new System.Drawing.Point(141, 195);
             this.btnSuaTG.Name = "btnSuaTG";
             this.btnSuaTG.Size = new System.Drawing.Size(105, 30);
             this.btnSuaTG.TabIndex = 16;
@@ -665,8 +697,8 @@
             this.btnThemTG.BackColor = System.Drawing.Color.SkyBlue;
             this.btnThemTG.FlatAppearance.BorderSize = 0;
             this.btnThemTG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThemTG.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemTG.Location = new System.Drawing.Point(35, 247);
+            this.btnThemTG.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemTG.Location = new System.Drawing.Point(17, 195);
             this.btnThemTG.Name = "btnThemTG";
             this.btnThemTG.Size = new System.Drawing.Size(105, 30);
             this.btnThemTG.TabIndex = 14;
@@ -676,10 +708,10 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(493, 26);
+            this.label22.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(506, 14);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(222, 21);
+            this.label22.Size = new System.Drawing.Size(176, 17);
             this.label22.TabIndex = 5;
             this.label22.Text = "DANH SÁCH CÁC TÁC GIẢ";
             // 
@@ -695,12 +727,11 @@
             this.TenTacGia,
             this.NgaySinh,
             this.GioiTinh});
-            this.dgvDSTacGia.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dgvDSTacGia.Location = new System.Drawing.Point(409, 50);
+            this.dgvDSTacGia.Location = new System.Drawing.Point(409, 34);
             this.dgvDSTacGia.Name = "dgvDSTacGia";
             this.dgvDSTacGia.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvDSTacGia.RowHeadersVisible = false;
-            this.dgvDSTacGia.Size = new System.Drawing.Size(384, 452);
+            this.dgvDSTacGia.Size = new System.Drawing.Size(384, 196);
             this.dgvDSTacGia.TabIndex = 4;
             // 
             // STT
@@ -735,65 +766,65 @@
             // 
             // txtNamSinh
             // 
-            this.txtNamSinh.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNamSinh.Location = new System.Drawing.Point(184, 152);
+            this.txtNamSinh.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNamSinh.Location = new System.Drawing.Point(183, 123);
             this.txtNamSinh.Name = "txtNamSinh";
-            this.txtNamSinh.Size = new System.Drawing.Size(164, 27);
+            this.txtNamSinh.Size = new System.Drawing.Size(164, 23);
             this.txtNamSinh.TabIndex = 3;
             // 
             // txtTenTacGia
             // 
-            this.txtTenTacGia.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenTacGia.Location = new System.Drawing.Point(184, 110);
+            this.txtTenTacGia.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenTacGia.Location = new System.Drawing.Point(183, 81);
             this.txtTenTacGia.Name = "txtTenTacGia";
-            this.txtTenTacGia.Size = new System.Drawing.Size(164, 27);
+            this.txtTenTacGia.Size = new System.Drawing.Size(164, 23);
             this.txtTenTacGia.TabIndex = 3;
             // 
             // txtMaTacGia
             // 
-            this.txtMaTacGia.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaTacGia.Location = new System.Drawing.Point(184, 68);
+            this.txtMaTacGia.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaTacGia.Location = new System.Drawing.Point(183, 39);
             this.txtMaTacGia.Name = "txtMaTacGia";
-            this.txtMaTacGia.Size = new System.Drawing.Size(164, 27);
+            this.txtMaTacGia.Size = new System.Drawing.Size(164, 23);
             this.txtMaTacGia.TabIndex = 2;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(31, 194);
+            this.label27.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(30, 165);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(90, 21);
+            this.label27.Size = new System.Drawing.Size(70, 17);
             this.label27.TabIndex = 1;
             this.label27.Text = "GIỚI TÍNH:";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(33, 152);
+            this.label26.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(32, 123);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(104, 21);
+            this.label26.Size = new System.Drawing.Size(81, 17);
             this.label26.TabIndex = 1;
             this.label26.Text = "NGÀY SINH:";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(33, 110);
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(32, 81);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(115, 21);
+            this.label21.Size = new System.Drawing.Size(90, 17);
             this.label21.TabIndex = 1;
             this.label21.Text = "TÊN TÁC GIẢ:";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(33, 68);
+            this.label20.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(32, 39);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(114, 21);
+            this.label20.Size = new System.Drawing.Size(88, 17);
             this.label20.TabIndex = 0;
             this.label20.Text = "MÃ TÁC GIẢ:";
             // 
@@ -935,38 +966,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(30, 251);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 20);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "SỐ BẢN SAO:";
-            // 
-            // txtSoBanSao
-            // 
-            this.txtSoBanSao.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoBanSao.Location = new System.Drawing.Point(174, 248);
-            this.txtSoBanSao.Name = "txtSoBanSao";
-            this.txtSoBanSao.Size = new System.Drawing.Size(121, 26);
-            this.txtSoBanSao.TabIndex = 17;
-            // 
-            // btnTaoBanSao
-            // 
-            this.btnTaoBanSao.BackColor = System.Drawing.Color.Goldenrod;
-            this.btnTaoBanSao.FlatAppearance.BorderSize = 0;
-            this.btnTaoBanSao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTaoBanSao.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaoBanSao.Location = new System.Drawing.Point(338, 248);
-            this.btnTaoBanSao.Name = "btnTaoBanSao";
-            this.btnTaoBanSao.Size = new System.Drawing.Size(95, 28);
-            this.btnTaoBanSao.TabIndex = 23;
-            this.btnTaoBanSao.Text = "TẠO";
-            this.btnTaoBanSao.UseVisualStyleBackColor = false;
-            this.btnTaoBanSao.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // ChinhSuaSachUSPL
             // 

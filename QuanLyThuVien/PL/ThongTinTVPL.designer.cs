@@ -1,6 +1,6 @@
 ﻿namespace QuanLyThuVien.PL
 {
-    partial class ThongTinTV
+    partial class ThongTinTVPL
     {
         /// <summary>
         /// Required designer variable.
@@ -50,7 +50,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtGioiTinh = new System.Windows.Forms.TextBox();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbHinhAnh)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label4
@@ -92,6 +94,7 @@
             // 
             // txtCMND
             // 
+            this.txtCMND.BackColor = System.Drawing.SystemColors.Control;
             this.txtCMND.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCMND.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCMND.Location = new System.Drawing.Point(144, 276);
@@ -101,6 +104,7 @@
             // 
             // txtSDT
             // 
+            this.txtSDT.BackColor = System.Drawing.SystemColors.Control;
             this.txtSDT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSDT.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDT.Location = new System.Drawing.Point(144, 241);
@@ -110,6 +114,7 @@
             // 
             // txtDiaChi
             // 
+            this.txtDiaChi.BackColor = System.Drawing.SystemColors.Control;
             this.txtDiaChi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDiaChi.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.Location = new System.Drawing.Point(144, 206);
@@ -119,6 +124,7 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.BackColor = System.Drawing.SystemColors.Control;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(144, 171);
@@ -128,14 +134,17 @@
             // 
             // txtTenThanhVien
             // 
+            this.txtTenThanhVien.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.txtTenThanhVien.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTenThanhVien.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenThanhVien.Location = new System.Drawing.Point(56, 24);
+            this.txtTenThanhVien.Location = new System.Drawing.Point(37, 12);
             this.txtTenThanhVien.Name = "txtTenThanhVien";
-            this.txtTenThanhVien.Size = new System.Drawing.Size(252, 27);
+            this.txtTenThanhVien.Size = new System.Drawing.Size(322, 20);
             this.txtTenThanhVien.TabIndex = 63;
             // 
             // txtMaThanhVien
             // 
+            this.txtMaThanhVien.BackColor = System.Drawing.SystemColors.Control;
             this.txtMaThanhVien.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMaThanhVien.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaThanhVien.Location = new System.Drawing.Point(144, 65);
@@ -243,6 +252,7 @@
             // 
             // txtGioiTinh
             // 
+            this.txtGioiTinh.BackColor = System.Drawing.SystemColors.Control;
             this.txtGioiTinh.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtGioiTinh.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGioiTinh.Location = new System.Drawing.Point(144, 103);
@@ -253,7 +263,9 @@
             // btnThoat
             // 
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThoat.Location = new System.Drawing.Point(533, 12);
+            this.btnThoat.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnThoat.Location = new System.Drawing.Point(541, 12);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(30, 30);
             this.btnThoat.TabIndex = 75;
@@ -261,13 +273,23 @@
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // ThongTinTV
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel1.Controls.Add(this.btnThoat);
+            this.panel1.Controls.Add(this.txtTenThanhVien);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(583, 50);
+            this.panel1.TabIndex = 76;
+            // 
+            // ThongTinTVPL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(583, 391);
-            this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pbHinhAnh);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dtpNgayKetThuc);
@@ -277,7 +299,6 @@
             this.Controls.Add(this.txtSDT);
             this.Controls.Add(this.txtDiaChi);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtTenThanhVien);
             this.Controls.Add(this.txtGioiTinh);
             this.Controls.Add(this.txtMaThanhVien);
             this.Controls.Add(this.label9);
@@ -290,11 +311,14 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "ThongTinTV";
+            this.Name = "ThongTinTVPL";
             this.Text = "ThongTinTV";
             ((System.ComponentModel.ISupportInitialize)(this.pbHinhAnh)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,5 +347,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtGioiTinh;
         private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Panel panel1;
     }
 }

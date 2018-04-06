@@ -10,26 +10,16 @@ using System.Windows.Forms;
 
 namespace QuanLyThuVien.PL
 {
-    public partial class ThongTinSachPL : Form
+    public partial class ThongTinPhieuPL : Form
     {
-        public ThongTinSachPL()
+        public ThongTinPhieuPL()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
         }
-        private void ThongTinSachPL_Load(object sender, EventArgs e)
-        {
 
-        }
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            ThemBanSaoPL them = new ThemBanSaoPL();
-            them.Show();
         }
     }
 }

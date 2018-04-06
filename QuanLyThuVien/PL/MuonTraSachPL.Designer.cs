@@ -29,21 +29,22 @@
         private void InitializeComponent()
         {
             this.TopPanel = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
             this.btnThunho = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.LeftPanel = new System.Windows.Forms.Panel();
-            this.btnBack = new System.Windows.Forms.Button();
+            this.btnTimPhieu = new System.Windows.Forms.Button();
             this.btnTao = new System.Windows.Forms.Button();
-            this.btnDanhSach = new System.Windows.Forms.Button();
             this.SidePanel = new System.Windows.Forms.Panel();
-            this.btViPham = new System.Windows.Forms.Button();
+            this.timKiemPhieu1 = new QuanLyThuVien.PL.TimKiemPhieu();
+            this.chinhSuaPhieuMuonUSPL1 = new QuanLyThuVien.PL.ChinhSuaPhieuMuonUSPL();
             this.TopPanel.SuspendLayout();
             this.LeftPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // TopPanel
             // 
-            this.TopPanel.BackColor = System.Drawing.Color.SteelBlue;
+            this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(93)))), ((int)(((byte)(96)))));
             this.TopPanel.Controls.Add(this.btnBack);
             this.TopPanel.Controls.Add(this.btnThunho);
             this.TopPanel.Controls.Add(this.btnThoat);
@@ -51,40 +52,6 @@
             this.TopPanel.Name = "TopPanel";
             this.TopPanel.Size = new System.Drawing.Size(1000, 50);
             this.TopPanel.TabIndex = 0;
-            // 
-            // btnThunho
-            // 
-            this.btnThunho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThunho.ForeColor = System.Drawing.Color.LightCyan;
-            this.btnThunho.Location = new System.Drawing.Point(924, 12);
-            this.btnThunho.Name = "btnThunho";
-            this.btnThunho.Size = new System.Drawing.Size(30, 30);
-            this.btnThunho.TabIndex = 1;
-            this.btnThunho.Text = "_";
-            this.btnThunho.UseVisualStyleBackColor = true;
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThoat.ForeColor = System.Drawing.Color.LightCyan;
-            this.btnThoat.Location = new System.Drawing.Point(960, 12);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(30, 30);
-            this.btnThoat.TabIndex = 0;
-            this.btnThoat.Text = "X";
-            this.btnThoat.UseVisualStyleBackColor = true;
-            // 
-            // LeftPanel
-            // 
-            this.LeftPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(220)))), ((int)(((byte)(254)))));
-            this.LeftPanel.Controls.Add(this.btViPham);
-            this.LeftPanel.Controls.Add(this.btnTao);
-            this.LeftPanel.Controls.Add(this.btnDanhSach);
-            this.LeftPanel.Controls.Add(this.SidePanel);
-            this.LeftPanel.Location = new System.Drawing.Point(0, 50);
-            this.LeftPanel.Name = "LeftPanel";
-            this.LeftPanel.Size = new System.Drawing.Size(200, 550);
-            this.LeftPanel.TabIndex = 1;
             // 
             // btnBack
             // 
@@ -96,65 +63,109 @@
             this.btnBack.TabIndex = 2;
             this.btnBack.Text = "<-";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // btnThunho
+            // 
+            this.btnThunho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThunho.ForeColor = System.Drawing.Color.LightCyan;
+            this.btnThunho.Location = new System.Drawing.Point(924, 12);
+            this.btnThunho.Name = "btnThunho";
+            this.btnThunho.Size = new System.Drawing.Size(30, 30);
+            this.btnThunho.TabIndex = 1;
+            this.btnThunho.Text = "_";
+            this.btnThunho.UseVisualStyleBackColor = true;
+            this.btnThunho.Click += new System.EventHandler(this.btnThunho_Click);
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoat.ForeColor = System.Drawing.Color.LightCyan;
+            this.btnThoat.Location = new System.Drawing.Point(960, 12);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(30, 30);
+            this.btnThoat.TabIndex = 0;
+            this.btnThoat.Text = "X";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // LeftPanel
+            // 
+            this.LeftPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(159)))), ((int)(((byte)(125)))));
+            this.LeftPanel.Controls.Add(this.btnTimPhieu);
+            this.LeftPanel.Controls.Add(this.btnTao);
+            this.LeftPanel.Controls.Add(this.SidePanel);
+            this.LeftPanel.Location = new System.Drawing.Point(0, 50);
+            this.LeftPanel.Name = "LeftPanel";
+            this.LeftPanel.Size = new System.Drawing.Size(200, 550);
+            this.LeftPanel.TabIndex = 1;
+            // 
+            // btnTimPhieu
+            // 
+            this.btnTimPhieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(159)))), ((int)(((byte)(125)))));
+            this.btnTimPhieu.FlatAppearance.BorderSize = 0;
+            this.btnTimPhieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimPhieu.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimPhieu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(24)))), ((int)(((byte)(71)))));
+            this.btnTimPhieu.Location = new System.Drawing.Point(12, 235);
+            this.btnTimPhieu.Name = "btnTimPhieu";
+            this.btnTimPhieu.Size = new System.Drawing.Size(190, 100);
+            this.btnTimPhieu.TabIndex = 1;
+            this.btnTimPhieu.Text = "TÌM PHIẾU";
+            this.btnTimPhieu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTimPhieu.UseVisualStyleBackColor = false;
+            this.btnTimPhieu.Click += new System.EventHandler(this.btnTimPhieu_Click);
             // 
             // btnTao
             // 
-            this.btnTao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(220)))), ((int)(((byte)(254)))));
+            this.btnTao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(159)))), ((int)(((byte)(125)))));
             this.btnTao.FlatAppearance.BorderSize = 0;
             this.btnTao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTao.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTao.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.btnTao.Location = new System.Drawing.Point(12, 235);
+            this.btnTao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(24)))), ((int)(((byte)(71)))));
+            this.btnTao.Location = new System.Drawing.Point(12, 135);
             this.btnTao.Name = "btnTao";
             this.btnTao.Size = new System.Drawing.Size(190, 100);
             this.btnTao.TabIndex = 1;
             this.btnTao.Text = "TẠO PHIẾU";
             this.btnTao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTao.UseVisualStyleBackColor = false;
-            // 
-            // btnDanhSach
-            // 
-            this.btnDanhSach.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(220)))), ((int)(((byte)(254)))));
-            this.btnDanhSach.FlatAppearance.BorderSize = 0;
-            this.btnDanhSach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDanhSach.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDanhSach.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.btnDanhSach.Location = new System.Drawing.Point(12, 135);
-            this.btnDanhSach.Name = "btnDanhSach";
-            this.btnDanhSach.Size = new System.Drawing.Size(190, 100);
-            this.btnDanhSach.TabIndex = 1;
-            this.btnDanhSach.Text = "DANH SÁCH";
-            this.btnDanhSach.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDanhSach.UseVisualStyleBackColor = false;
+            this.btnTao.Click += new System.EventHandler(this.btnTao_Click);
             // 
             // SidePanel
             // 
-            this.SidePanel.BackColor = System.Drawing.Color.SteelBlue;
+            this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(64)))), ((int)(((byte)(103)))));
             this.SidePanel.Location = new System.Drawing.Point(2, 135);
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(10, 100);
             this.SidePanel.TabIndex = 0;
             // 
-            // btViPham
+            // timKiemPhieu1
             // 
-            this.btViPham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(220)))), ((int)(((byte)(254)))));
-            this.btViPham.FlatAppearance.BorderSize = 0;
-            this.btViPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btViPham.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btViPham.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.btViPham.Location = new System.Drawing.Point(12, 335);
-            this.btViPham.Name = "btViPham";
-            this.btViPham.Size = new System.Drawing.Size(190, 100);
-            this.btViPham.TabIndex = 1;
-            this.btViPham.Text = "TÌM PHIẾU";
-            this.btViPham.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btViPham.UseVisualStyleBackColor = false;
+            this.timKiemPhieu1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timKiemPhieu1.Location = new System.Drawing.Point(200, 50);
+            this.timKiemPhieu1.Margin = new System.Windows.Forms.Padding(4);
+            this.timKiemPhieu1.Name = "timKiemPhieu1";
+            this.timKiemPhieu1.Size = new System.Drawing.Size(800, 550);
+            this.timKiemPhieu1.TabIndex = 2;
+            // 
+            // chinhSuaPhieuMuonUSPL1
+            // 
+            this.chinhSuaPhieuMuonUSPL1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.chinhSuaPhieuMuonUSPL1.Font = new System.Drawing.Font("Century Gothic", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chinhSuaPhieuMuonUSPL1.Location = new System.Drawing.Point(200, 50);
+            this.chinhSuaPhieuMuonUSPL1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chinhSuaPhieuMuonUSPL1.Name = "chinhSuaPhieuMuonUSPL1";
+            this.chinhSuaPhieuMuonUSPL1.Size = new System.Drawing.Size(800, 550);
+            this.chinhSuaPhieuMuonUSPL1.TabIndex = 3;
             // 
             // MuonTraSachPL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 600);
+            this.Controls.Add(this.chinhSuaPhieuMuonUSPL1);
+            this.Controls.Add(this.timKiemPhieu1);
             this.Controls.Add(this.LeftPanel);
             this.Controls.Add(this.TopPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -175,8 +186,9 @@
         private System.Windows.Forms.Panel LeftPanel;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnTao;
-        private System.Windows.Forms.Button btnDanhSach;
         private System.Windows.Forms.Panel SidePanel;
-        private System.Windows.Forms.Button btViPham;
+        private System.Windows.Forms.Button btnTimPhieu;
+        private TimKiemPhieu timKiemPhieu1;
+        private ChinhSuaPhieuMuonUSPL chinhSuaPhieuMuonUSPL1;
     }
 }

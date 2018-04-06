@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyThuVien.PL
 {
-    public partial class ThongTinTV : Form
+    public partial class ThongTinTVPL : Form
     {
-        public ThongTinTV()
+        public ThongTinTVPL()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;

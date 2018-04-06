@@ -26,7 +26,7 @@ namespace QuanLyThuVien.PL
 
         private void xemthôngtinToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ThongTinTV tv = new ThongTinTV();
+            ThongTinTVPL tv = new ThongTinTVPL();
             tv.Show();
         }
 

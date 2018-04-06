@@ -34,16 +34,15 @@
             this.TopPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvDSThanhVien = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.chỉnhSửaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaThanhVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayGiaNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayHetHan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.chỉnhSửaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSThanhVien)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -89,8 +88,7 @@
             this.HoTen,
             this.GioiTinh,
             this.NgaySinh,
-            this.NgayGiaNhap,
-            this.NgayHetHan});
+            this.SDT});
             this.dgvDSThanhVien.GridColor = System.Drawing.SystemColors.Control;
             this.dgvDSThanhVien.Location = new System.Drawing.Point(0, 50);
             this.dgvDSThanhVien.Margin = new System.Windows.Forms.Padding(4);
@@ -108,6 +106,28 @@
             this.dgvDSThanhVien.Size = new System.Drawing.Size(800, 500);
             this.dgvDSThanhVien.TabIndex = 1;
             this.dgvDSThanhVien.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDSThanhVien_CellMouseClick);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.chỉnhSửaToolStripMenuItem,
+            this.xóaToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(151, 48);
+            // 
+            // chỉnhSửaToolStripMenuItem
+            // 
+            this.chỉnhSửaToolStripMenuItem.Name = "chỉnhSửaToolStripMenuItem";
+            this.chỉnhSửaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.chỉnhSửaToolStripMenuItem.Text = "Chỉnh sửa";
+            this.chỉnhSửaToolStripMenuItem.Click += new System.EventHandler(this.chỉnhSửaToolStripMenuItem_Click);
+            // 
+            // xóaToolStripMenuItem
+            // 
+            this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
+            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.xóaToolStripMenuItem.Text = "Xem thông tin";
+            this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xemthôngtinToolStripMenuItem_Click);
             // 
             // STT
             // 
@@ -131,46 +151,20 @@
             this.GioiTinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.GioiTinh.HeaderText = "Giới Tính";
             this.GioiTinh.Name = "GioiTinh";
-            this.GioiTinh.Width = 58;
+            this.GioiTinh.Width = 86;
             // 
             // NgaySinh
             // 
             this.NgaySinh.HeaderText = "Ngày Sinh";
             this.NgaySinh.Name = "NgaySinh";
+            this.NgaySinh.Width = 120;
             // 
-            // NgayGiaNhap
+            // SDT
             // 
-            this.NgayGiaNhap.HeaderText = "Ngày Gia Nhập";
-            this.NgayGiaNhap.Name = "NgayGiaNhap";
-            this.NgayGiaNhap.Width = 140;
-            // 
-            // NgayHetHan
-            // 
-            this.NgayHetHan.HeaderText = "Ngày Hết Hạn";
-            this.NgayHetHan.Name = "NgayHetHan";
-            this.NgayHetHan.Width = 140;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.chỉnhSửaToolStripMenuItem,
-            this.xóaToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(151, 48);
-            // 
-            // chỉnhSửaToolStripMenuItem
-            // 
-            this.chỉnhSửaToolStripMenuItem.Name = "chỉnhSửaToolStripMenuItem";
-            this.chỉnhSửaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.chỉnhSửaToolStripMenuItem.Text = "Chỉnh sửa";
-            this.chỉnhSửaToolStripMenuItem.Click += new System.EventHandler(this.chỉnhSửaToolStripMenuItem_Click);
-            // 
-            // xóaToolStripMenuItem
-            // 
-            this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
-            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.xóaToolStripMenuItem.Text = "Xem thông tin";
-            this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xemthôngtinToolStripMenuItem_Click);
+            this.SDT.HeaderText = "SDT";
+            this.SDT.Name = "SDT";
+            this.SDT.ReadOnly = true;
+            this.SDT.Width = 120;
             // 
             // DSThanhVienUSPL
             // 
@@ -203,7 +197,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
         private System.Windows.Forms.DataGridViewTextBoxColumn GioiTinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayGiaNhap;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayHetHan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
     }
 }
