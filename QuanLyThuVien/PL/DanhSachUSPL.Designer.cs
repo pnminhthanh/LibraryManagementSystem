@@ -32,17 +32,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvDSSach = new System.Windows.Forms.DataGridView();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiaTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.xemThôngTinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cậpNhậtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NamXuatBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSSach)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -65,6 +66,7 @@
             this.MaSach,
             this.TenSach,
             this.TacGia,
+            this.NamXuatBan,
             this.NXB,
             this.GiaTien});
             this.dgvDSSach.GridColor = System.Drawing.SystemColors.InactiveCaption;
@@ -84,6 +86,48 @@
             this.dgvDSSach.Size = new System.Drawing.Size(800, 515);
             this.dgvDSSach.TabIndex = 0;
             this.dgvDSSach.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDSSach_CellMouseClick);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.xemThôngTinToolStripMenuItem,
+            this.cậpNhậtToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(151, 48);
+            // 
+            // xemThôngTinToolStripMenuItem
+            // 
+            this.xemThôngTinToolStripMenuItem.Name = "xemThôngTinToolStripMenuItem";
+            this.xemThôngTinToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.xemThôngTinToolStripMenuItem.Text = "Xem thông tin";
+            this.xemThôngTinToolStripMenuItem.Click += new System.EventHandler(this.xemThôngTinToolStripMenuItem_Click);
+            // 
+            // cậpNhậtToolStripMenuItem
+            // 
+            this.cậpNhậtToolStripMenuItem.Name = "cậpNhậtToolStripMenuItem";
+            this.cậpNhậtToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.cậpNhậtToolStripMenuItem.Text = "Cập Nhật";
+            this.cậpNhậtToolStripMenuItem.Click += new System.EventHandler(this.cậpNhậtToolStripMenuItem_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 35);
+            this.panel1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label1.Location = new System.Drawing.Point(279, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(222, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "DANH SÁCH ĐẦU SÁCH";
             // 
             // STT
             // 
@@ -108,6 +152,11 @@
             this.TacGia.Name = "TacGia";
             this.TacGia.Width = 120;
             // 
+            // NamXuatBan
+            // 
+            this.NamXuatBan.HeaderText = "Năm Xuất Bản";
+            this.NamXuatBan.Name = "NamXuatBan";
+            // 
             // NXB
             // 
             this.NXB.HeaderText = "NXB";
@@ -117,48 +166,6 @@
             // 
             this.GiaTien.HeaderText = "Giá Tiền";
             this.GiaTien.Name = "GiaTien";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.xemThôngTinToolStripMenuItem,
-            this.cậpNhậtToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
-            // 
-            // xemThôngTinToolStripMenuItem
-            // 
-            this.xemThôngTinToolStripMenuItem.Name = "xemThôngTinToolStripMenuItem";
-            this.xemThôngTinToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.xemThôngTinToolStripMenuItem.Text = "Xem thông tin";
-            this.xemThôngTinToolStripMenuItem.Click += new System.EventHandler(this.xemThôngTinToolStripMenuItem_Click);
-            // 
-            // cậpNhậtToolStripMenuItem
-            // 
-            this.cậpNhậtToolStripMenuItem.Name = "cậpNhậtToolStripMenuItem";
-            this.cậpNhậtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cậpNhậtToolStripMenuItem.Text = "Cập Nhật";
-            this.cậpNhậtToolStripMenuItem.Click += new System.EventHandler(this.cậpNhậtToolStripMenuItem_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 35);
-            this.panel1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(279, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "DANH SÁCH ĐẦU SÁCH";
             // 
             // DanhSachUSPL
             // 
@@ -186,13 +193,14 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem cậpNhậtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xemThôngTinToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TacGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NamXuatBan;
         private System.Windows.Forms.DataGridViewTextBoxColumn NXB;
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaTien;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
     }
 }

@@ -45,8 +45,9 @@ namespace QuanLyThuVien
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            FormState.PreviousForm = null;
-            Application.Exit();
+            if (MessageBox.Show("Bạn có chắc muốn thoát ra không?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                Application.Exit();
+            else { };
         }
 
         private void btnThunho_Click(object sender, EventArgs e)

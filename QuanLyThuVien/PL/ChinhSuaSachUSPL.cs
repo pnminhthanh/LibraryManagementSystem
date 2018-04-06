@@ -13,6 +13,23 @@ namespace QuanLyThuVien.PL
     public partial class ChinhSuaSachUSPL : UserControl
     {
         #region Property
+        # region ViTri
+        public TextBox TxtMaKe
+        {
+            get { return txtMaKe; }
+            set { txtMaKe = value; }
+        }
+        public TextBox TxtChuDe
+        {
+            get { return txtChuDe; }
+            set { txtChuDe = value; }
+        }
+        public DataGridView DgvDSKe
+        {
+            get { return dgvDSKeSach; }
+            set { dgvDSKeSach = value; }
+        }
+        #endregion
         #region Sach
         public TextBox TxtMaSach
         {
@@ -119,10 +136,12 @@ namespace QuanLyThuVien.PL
         {
             InitializeComponent();
         }
-
+        #region TabSach
         private void btnThem_Click(object sender, EventArgs e)
         {
 
         }
+        #endregion
+
     }
 }

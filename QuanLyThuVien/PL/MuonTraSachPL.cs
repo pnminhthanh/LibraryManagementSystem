@@ -11,10 +11,42 @@ using System.Windows.Forms;
 namespace QuanLyThuVien.PL
 {
     public partial class MuonTraSachPL : Form
-    {
+    {       
         public MuonTraSachPL()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+            timKiemPhieu1.ShowChinhSua += new EventHandler(btnTao_Click);
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc muốn thoát ra không?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                Application.Exit();
+            else { };
+        }
+
+        private void btnThunho_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormState.PreviousForm.Show();
+        }
+
+        private void btnTao_Click(object sender, EventArgs e)
+        {
+            SidePanel.Top = btnTao.Top;
+            chinhSuaPhieuMuonUSPL1.BringToFront();
+        }
+
+        private void btnTimPhieu_Click(object sender, EventArgs e)
+        {
+            SidePanel.Top = btnTimPhieu.Top;
+            timKiemPhieu1.BringToFront();
         }
     }
 }

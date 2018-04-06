@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.TopPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtNoiDungTim = new System.Windows.Forms.TextBox();
@@ -44,7 +45,8 @@
             this.DaTra = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cậpNhậtTìnhTrạngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
+            this.chỉnhSửaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xemThôngTinChiTiếtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSPhieuMuon)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -52,7 +54,7 @@
             // 
             // TopPanel
             // 
-            this.TopPanel.BackColor = System.Drawing.Color.Bisque;
+            this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(159)))), ((int)(((byte)(125)))));
             this.TopPanel.Controls.Add(this.label1);
             this.TopPanel.Controls.Add(this.label2);
             this.TopPanel.Controls.Add(this.btnTimKiem);
@@ -63,11 +65,22 @@
             this.TopPanel.Size = new System.Drawing.Size(800, 80);
             this.TopPanel.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(24)))), ((int)(((byte)(71)))));
+            this.label1.Location = new System.Drawing.Point(289, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(243, 23);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "DANH SÁCH PHIẾU MƯỢN";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(98, 47);
+            this.label2.Location = new System.Drawing.Point(113, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 17);
             this.label2.TabIndex = 9;
@@ -86,10 +99,11 @@
             this.btnTimKiem.TabIndex = 7;
             this.btnTimKiem.Text = "TÌM KIẾM";
             this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtNoiDungTim
             // 
-            this.txtNoiDungTim.Location = new System.Drawing.Point(243, 44);
+            this.txtNoiDungTim.Location = new System.Drawing.Point(258, 43);
             this.txtNoiDungTim.Name = "txtNoiDungTim";
             this.txtNoiDungTim.Size = new System.Drawing.Size(262, 22);
             this.txtNoiDungTim.TabIndex = 6;
@@ -115,6 +129,7 @@
             this.dgvDSPhieuMuon.RowHeadersVisible = false;
             this.dgvDSPhieuMuon.Size = new System.Drawing.Size(800, 470);
             this.dgvDSPhieuMuon.TabIndex = 2;
+            this.dgvDSPhieuMuon.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDSPhieuMuon_CellMouseClick);
             // 
             // STT
             // 
@@ -166,26 +181,32 @@
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cậpNhậtTìnhTrạngToolStripMenuItem});
+            this.cậpNhậtTìnhTrạngToolStripMenuItem,
+            this.chỉnhSửaToolStripMenuItem,
+            this.xemThôngTinChiTiếtToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(178, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(190, 70);
             // 
             // cậpNhậtTìnhTrạngToolStripMenuItem
             // 
             this.cậpNhậtTìnhTrạngToolStripMenuItem.Name = "cậpNhậtTìnhTrạngToolStripMenuItem";
-            this.cậpNhậtTìnhTrạngToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.cậpNhậtTìnhTrạngToolStripMenuItem.Text = "Cập nhật tình trạng";
+            this.cậpNhậtTìnhTrạngToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.cậpNhậtTìnhTrạngToolStripMenuItem.Text = "Đánh dấu đã trả";
+            this.cậpNhậtTìnhTrạngToolStripMenuItem.Click += new System.EventHandler(this.danhdaudatraToolStripMenuItem_Click);
             // 
-            // label1
+            // chỉnhSửaToolStripMenuItem
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label1.Location = new System.Drawing.Point(289, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(243, 23);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "DANH SÁCH PHIẾU MƯỢN";
+            this.chỉnhSửaToolStripMenuItem.Name = "chỉnhSửaToolStripMenuItem";
+            this.chỉnhSửaToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.chỉnhSửaToolStripMenuItem.Text = "Chỉnh sửa";
+            this.chỉnhSửaToolStripMenuItem.Click += new System.EventHandler(this.chỉnhSửaToolStripMenuItem_Click);
+            // 
+            // xemThôngTinChiTiếtToolStripMenuItem
+            // 
+            this.xemThôngTinChiTiếtToolStripMenuItem.Name = "xemThôngTinChiTiếtToolStripMenuItem";
+            this.xemThôngTinChiTiếtToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.xemThôngTinChiTiếtToolStripMenuItem.Text = "Xem thông tin chi tiết";
+            this.xemThôngTinChiTiếtToolStripMenuItem.Click += new System.EventHandler(this.xemThôngTinChiTiếtToolStripMenuItem_Click);
             // 
             // DanhSachPhieuUSPL
             // 
@@ -223,5 +244,7 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn DaTra;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem chỉnhSửaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xemThôngTinChiTiếtToolStripMenuItem;
     }
 }

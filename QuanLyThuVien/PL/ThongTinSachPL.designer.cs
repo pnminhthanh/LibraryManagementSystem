@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label12 = new System.Windows.Forms.Label();
             this.pbBiaSach = new System.Windows.Forms.PictureBox();
             this.rtxtNoiDung = new System.Windows.Forms.RichTextBox();
@@ -57,8 +57,11 @@
             this.txtTheLoai3 = new System.Windows.Forms.TextBox();
             this.txtTheLoai1 = new System.Windows.Forms.TextBox();
             this.txtTheLoai2 = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnThem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbBiaSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label12
@@ -83,6 +86,7 @@
             // 
             // rtxtNoiDung
             // 
+            this.rtxtNoiDung.BackColor = System.Drawing.SystemColors.Control;
             this.rtxtNoiDung.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtxtNoiDung.Location = new System.Drawing.Point(30, 332);
             this.rtxtNoiDung.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -93,15 +97,18 @@
             // 
             // txtSoBanSao
             // 
+            this.txtSoBanSao.BackColor = System.Drawing.SystemColors.Control;
+            this.txtSoBanSao.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSoBanSao.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoBanSao.Location = new System.Drawing.Point(553, 302);
             this.txtSoBanSao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSoBanSao.Name = "txtSoBanSao";
-            this.txtSoBanSao.Size = new System.Drawing.Size(86, 23);
+            this.txtSoBanSao.Size = new System.Drawing.Size(64, 16);
             this.txtSoBanSao.TabIndex = 42;
             // 
             // txtNamXuatBan
             // 
+            this.txtNamXuatBan.BackColor = System.Drawing.SystemColors.Control;
             this.txtNamXuatBan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNamXuatBan.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNamXuatBan.Location = new System.Drawing.Point(159, 179);
@@ -112,6 +119,7 @@
             // 
             // txtGiaTien
             // 
+            this.txtGiaTien.BackColor = System.Drawing.SystemColors.Control;
             this.txtGiaTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtGiaTien.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGiaTien.Location = new System.Drawing.Point(159, 144);
@@ -122,6 +130,7 @@
             // 
             // txtNhaXuatBan
             // 
+            this.txtNhaXuatBan.BackColor = System.Drawing.SystemColors.Control;
             this.txtNhaXuatBan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNhaXuatBan.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNhaXuatBan.Location = new System.Drawing.Point(159, 109);
@@ -133,9 +142,11 @@
             // txtTenSach
             // 
             this.txtTenSach.AllowDrop = true;
+            this.txtTenSach.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(159)))), ((int)(((byte)(125)))));
             this.txtTenSach.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTenSach.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenSach.Location = new System.Drawing.Point(91, 34);
+            this.txtTenSach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(24)))), ((int)(((byte)(71)))));
+            this.txtTenSach.Location = new System.Drawing.Point(39, 11);
             this.txtTenSach.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTenSach.Name = "txtTenSach";
             this.txtTenSach.Size = new System.Drawing.Size(433, 24);
@@ -143,6 +154,7 @@
             // 
             // txtMaSach
             // 
+            this.txtMaSach.BackColor = System.Drawing.SystemColors.Control;
             this.txtMaSach.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMaSach.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaSach.Location = new System.Drawing.Point(159, 74);
@@ -225,7 +237,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(583, 49);
+            this.label11.Location = new System.Drawing.Point(580, 53);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(66, 17);
             this.label11.TabIndex = 37;
@@ -244,15 +256,14 @@
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.PaleTurquoise;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
@@ -285,7 +296,10 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(722, 12);
+            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoat.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Location = new System.Drawing.Point(726, 8);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(30, 30);
             this.btnThoat.TabIndex = 58;
@@ -295,6 +309,7 @@
             // 
             // txtTacGia
             // 
+            this.txtTacGia.BackColor = System.Drawing.SystemColors.Control;
             this.txtTacGia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTacGia.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTacGia.Location = new System.Drawing.Point(159, 217);
@@ -305,6 +320,7 @@
             // 
             // txtMaKe
             // 
+            this.txtMaKe.BackColor = System.Drawing.SystemColors.Control;
             this.txtMaKe.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMaKe.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaKe.Location = new System.Drawing.Point(430, 217);
@@ -315,6 +331,7 @@
             // 
             // txtTheLoai3
             // 
+            this.txtTheLoai3.BackColor = System.Drawing.SystemColors.Control;
             this.txtTheLoai3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTheLoai3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTheLoai3.Location = new System.Drawing.Point(399, 252);
@@ -325,6 +342,7 @@
             // 
             // txtTheLoai1
             // 
+            this.txtTheLoai1.BackColor = System.Drawing.SystemColors.Control;
             this.txtTheLoai1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTheLoai1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTheLoai1.Location = new System.Drawing.Point(159, 252);
@@ -335,6 +353,7 @@
             // 
             // txtTheLoai2
             // 
+            this.txtTheLoai2.BackColor = System.Drawing.SystemColors.Control;
             this.txtTheLoai2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTheLoai2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTheLoai2.Location = new System.Drawing.Point(279, 252);
@@ -343,19 +362,44 @@
             this.txtTheLoai2.Size = new System.Drawing.Size(120, 16);
             this.txtTheLoai2.TabIndex = 41;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(159)))), ((int)(((byte)(125)))));
+            this.panel1.Controls.Add(this.btnThoat);
+            this.panel1.Controls.Add(this.txtTenSach);
+            this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(24)))), ((int)(((byte)(71)))));
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(764, 50);
+            this.panel1.TabIndex = 59;
+            // 
+            // btnThem
+            // 
+            this.btnThem.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Location = new System.Drawing.Point(669, 295);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(74, 30);
+            this.btnThem.TabIndex = 58;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
             // ThongTinSachPL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.CancelButton = this.btnThoat;
             this.ClientSize = new System.Drawing.Size(764, 557);
-            this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.btnThem);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.pbBiaSach);
             this.Controls.Add(this.rtxtNoiDung);
             this.Controls.Add(this.txtSoBanSao);
-            this.Controls.Add(this.txtTenSach);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label28);
@@ -382,6 +426,8 @@
             this.Load += new System.EventHandler(this.ThongTinSachPL_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbBiaSach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -416,5 +462,7 @@
         private System.Windows.Forms.TextBox txtTheLoai3;
         private System.Windows.Forms.TextBox txtTheLoai1;
         private System.Windows.Forms.TextBox txtTheLoai2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnThem;
     }
 }

@@ -41,6 +41,11 @@
             this.cbSoNgayMuon = new System.Windows.Forms.ComboBox();
             this.lbNgayHetHan = new System.Windows.Forms.Label();
             this.dgvDSMuon = new System.Windows.Forms.DataGridView();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaBanSao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dtpNgayHetHan = new System.Windows.Forms.DateTimePicker();
@@ -49,11 +54,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtMaBanSao = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaBanSao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSMuon)).BeginInit();
@@ -64,7 +64,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(24)))), ((int)(((byte)(71)))));
             this.label1.Location = new System.Drawing.Point(291, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(225, 23);
@@ -190,13 +190,45 @@
             this.dgvDSMuon.Size = new System.Drawing.Size(560, 177);
             this.dgvDSMuon.TabIndex = 19;
             // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.Width = 40;
+            // 
+            // MaBanSao
+            // 
+            this.MaBanSao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.MaBanSao.HeaderText = "Mã Bản Sao";
+            this.MaBanSao.Name = "MaBanSao";
+            this.MaBanSao.Width = 108;
+            // 
+            // TenSach
+            // 
+            this.TenSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenSach.HeaderText = "Tên Sách";
+            this.TenSach.Name = "TenSach";
+            // 
+            // TacGia
+            // 
+            this.TacGia.HeaderText = "Tác Giả";
+            this.TacGia.Name = "TacGia";
+            this.TacGia.Width = 120;
+            // 
+            // SL
+            // 
+            this.SL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.SL.HeaderText = "SL";
+            this.SL.Name = "SL";
+            this.SL.Width = 45;
+            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.PaleTurquoise;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(467, 156);
+            this.button3.Location = new System.Drawing.Point(482, 238);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(126, 35);
             this.button3.TabIndex = 22;
@@ -209,7 +241,7 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(609, 156);
+            this.button4.Location = new System.Drawing.Point(624, 238);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(126, 35);
             this.button4.TabIndex = 22;
@@ -273,41 +305,9 @@
             this.button1.Text = "THÊM";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            this.STT.Width = 40;
-            // 
-            // MaBanSao
-            // 
-            this.MaBanSao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.MaBanSao.HeaderText = "Mã Bản Sao";
-            this.MaBanSao.Name = "MaBanSao";
-            this.MaBanSao.Width = 108;
-            // 
-            // TenSach
-            // 
-            this.TenSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenSach.HeaderText = "Tên Sách";
-            this.TenSach.Name = "TenSach";
-            // 
-            // TacGia
-            // 
-            this.TacGia.HeaderText = "Tác Giả";
-            this.TacGia.Name = "TacGia";
-            this.TacGia.Width = 120;
-            // 
-            // SL
-            // 
-            this.SL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.SL.HeaderText = "SL";
-            this.SL.Name = "SL";
-            this.SL.Width = 45;
-            // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Bisque;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(159)))), ((int)(((byte)(125)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -320,7 +320,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(531, 197);
+            this.button2.Location = new System.Drawing.Point(546, 279);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(126, 35);
             this.button2.TabIndex = 22;

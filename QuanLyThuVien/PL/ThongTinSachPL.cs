@@ -25,5 +25,11 @@ namespace QuanLyThuVien.PL
         {
             this.Close();
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            ThemBanSaoPL them = new ThemBanSaoPL();
+            them.Show();
+        }
     }
 }
