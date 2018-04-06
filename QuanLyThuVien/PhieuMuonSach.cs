@@ -26,8 +26,8 @@ namespace QuanLyThuVien
         public System.DateTime NgayMuonSach { get; set; }
         public System.DateTime HanTraSach { get; set; }
         public System.DateTime NgayTraSach { get; set; }
-        public int TienDatCoc { get; set; }
-        public string PhiThue { get; set; }
+        public decimal TienDatCoc { get; set; }
+        public Nullable<decimal> PhiThue { get; set; }
     
         public virtual DocGia DocGia { get; set; }
         public virtual ThuThu ThuThu { get; set; }

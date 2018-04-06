@@ -33,89 +33,77 @@
             this.btnThoat = new System.Windows.Forms.Button();
             this.LeftPanel = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
-            this.btViPham = new System.Windows.Forms.Button();
             this.btnTao = new System.Windows.Forms.Button();
             this.btnDanhSach = new System.Windows.Forms.Button();
             this.SidePanel = new System.Windows.Forms.Panel();
+            this.btViPham = new System.Windows.Forms.Button();
             this.TopPanel.SuspendLayout();
             this.LeftPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // TopPanel
             // 
-            this.TopPanel.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.TopPanel.BackColor = System.Drawing.Color.SteelBlue;
+            this.TopPanel.Controls.Add(this.btnBack);
             this.TopPanel.Controls.Add(this.btnThunho);
             this.TopPanel.Controls.Add(this.btnThoat);
-            this.TopPanel.Location = new System.Drawing.Point(200, 0);
+            this.TopPanel.Location = new System.Drawing.Point(0, 0);
             this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(800, 50);
+            this.TopPanel.Size = new System.Drawing.Size(1000, 50);
             this.TopPanel.TabIndex = 0;
             // 
             // btnThunho
             // 
-            this.btnThunho.Location = new System.Drawing.Point(722, 10);
+            this.btnThunho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThunho.ForeColor = System.Drawing.Color.LightCyan;
+            this.btnThunho.Location = new System.Drawing.Point(924, 12);
             this.btnThunho.Name = "btnThunho";
             this.btnThunho.Size = new System.Drawing.Size(30, 30);
             this.btnThunho.TabIndex = 1;
-            this.btnThunho.Text = "button2";
+            this.btnThunho.Text = "_";
             this.btnThunho.UseVisualStyleBackColor = true;
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(758, 10);
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoat.ForeColor = System.Drawing.Color.LightCyan;
+            this.btnThoat.Location = new System.Drawing.Point(960, 12);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(30, 30);
             this.btnThoat.TabIndex = 0;
-            this.btnThoat.Text = "button1";
+            this.btnThoat.Text = "X";
             this.btnThoat.UseVisualStyleBackColor = true;
             // 
             // LeftPanel
             // 
-            this.LeftPanel.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.LeftPanel.Controls.Add(this.btnBack);
+            this.LeftPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(220)))), ((int)(((byte)(254)))));
             this.LeftPanel.Controls.Add(this.btViPham);
             this.LeftPanel.Controls.Add(this.btnTao);
             this.LeftPanel.Controls.Add(this.btnDanhSach);
             this.LeftPanel.Controls.Add(this.SidePanel);
-            this.LeftPanel.Location = new System.Drawing.Point(0, 0);
+            this.LeftPanel.Location = new System.Drawing.Point(0, 50);
             this.LeftPanel.Name = "LeftPanel";
-            this.LeftPanel.Size = new System.Drawing.Size(200, 600);
+            this.LeftPanel.Size = new System.Drawing.Size(200, 550);
             this.LeftPanel.TabIndex = 1;
             // 
             // btnBack
             // 
-            this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBack.Location = new System.Drawing.Point(10, 10);
+            this.btnBack.Location = new System.Drawing.Point(27, 0);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(50, 50);
             this.btnBack.TabIndex = 2;
             this.btnBack.Text = "<-";
             this.btnBack.UseVisualStyleBackColor = true;
             // 
-            // btViPham
-            // 
-            this.btViPham.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.btViPham.FlatAppearance.BorderSize = 0;
-            this.btViPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btViPham.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btViPham.ForeColor = System.Drawing.Color.White;
-            this.btViPham.Location = new System.Drawing.Point(12, 335);
-            this.btViPham.Name = "btViPham";
-            this.btViPham.Size = new System.Drawing.Size(190, 100);
-            this.btViPham.TabIndex = 1;
-            this.btViPham.Text = "VI PHẠM";
-            this.btViPham.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btViPham.UseVisualStyleBackColor = false;
-            // 
             // btnTao
             // 
-            this.btnTao.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnTao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(220)))), ((int)(((byte)(254)))));
             this.btnTao.FlatAppearance.BorderSize = 0;
             this.btnTao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTao.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTao.ForeColor = System.Drawing.Color.White;
+            this.btnTao.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.btnTao.Location = new System.Drawing.Point(12, 235);
             this.btnTao.Name = "btnTao";
             this.btnTao.Size = new System.Drawing.Size(190, 100);
@@ -126,11 +114,11 @@
             // 
             // btnDanhSach
             // 
-            this.btnDanhSach.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnDanhSach.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(220)))), ((int)(((byte)(254)))));
             this.btnDanhSach.FlatAppearance.BorderSize = 0;
             this.btnDanhSach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDanhSach.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDanhSach.ForeColor = System.Drawing.Color.White;
+            this.btnDanhSach.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.btnDanhSach.Location = new System.Drawing.Point(12, 135);
             this.btnDanhSach.Name = "btnDanhSach";
             this.btnDanhSach.Size = new System.Drawing.Size(190, 100);
@@ -141,11 +129,26 @@
             // 
             // SidePanel
             // 
-            this.SidePanel.BackColor = System.Drawing.SystemColors.WindowText;
+            this.SidePanel.BackColor = System.Drawing.Color.SteelBlue;
             this.SidePanel.Location = new System.Drawing.Point(2, 135);
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(10, 100);
             this.SidePanel.TabIndex = 0;
+            // 
+            // btViPham
+            // 
+            this.btViPham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(220)))), ((int)(((byte)(254)))));
+            this.btViPham.FlatAppearance.BorderSize = 0;
+            this.btViPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btViPham.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btViPham.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.btViPham.Location = new System.Drawing.Point(12, 335);
+            this.btViPham.Name = "btViPham";
+            this.btViPham.Size = new System.Drawing.Size(190, 100);
+            this.btViPham.TabIndex = 1;
+            this.btViPham.Text = "TÌM PHIẾU";
+            this.btViPham.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btViPham.UseVisualStyleBackColor = false;
             // 
             // MuonTraSachPL
             // 
@@ -171,9 +174,9 @@
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Panel LeftPanel;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button btViPham;
         private System.Windows.Forms.Button btnTao;
         private System.Windows.Forms.Button btnDanhSach;
         private System.Windows.Forms.Panel SidePanel;
+        private System.Windows.Forms.Button btViPham;
     }
 }

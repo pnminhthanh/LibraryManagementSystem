@@ -33,6 +33,11 @@ namespace QuanLyThuVien.PL
             get { return txtMaBanSao; }
             set { txtMaBanSao = value; }
         }
+        public TextBox TxtTongTienCoc
+        {
+            get { return txtTienCoc; }
+            set { txtTienCoc = value; }
+        }
         public ComboBox CbSoNgayMuon
         {
             get { return cbSoNgayMuon; }
@@ -47,11 +52,6 @@ namespace QuanLyThuVien.PL
         {
             get { return dtpNgayHetHan; }
             set { dtpNgayHetHan = value; }
-        }
-        public DateTimePicker DtpNgayTra
-        {
-            get { return dtpNgayTra; }
-            set { dtpNgayTra = value; }
         }
         public DataGridView DgvDSMuon
         {

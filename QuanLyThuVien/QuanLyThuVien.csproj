@@ -142,6 +142,12 @@
       <DependentUpon>DSThanhVienUSPL.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\FormState.cs" />
+    <Compile Include="PL\LocThanhVienPS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\LocThanhVienPS.designer.cs">
+      <DependentUpon>LocThanhVienPS.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\MainPL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,12 @@
     </Compile>
     <Compile Include="PL\ThongTinSachPL.designer.cs">
       <DependentUpon>ThongTinSachPL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\ThongTinTV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\ThongTinTV.designer.cs">
+      <DependentUpon>ThongTinTV.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\TimKiemSachPL.cs">
       <SubType>UserControl</SubType>
@@ -219,6 +231,9 @@
     <EmbeddedResource Include="PL\DSThanhVienUSPL.resx">
       <DependentUpon>DSThanhVienUSPL.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\LocThanhVienPS.resx">
+      <DependentUpon>LocThanhVienPS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\MainPL.resx">
       <DependentUpon>MainPL.cs</DependentUpon>
     </EmbeddedResource>
@@ -236,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\ThongTinSachPL.resx">
       <DependentUpon>ThongTinSachPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\ThongTinTV.resx">
+      <DependentUpon>ThongTinTV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\TimKiemSachPL.resx">
       <DependentUpon>TimKiemSachPL.cs</DependentUpon>

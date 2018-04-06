@@ -16,6 +16,17 @@ namespace QuanLyThuVien.BLL
         {
             dgvListPhieuMuon.DataSource = phieuMuonDAL.LayDSPhieuMuon();
         }
+        
+        public void HienThiTienCoc(DataGridView dgvBanSao, TextBox txtTienCoc)
+        {
+            double tienCoc = 0;
+            for (int i = 0; i < dgvBanSao.RowCount; i++)
+            {
+                int giaTien = Convert.ToInt16(dgvBanSao.Rows[i].Cells[3].ToString());
+                tienCoc = +giaTien * 0.6;
+            }
+            txtTienCoc.Text = tienCoc.ToString();
+        }
 
         public void TKPhieuMuon(TextBox txtMaPhieuMuon, TextBox txtMaNguoiMuon, ComboBox cbThuThu, DateTimePicker dpNgayMuon, DateTimePicker dpNgayTra, DateTimePicker dpHanTra, DataGridView dgvListPhieuMuon)
         {
@@ -29,7 +40,7 @@ namespace QuanLyThuVien.BLL
             dgvListPhieuMuon.DataSource = phieuMuonDAL.TimKiemPhieuMuon(phieuMuon);
         }
 
-        public bool ThemPhieuMuon(TextBox txtMaPhieuMuon, TextBox txtMaNguoiMuon, ComboBox cbThuThu, DataGridView dgvListBanSao)
+        public bool ThemPhieuMuon(TextBox txtMaPhieuMuon, TextBox txtMaNguoiMuon, ComboBox cbThuThu, DataGridView dgvListBanSao, TextBox txtTienCoc)
         {
             PhieuMuonSach phieuMuon = new PhieuMuonSach();
             phieuMuon.MaPhieuMuon = txtMaPhieuMuon.Text;
@@ -44,6 +55,7 @@ namespace QuanLyThuVien.BLL
 
                 phieuMuon.BanSaos.Add(banSao);
             }
+            phieuMuon.TienDatCoc = Math.Round(Convert.ToDecimal(txtTienCoc.Text), 0);
             phieuMuonDAL.ThemPhieuMuon(phieuMuon);
             return true;
         }

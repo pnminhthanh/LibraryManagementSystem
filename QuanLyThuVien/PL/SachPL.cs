@@ -11,17 +11,18 @@ using System.Windows.Forms;
 namespace QuanLyThuVien.PL
 {
     public partial class SachPL : Form
-    {
+    {       
         public SachPL()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+            danhSachUSPL1.ShowChinhSua += new EventHandler(btnChinhSua_Click);
         }
         private void btnDanhSach_Click(object sender, EventArgs e)
         {
             SidePanel.Height = btnDanhSach.Height;
             SidePanel.Top = btnDanhSach.Top;
-            DanhSachUSPL.BringToFront();
+            danhSachUSPL1.BringToFront();
         }
 
         private void btnChinhSua_Click(object sender, EventArgs e)
@@ -41,8 +42,7 @@ namespace QuanLyThuVien.PL
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormState.PreviousForm.Show();
-            
+            FormState.PreviousForm.Show();          
         }
 
         private void btnThunho_Click(object sender, EventArgs e)

@@ -64,9 +64,25 @@ namespace QuanLyThuVien.BLL
             return true;
         }
 
-        public bool CapNhatTrangThaiSach(DataGridView dgvBanSao)
+        public bool CapNhatTrangThaiDaChoThue(DataGridView dgvBanSao)
         {
+            for (int i = 0; i<dgvBanSao.RowCount;i++)
+            {
+                var banSao = banSaoDAL.TKBanSaoTheoMa(dgvBanSao.Rows[i].Cells[0].ToString());
+                banSao.TrangThai = ETrangThai.DaChoThue;
+                banSaoDAL.CapNhatBanSao(banSao);
+            }            
+            return true;
+        }
 
+        public bool CapNhatTrangThaiCoSan(DataGridView dgvBanSao)
+        {
+            for (int i = 0; i < dgvBanSao.RowCount; i++)
+            {
+                var banSao = banSaoDAL.TKBanSaoTheoMa(dgvBanSao.Rows[i].Cells[0].ToString());
+                banSao.TrangThai = ETrangThai.CoSan;
+                banSaoDAL.CapNhatBanSao(banSao);
+            }
             return true;
         }
     }

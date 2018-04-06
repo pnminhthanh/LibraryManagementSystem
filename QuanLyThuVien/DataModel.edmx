@@ -320,11 +320,11 @@
           <Property Name="NgayMuonSach" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="HanTraSach" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="NgayTraSach" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="TienDatCoc" Type="Int32" Nullable="false" />
+          <Property Name="TienDatCoc" Type="Decimal" Nullable="false" />
           <NavigationProperty Name="DocGia" Relationship="Self.FK_PhieuMuonSach_DocGia" FromRole="PhieuMuonSach" ToRole="DocGia" />
           <NavigationProperty Name="ThuThu" Relationship="Self.FK_PhieuMuonSach_ThuThu" FromRole="PhieuMuonSach" ToRole="ThuThu" />
           <NavigationProperty Name="BanSaos" Relationship="Self.ChiTietPhieuMuon" FromRole="PhieuMuonSach" ToRole="BanSao" />
-          <Property Name="PhiThue" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="PhiThue" Type="Decimal" />
         </EntityType>
         <EntityType Name="Sach">
           <Key>

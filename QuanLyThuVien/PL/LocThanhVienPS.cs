@@ -10,30 +10,30 @@ using System.Windows.Forms;
 
 namespace QuanLyThuVien.PL
 {
-    public partial class DSThanhVienUSPL : UserControl
+    public partial class LocThanhVienPS : UserControl
     {
         public event EventHandler ShowChinhSua;
-        public DSThanhVienUSPL()
+        public LocThanhVienPS()
         {
             InitializeComponent();
         }
 
-        private void chỉnhSửaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void cậpNhậtToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (ShowChinhSua != null)
                 this.ShowChinhSua(this, e);
         }
 
-        private void xemthôngtinToolStripMenuItem_Click(object sender, EventArgs e)
+        private void xemthoongtinToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ThongTinTV tv = new ThongTinTV();
             tv.Show();
         }
 
-        private void dgvDSThanhVien_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
-                contextMenuStrip1.Show(dgvDSThanhVien.PointToScreen(e.Location));
+                contextMenuStrip1.Show(dgvDSTV.PointToScreen(e.Location));
         }
     }
 }

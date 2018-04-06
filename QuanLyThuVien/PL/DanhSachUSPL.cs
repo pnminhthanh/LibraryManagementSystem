@@ -11,7 +11,8 @@ using System.Windows.Forms;
 namespace QuanLyThuVien.PL
 {
     public partial class DanhSachUSPL : UserControl
-    {       
+    {
+        public event EventHandler ShowChinhSua;
         public DanhSachUSPL()
         {
             InitializeComponent();            
@@ -45,6 +46,12 @@ namespace QuanLyThuVien.PL
         {
             ThongTinSachPL sach = new ThongTinSachPL();
             sach.Show();
+        }
+
+        private void cậpNhậtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ShowChinhSua != null)
+                this.ShowChinhSua(this, e);
         }
     }
 }
