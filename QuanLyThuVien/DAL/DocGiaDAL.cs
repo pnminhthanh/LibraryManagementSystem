@@ -20,6 +20,7 @@ namespace QuanLyThuVien.DAL
             using (QLThuVienEntities ThuVienDS = new QLThuVienEntities())
             {
                 ThuVienDS.DocGias.Add(docGia);
+                ThuVienDS.SaveChanges();
             }
             return true;
         }

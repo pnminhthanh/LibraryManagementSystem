@@ -22,6 +22,7 @@ namespace QuanLyThuVien.DAL
             using (QLThuVienEntities ThuVienDS = new QLThuVienEntities())
             {
                 ThuVienDS.TheLoais.Add(theLoai);
+                ThuVienDS.SaveChanges();
             }
             return true;
         }
@@ -58,6 +59,15 @@ namespace QuanLyThuVien.DAL
                 if (theLoai.TenTheLoai != "none")
                     listTheLoai = listTheLoai.Where<TheLoai>(c => c.TenTheLoai.Contains(theLoai.TenTheLoai));
                 return listTheLoai.ToList();
+            }
+        }
+
+        public TheLoai LayTLTheoMa(string maTheLoai)
+        {
+            using (QLThuVienEntities ThuVienDS = new QLThuVienEntities())
+            {
+                TheLoai theLoai = ThuVienDS.TheLoais.Find(maTheLoai);
+                return theLoai;
             }
         }
     }

@@ -22,6 +22,7 @@ namespace QuanLyThuVien.DAL
                 foreach  (var banSao in ListBanSao)
                 {
                     ThuVienDS.BanSaos.Add(banSao);
+                    ThuVienDS.SaveChanges();
                 }                
             }
             return true;

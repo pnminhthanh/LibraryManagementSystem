@@ -22,6 +22,7 @@ namespace QuanLyThuVien.DAL
             using (QLThuVienEntities ThuVienDS = new QLThuVienEntities())
             {
                 ThuVienDS.PhieuMuonSaches.Add(phieuMuon);
+                ThuVienDS.SaveChanges();
             }
             return true;
         }
