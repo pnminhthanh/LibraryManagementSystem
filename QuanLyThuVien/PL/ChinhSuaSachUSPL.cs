@@ -143,5 +143,23 @@ namespace QuanLyThuVien.PL
         }
         #endregion
 
+        #region TabViTri
+
+        #endregion
+
+        private void btnThemKe_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSuaKe_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnXoaKe_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
