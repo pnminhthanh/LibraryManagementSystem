@@ -503,6 +503,7 @@
             this.btnXoaKe.TabIndex = 12;
             this.btnXoaKe.Text = "XÓA";
             this.btnXoaKe.UseVisualStyleBackColor = false;
+            this.btnXoaKe.Click += new System.EventHandler(this.btnXoaKe_Click);
             // 
             // btnSuaKe
             // 
@@ -516,6 +517,7 @@
             this.btnSuaKe.TabIndex = 13;
             this.btnSuaKe.Text = "SỬA";
             this.btnSuaKe.UseVisualStyleBackColor = false;
+            this.btnSuaKe.Click += new System.EventHandler(this.btnSuaKe_Click);
             // 
             // btnThemKe
             // 
@@ -529,6 +531,7 @@
             this.btnThemKe.TabIndex = 11;
             this.btnThemKe.Text = "THÊM";
             this.btnThemKe.UseVisualStyleBackColor = false;
+            this.btnThemKe.Click += new System.EventHandler(this.btnThemKe_Click);
             // 
             // txtChuDe
             // 

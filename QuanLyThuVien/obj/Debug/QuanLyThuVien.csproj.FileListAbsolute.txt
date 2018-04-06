@@ -38,3 +38,34 @@ C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\Quan
 C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThongTinSachPL.resources
 C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThongTinTV.resources
 C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.TimKiemSachPL.resources
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ChinhSuaPhieuMuonUSPL.resources
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ChinhSuaSachUSPL.resources
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ChinhSuaThanhVienUSPL.resources
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.DanhSachPhieuUSPL.resources
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.DanhSachUSPL.resources
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.DSThanhVienUSPL.resources
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.LocThanhVienPS.resources
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.MuonTraSachPL.resources
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.SachPL.resources
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThanhVienPL.resources
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThemBanSaoPL.resources
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThongTinPhieuPL.resources
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThongTinSachPL.resources
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThongTinTV.resources
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThongTinTVPL.resources
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.Properties.Resources.resources
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.GenerateResource.cache
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CoreCompileInputs.cache
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.MainForm.resources
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\bin\Debug\QuanLyThuVien.pdb
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\bin\Debug\EntityFramework.dll
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\bin\Debug\EntityFramework.xml
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.TimKiemPhieu.resources
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.TimKiemSachPL.resources
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CopyComplete
