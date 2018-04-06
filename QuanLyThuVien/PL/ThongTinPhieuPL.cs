@@ -15,6 +15,7 @@ namespace QuanLyThuVien.PL
         public ThongTinPhieuPL()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

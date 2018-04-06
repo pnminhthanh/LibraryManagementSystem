@@ -23,14 +23,21 @@ namespace QuanLyThuVien.BLL
             }
         }
 
-        public void HienThiDGVTrongPhieuMuon(DataGridView dgvBanSao, TextBox txtMaBanSao)
+        public bool HienThiDGVTrongPhieuMuon(DataGridView dgvBanSao, TextBox txtMaBanSao)
         {
+            bool kq;
             var banSao = banSaoDAL.TKBanSaoTheoMa(txtMaBanSao.Text);
-            int newRowIndex = dgvBanSao.NewRowIndex;
-            dgvBanSao.Rows[newRowIndex].Cells[1].Value = (newRowIndex + 1).ToString();
-            dgvBanSao.Rows[newRowIndex].Cells[1].Value = banSao.MaBanSao;
-            dgvBanSao.Rows[newRowIndex].Cells[2].Value = banSao.Sach.TenSach;
-            dgvBanSao.Rows[newRowIndex].Cells[3].Value = banSao.Sach.GiaTien;
+            if (banSao != null)
+            {
+                int newRowIndex = dgvBanSao.NewRowIndex;
+                dgvBanSao.Rows[newRowIndex].Cells[1].Value = (newRowIndex + 1).ToString();
+                dgvBanSao.Rows[newRowIndex].Cells[1].Value = banSao.MaBanSao;
+                dgvBanSao.Rows[newRowIndex].Cells[2].Value = banSao.Sach.TenSach;
+                dgvBanSao.Rows[newRowIndex].Cells[3].Value = banSao.Sach.GiaTien;
+                kq = true;
+            }
+            else kq = false;
+            return kq;
         }
 
         public void LocBSCoSan(DataGridView dgvBanSao, CheckBox chbCoSan, TextBox txtMaSach)

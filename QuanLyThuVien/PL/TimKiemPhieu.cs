@@ -68,7 +68,8 @@ namespace QuanLyThuVien.PL
 
         private void xemThôngTinToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            ThongTinPhieuPL phieu = new ThongTinPhieuPL();
+            phieu.Show();
         }
 
         private void đánhDấuĐãTrảToolStripMenuItem_Click(object sender, EventArgs e)
