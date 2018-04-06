@@ -91,10 +91,9 @@ namespace QuanLyThuVien.BLL
             return true;
         }
 
-        public bool XoaPhieuMuon(DataGridViewRow dgvrPhieuMuon)
+        public bool XoaPhieuMuon(TextBox txtMaPhieuMuon)
         {
-            string maPhieuMuon = dgvrPhieuMuon.Cells[0].ToString();
-            phieuMuonDAL.XoaPhieuMuon(maPhieuMuon);
+            phieuMuonDAL.XoaPhieuMuon(txtMaPhieuMuon.Text);
             return true;
         }
     }

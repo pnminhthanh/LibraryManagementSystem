@@ -70,6 +70,7 @@
     <Compile Include="BLL\TacGiaBLL.cs" />
     <Compile Include="BLL\TheLoaiBLL.cs" />
     <Compile Include="BLL\ThuThuBLL.cs" />
+    <Compile Include="Components\KtraDuLieu.cs" />
     <Compile Include="DAL\BanSaoDAL.cs" />
     <Compile Include="DAL\DocGiaDAL.cs" />
     <Compile Include="DAL\KeSachDAL.cs" />

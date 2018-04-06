@@ -73,10 +73,9 @@ namespace QuanLyThuVien.BLL
             return true;
         }
 
-        public bool XoaDocGia(DataGridViewRow dgvrDocGia)
+        public bool XoaDocGia(TextBox txtMaDocGia)
         {
-            string maDocGia = dgvrDocGia.Cells[0].ToString();
-            docGiaDAL.XoaDocGia(maDocGia);
+            docGiaDAL.XoaDocGia(txtMaDocGia.Text);
             return true;
         }
     }

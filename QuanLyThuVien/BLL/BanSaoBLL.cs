@@ -72,9 +72,9 @@ namespace QuanLyThuVien.BLL
             return true;
         }
 
-        public bool XoaBanSao(DataGridViewRow dgvrBanSao)
+        public bool XoaBanSao(TextBox txtMaBanSao)
         {
-            banSaoDAL.XoaBanSao(dgvrBanSao.Cells[0].ToString());
+            banSaoDAL.XoaBanSao(txtMaBanSao.Text);
             return true;
         }
 
