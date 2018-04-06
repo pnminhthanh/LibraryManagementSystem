@@ -22,5 +22,9 @@ namespace QuanLyThuVien.Components
         {
             return ((chuoiCMND.Length < 11) && (chuoiCMND.Length > 8) && (int.TryParse(chuoiCMND, out int cmnd)));
         }
+        public static bool CheckNgay(DateTime ngay)
+        {
+            return (ngay.Date != DateTime.Now);
+        }
     }
 }
