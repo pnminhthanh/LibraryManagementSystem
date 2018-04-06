@@ -86,7 +86,7 @@ namespace QuanLyThuVien.PL
             {
                 if (rbtnNam.Checked || rbtnNu.Checked)
                 {
-                    if (dtpNgaySinh.Value.Date != DateTime.Now.Date)
+                    if (dtpNgaySinh.ValueChange)
                     {
                         if (KtraDuLieu.CheckSDT(txtSDT.Text))
                         {
