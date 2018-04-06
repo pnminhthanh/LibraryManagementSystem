@@ -41,6 +41,7 @@ C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\Quan
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ChinhSuaPhieuMuonUSPL.resources
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ChinhSuaSachUSPL.resources
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ChinhSuaThanhVienUSPL.resources
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.DanhSachPhieuUSPL.resources
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.DanhSachUSPL.resources
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.DSThanhVienUSPL.resources
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.LocThanhVienPS.resources
@@ -50,6 +51,7 @@ C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThemBanSaoPL.resources
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThongTinPhieuPL.resources
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThongTinSachPL.resources
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThongTinTV.resources
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThongTinTVPL.resources
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.Properties.Resources.resources
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.GenerateResource.cache
@@ -71,5 +73,36 @@ C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\Quan
 C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThongTinPhieuPL.resources
 C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThongTinTVPL.resources
 C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.TimKiemPhieu.resources
-C:\Users\Minh Thanh\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThuThuPL.resources
-C:\Users\Minh Thanh\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.csprojResolveAssemblyReference.cache
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.csprojResolveAssemblyReference.cache
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\bin\Debug\QuanLyThuVien.pdb
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\bin\Debug\EntityFramework.dll
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\bin\Debug\EntityFramework.SqlServer.dll
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\bin\Debug\EntityFramework.xml
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\bin\Debug\EntityFramework.SqlServer.xml
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.csprojResolveAssemblyReference.cache
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ChinhSuaPhieuMuonUSPL.resources
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ChinhSuaSachUSPL.resources
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ChinhSuaThanhVienUSPL.resources
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.DanhSachPhieuUSPL.resources
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.DanhSachUSPL.resources
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.DSThanhVienUSPL.resources
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.LocThanhVienPS.resources
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.MainForm.resources
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.MuonTraSachPL.resources
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.SachPL.resources
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThanhVienPL.resources
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThemBanSaoPL.resources
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThongTinPhieuPL.resources
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThongTinSachPL.resources
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThongTinTV.resources
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThongTinTVPL.resources
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.TimKiemPhieu.resources
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.TimKiemSachPL.resources
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.Properties.Resources.resources
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.GenerateResource.cache
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CoreCompileInputs.cache
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CopyComplete
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
+E:\OneDrive\Documents\Visual Studio 2017\Projects\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb

@@ -12,7 +12,7 @@ namespace QuanLyThuVien.BLL
     {
         private TacGiaDAL tacGiaDAL = new TacGiaDAL();
 
-        public void HienThiDSTacGia(DataGridView dgvListTacGia)
+        public void HienThiDataGridView(DataGridView dgvListTacGia)
         {
             List<TacGia> listTacGia = tacGiaDAL.LayDSTacGia();
             for (int i = 0; i < listTacGia.Count; i++)
@@ -25,34 +25,47 @@ namespace QuanLyThuVien.BLL
             }
         }
 
-        public void TKTacGia(TextBox txtMaTacGia, TextBox txtTenTacGia, DateTimePicker dpNgaySinh, RadioButton rbGioiTinh, DataGridView dgvListTacGia)
+        public void HienThiComboBox(ComboBox cbTacGia)
+        {
+            cbTacGia.DataSource = tacGiaDAL.LayDSTacGia();
+            cbTacGia.DisplayMember = "TenTacGia";
+            cbTacGia.ValueMember = "MaTacGia";
+        }
+
+        public void TKTacGia(TextBox txtMaTacGia, TextBox txtTenTacGia, DateTimePicker dpNgaySinh, RadioButton rbNam, RadioButton rbNu, DataGridView dgvListTacGia)
         {
             TacGia tacGia = new TacGia();
             tacGia.MaTacGia = txtMaTacGia.Text;
             tacGia.TenTacGia = txtTenTacGia.Text;
             tacGia.NgaySinh = dpNgaySinh.Value.Date;
-            tacGia.GioiTinh = rbGioiTinh.Text;
+            if (rbNam.Checked)
+                tacGia.GioiTinh = rbNam.Text;
+            else tacGia.GioiTinh = rbNu.Text;
             dgvListTacGia.DataSource = tacGiaDAL.TimKiemTacGia(tacGia);
         }
 
-        public bool ThemTacGia(TextBox txtMaTacGia, TextBox txtTenTacGia, DateTimePicker dpNgaySinh, RadioButton rbGioiTinh)
+        public bool ThemTacGia(TextBox txtMaTacGia, TextBox txtTenTacGia, DateTimePicker dpNgaySinh, RadioButton rbNam, RadioButton rbNu)
         {
             TacGia tacGia = new TacGia();
             tacGia.MaTacGia = txtMaTacGia.Text;
             tacGia.TenTacGia = txtTenTacGia.Text;
             tacGia.NgaySinh = dpNgaySinh.Value.Date;
-            tacGia.GioiTinh = rbGioiTinh.Text;
+            if (rbNam.Checked)
+                tacGia.GioiTinh = rbNam.Text;
+            else tacGia.GioiTinh = rbNu.Text;
             tacGiaDAL.ThemTacGia(tacGia);
             return true;
         }
 
-        public bool CapNhatDocGia(TextBox txtMaTacGia, TextBox txtTenTacGia, DateTimePicker dpNgaySinh, RadioButton rbGioiTinh)
+        public bool CapNhatTacGia(TextBox txtMaTacGia, TextBox txtTenTacGia, DateTimePicker dpNgaySinh, RadioButton rbNam, RadioButton rbNu)
         {
             TacGia tacGia = new TacGia();
             tacGia.MaTacGia = txtMaTacGia.Text;
             tacGia.MaTacGia = txtMaTacGia.Text;
             tacGia.NgaySinh = dpNgaySinh.Value.Date;
-            tacGia.GioiTinh = rbGioiTinh.Text;
+            if (rbNam.Checked)
+                tacGia.GioiTinh = rbNam.Text;
+            else tacGia.GioiTinh = rbNu.Text;
             tacGiaDAL.CapNhatTacGia(tacGia);
             return true;
         }
@@ -61,6 +74,17 @@ namespace QuanLyThuVien.BLL
         {
             tacGiaDAL.XoaTacGia(txtMaTacGia.Text);
             return true;
+        }
+
+        public void HienThiTacGia(TextBox txtMaTacGia, TextBox txtTenTacGia, DateTimePicker dpNgaySinh, RadioButton rbNam, RadioButton rbNu, DataGridViewRow dgvrTacGia)
+        {
+            TacGia tacGia = tacGiaDAL.LayTGTheoMa(dgvrTacGia.Cells[1].Value.ToString());
+            txtMaTacGia.Text = tacGia.MaTacGia;
+            txtTenTacGia.Text = tacGia.TenTacGia;
+            dpNgaySinh.Value = tacGia.NgaySinh.Value;
+            if (tacGia.GioiTinh == "Nam")
+                rbNam.Checked = true;
+            else rbNu.Checked = false;
         }
     }
 }

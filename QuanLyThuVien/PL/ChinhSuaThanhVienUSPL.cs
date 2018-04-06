@@ -86,14 +86,14 @@ namespace QuanLyThuVien.PL
             {
                 if (rbtnNam.Checked || rbtnNu.Checked)
                 {
-                    //if (dtpNgaySinh.ValueChange)
-                    //{
-                    //    if (KtraDuLieu.CheckSDT(txtSDT.Text))
-                    //    {
+                    if (true)
+                    {
+                        if (KtraDuLieu.CheckSDT(txtSDT.Text))
+                        {
 
-                    //    }
-                    //}
-                    //else MessageBox.Show("Please try again! Error: Wrong type of information");
+                        }
+                    }
+                    else MessageBox.Show("Please try again! Error: Wrong type of information");
                 }
                 else MessageBox.Show("Please try again! Error: Wrong type of information");
             }

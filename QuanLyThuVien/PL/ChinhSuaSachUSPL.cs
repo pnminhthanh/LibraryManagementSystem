@@ -95,10 +95,10 @@ namespace QuanLyThuVien.PL
             get { return txtTenTacGia; }
             set { txtTenTacGia = value; }
         }
-        public DateTimePicker DtpNgaySinh
+        public DateTimePicker dtpNamSinh
         {
-            get { return dtpNgaySinh; }
-            set { dtpNgaySinh = value; }
+            get { return dtpNgaySinhTG; }
+            set { dtpNgaySinhTG = value; }
         }
         public RadioButton RbtnNam
         {
@@ -124,8 +124,8 @@ namespace QuanLyThuVien.PL
         }
         public TextBox TxtTenChuDe
         {
-            get { return txtTenChuDe; }
-            set { txtTenChuDe = value; }
+            get { return txtTenTheLoai; }
+            set { txtTenTheLoai = value; }
         }
         public DataGridView DgvDSTheLoai
         {
@@ -136,111 +136,381 @@ namespace QuanLyThuVien.PL
         #endregion
 
         DataGridViewRow row;
-        SachBLL sach = new SachBLL();
+        SachBLL sachBLL = new SachBLL();
         KeSachBLL keSachBLL = new KeSachBLL();
         TacGiaBLL tacGiaBLL = new TacGiaBLL();
         TheLoaiBLL theLoaiBLL = new TheLoaiBLL();
+        BanSaoBLL banSaoBLL = new BanSaoBLL();
+
         public ChinhSuaSachUSPL()
         {
             InitializeComponent();
-
         }
+
         #region TabSach
+        
+        private void tabPageSach_Enter(object sender, EventArgs e)
+        {
+            keSachBLL.HienThiComboBox(cbMaKe);
+            tacGiaBLL.HienThiComboBox(cbTacGia);
+            theLoaiBLL.HienThiComboBox(cbTheLoai1);
+            theLoaiBLL.HienThiComboBox(cbTheLoai2);
+            theLoaiBLL.HienThiComboBox(cbTheLoai3);
+        }
+
         private void btnThem_Click(object sender, EventArgs e)
         {
+            if (!KtraDuLieu.CheckMa(txtMaSach.Text))
+            {
+                MessageBox.Show("Mã sách không hợp lệ!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (!KtraDuLieu.CheckTien(TxtGiaTien.Text))
+                {
+                    MessageBox.Show("Giá tiền không hợp lệ!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    if (!KtraDuLieu.CheckNam(txtNamXuatBan.Text))
+                    {
+                        MessageBox.Show("Năm xuất bản không hợp lệ!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        if (!KtraDuLieu.CheckMa(txtSoBanSao.Text))
+                        {
+                            MessageBox.Show("Số bản sao không hợp lệ!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else
+                        {
+                            List<ComboBox> listCbTheLoai = new List<ComboBox> { cbTheLoai1, cbTheLoai2, cbTheLoai3 };
+                            if ((banSaoBLL.ThemBanSao(txtMaSach, txtMaSach)) && (sachBLL.ThemSachMoi(txtMaSach, txtTenSach, txtNhaXuatBan, txtGiaTien, txtNamXuatBan, cbTacGia, listCbTheLoai, rtxtNoiDung, openFileDialog1)))
+                            {
+                                MessageBox.Show("Thêm bản sao thành công");
+                            }
+                            else MessageBox.Show("Thao tác thất bại! Mời nhập lại.");
+                        }
+                    }
+                }                
+            }
+        }
+        
+        private void btnTaoBanSao_Click(object sender, EventArgs e)
+        {
+            if (!KtraDuLieu.CheckMa(txtMaSach.Text))
+            {
+                MessageBox.Show("Mã sách không hợp lệ!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (!KtraDuLieu.CheckMa(txtSoBanSao.Text))
+                {
+                    MessageBox.Show("Số bản sao không hợp lệ!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    if (banSaoBLL.ThemBanSao(txtMaSach, txtSoBanSao))
+                    {
+                        MessageBox.Show("Thêm bản sao thành công");
+                    }
+                    else MessageBox.Show("Thao tác thất bại! Mời nhập lại.");
+                }                
+            }
+        }
 
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if (!KtraDuLieu.CheckMa(txtMaSach.Text))
+            {
+                MessageBox.Show("Mã sách không hợp lệ!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (!KtraDuLieu.CheckTien(TxtGiaTien.Text))
+                {
+                    MessageBox.Show("Giá tiền không hợp lệ!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    if (!KtraDuLieu.CheckNam(txtNamXuatBan.Text))
+                    {
+                        MessageBox.Show("Năm xuất bản không hợp lệ!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        if (!KtraDuLieu.CheckMa(txtSoBanSao.Text))
+                        {
+                            MessageBox.Show("Số bản sao không hợp lệ!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else
+                        {
+                            List<ComboBox> listCbTheLoai = new List<ComboBox> { cbTheLoai1 };
+                            if ((sachBLL.SuaThongTinSach(txtMaSach, txtTenSach, txtNhaXuatBan, txtGiaTien, txtNamXuatBan, cbTacGia, listCbTheLoai, rtxtNoiDung, openFileDialog1)))
+                            {
+                                MessageBox.Show("Thêm bản sao thành công");
+                            }
+                            else MessageBox.Show("Thao tác thất bại! Mời nhập lại.");
+                        }
+                    }
+                }
+            }
+        }
+        
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            DialogResult confirm = new DialogResult();
+            confirm = MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Confirm", MessageBoxButtons.YesNo);
+            if (confirm == DialogResult.Yes)
+            {
+                if (sachBLL.XoaSach(txtMaSach))
+                {
+                    MessageBox.Show("Xóa sách thành công");
+                }
+                else MessageBox.Show("Thao tác thất bại! Mời thao tác lại.");
+            }
+        }
+        
+        private void btnTimAnh_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "Image Files(*.jpeg;*.bmp;*.png;*.jpg)|*.jpeg;*.bmp;*.png;*.jpg";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string fulllocimage = openFileDialog1.FileName;
+                pbBiaSach.ImageLocation = fulllocimage;
+            }
         }
         #endregion
+
         #region TabViTri
         private void btnThemKe_Click(object sender, EventArgs e)
         {
             if (!KtraDuLieu.CheckMa(txtMaKe.Text))
             {
-                MessageBox.Show("Chỉ nhập số vào ô Mã Kệ!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Mã kệ sách không hợp lệ!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
                 if (keSachBLL.ThemKeMoi(txtMaKe, txtChuDe))
                 {
                     MessageBox.Show("Thêm kệ thành công");
-                    UpdateDGV();
+                    UpdateDGVKeSach();
                 }
                 else MessageBox.Show("Thao tác thất bại! Mời nhập lại.");
             }
         }
+
         private void btnSuaKe_Click(object sender, EventArgs e)
         {
             if (KtraDuLieu.CheckMa(txtMaKe.Text))
             {
-                MessageBox.Show("Chỉ nhập số vào ô Mã Kệ!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Mã kệ sách không hợp lệ!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
                 if (keSachBLL.SuaThongTinSach(txtMaKe, txtChuDe))
-                    MessageBox.Show("Sửa kệ thành công");
+                    MessageBox.Show("Sửa kệ sách thành công");
                 else MessageBox.Show("Thao tác thất bại! Mời nhập lại.");
             }
-            UpdateDGV();
+            UpdateDGVKeSach();
         }
+
         private void btnXoaKe_Click(object sender, EventArgs e)
         {
-            keSachBLL.XoaKeSach(txtMaKe);
-            UpdateDGV();
+            DialogResult confirm = new DialogResult();
+            confirm = MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Confirm", MessageBoxButtons.YesNo);
+            if (confirm == DialogResult.Yes)
+            {
+                if (keSachBLL.XoaKeSach(txtMaKe))
+                {
+                    MessageBox.Show("Xóa kệ sách thành công");
+                    UpdateDGVKeSach();
+                }
+                else MessageBox.Show("Thao tác thất bại! Mời thao tác lại.");
+            }            
         }
-        private void UpdateDGV()
+
+        private void UpdateDGVKeSach()
         {
             dgvDSKeSach.DataSource = null;
             keSachBLL.HienThiDataGridView(dgvDSKeSach);
         }
+
+        private void tabPage2_Enter(object sender, EventArgs e)
+        {
+            UpdateDGVKeSach();
+        }
+
         private void dgvDSKeSach_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             row = dgvDSKeSach.Rows[e.RowIndex];
+            keSachBLL.HienThiKeSach(txtMaKe, TxtTenChuDe, row);
         }
+
         #endregion
 
-        //Thieu kiem tra ngay sinh
         #region TabTacGia
+        private void UpdateDGVTacGia()
+        {
+            dgvDSTacGia.DataSource = null;
+            tacGiaBLL.HienThiDataGridView(dgvDSTacGia);
+        }
+
+        private void tabPage3_Enter(object sender, EventArgs e)
+        {
+            UpdateDGVTacGia();
+        }
+
         private void btnThemTG_Click(object sender, EventArgs e)
         {
             if (!KtraDuLieu.CheckMa(txtMaTacGia.Text))
             {
-                MessageBox.Show("Chỉ nhập số vào ô Mã Kệ!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Mã sách không hợp lệ!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            //Kiem tra ngay sinh
-            //else if ()
             else
             {
-                //if (tacGiaBLL.ThemTacGia(txtMaTacGia,txtTenTacGia,dtpNgaySinh,)
-                //{
-                //    MessageBox.Show("Thêm thành công");
-                //    UpdateDGVTG();
-                //}
-                //else MessageBox.Show("Thao tác thất bại! Mời nhập lại.");
+                if (!KtraDuLieu.CheckNgay(dtpNgaySinhTG.Value))
+                {
+                    MessageBox.Show("Ngày sinh không hợp lệ!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    if (rbtnNam.Checked || rbtnNu.Checked)
+                    {
+                        MessageBox.Show("Giới tính không hợp lệ!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {                        
+                        if (tacGiaBLL.ThemTacGia(txtMaTacGia, txtTenTacGia, dtpNgaySinhTG, rbtnNam, rbtnNu))
+                        {
+                            MessageBox.Show("Thêm tác giả thành công");
+                            UpdateDGVTacGia();
+                        }
+                        else MessageBox.Show("Thao tác thất bại! Mời nhập lại.");
+                    }
+                }
             }
         }
 
         private void btnSuaTG_Click(object sender, EventArgs e)
         {
-
+            if (!KtraDuLieu.CheckMa(txtMaTacGia.Text))
+            {
+                MessageBox.Show("Mã sách không hợp lệ!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (!KtraDuLieu.CheckNgay(dtpNgaySinhTG.Value))
+                {
+                    MessageBox.Show("Ngày sinh không hợp lệ!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    if (rbtnNam.Checked || rbtnNu.Checked)
+                    {
+                        MessageBox.Show("Giới tính không hợp lệ!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        if (tacGiaBLL.CapNhatTacGia(txtMaTacGia, txtTenTacGia, dtpNgaySinhTG, rbtnNam, rbtnNu))
+                        {
+                            MessageBox.Show("Sửa tác giả thành công");
+                            UpdateDGVTacGia();
+                        }
+                        else MessageBox.Show("Thao tác thất bại! Mời nhập lại.");
+                    }
+                }
+            }
         }
 
         private void btnXoaTG_Click(object sender, EventArgs e)
         {
-
+            DialogResult confirm = new DialogResult();
+            confirm = MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Confirm", MessageBoxButtons.YesNo);
+            if (confirm == DialogResult.Yes)
+            {
+                if (tacGiaBLL.XoaTacGia(TxtMaTacGia))
+                {
+                    MessageBox.Show("Xóa tác giả thành công");
+                    UpdateDGVTacGia();
+                }
+                else MessageBox.Show("Thao tác thất bại! Mời thao tác lại.");
+            }
         }
 
         private void dgvDSTacGia_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            row = dgvDSTacGia.Rows[e.RowIndex];
+            tacGiaBLL.HienThiTacGia(txtMaTacGia, txtTenTacGia, dtpNgaySinhTG, rbtnNam, rbtnNu, row);
         }
 
-        private void UpdateDGVTG()
-        {
-            dgvDSTacGia.DataSource = null;
-            tacGiaBLL.HienThiDSTacGia(dgvDSTacGia);
-        }
         #endregion
 
+        #region TabTheLoai
+        private void tabPage4_Enter(object sender, EventArgs e)
+        {
+            UpdateDGVTheLoai();
+        }
+
+        public void UpdateDGVTheLoai()
+        {
+            DgvDSTheLoai.DataSource = null;
+            theLoaiBLL.HienThiDataGridView(DgvDSTheLoai);
+        }
+
+        private void btnThemTL_Click(object sender, EventArgs e)
+        {
+            if (!KtraDuLieu.CheckMa(txtMaChuDe.Text))
+            {
+                MessageBox.Show("Mã thể loại không hợp lệ!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (theLoaiBLL.ThemTheLoai(txtMaChuDe, txtTenTheLoai))
+                {
+                    MessageBox.Show("Thêm thể loại thành công");
+                    UpdateDGVTheLoai();
+                }
+                else MessageBox.Show("Thao tác thất bại! Mời nhập lại.");
+            }
+        }
+
+        private void btnSuaTL_Click(object sender, EventArgs e)
+        {
+            if (KtraDuLieu.CheckMa(txtMaChuDe.Text))
+            {
+                MessageBox.Show("Mã thể loại không hợp lệ!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (theLoaiBLL.SuaThongTin(txtMaChuDe, txtTenTheLoai))
+                    MessageBox.Show("Sửa thể loại thành công");
+                else MessageBox.Show("Thao tác thất bại! Mời nhập lại.");
+            }
+            UpdateDGVKeSach();
+        }
+
+        private void btnXoaTL_Click(object sender, EventArgs e)
+        {
+            DialogResult confirm = new DialogResult();
+            confirm = MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Confirm", MessageBoxButtons.YesNo);
+            if (confirm == DialogResult.Yes)
+            {
+                if (theLoaiBLL.XoaTheLoai(txtMaChuDe))
+                {
+                    MessageBox.Show("Xóa thể loại thành công");
+                    UpdateDGVTheLoai();
+                }
+                else MessageBox.Show("Thao tác thất bại! Mời thao tác lại.");
+            }
+        }
+
+        private void dgvDSTheLoai_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            row = DgvDSTheLoai.Rows[e.RowIndex];
+            theLoaiBLL.LayTLTheoMa(txtMaChuDe, txtTenTheLoai, row);
+        }
+        #endregion
 
     }
 }

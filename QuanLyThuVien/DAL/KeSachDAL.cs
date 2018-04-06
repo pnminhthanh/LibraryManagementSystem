@@ -19,9 +19,10 @@ namespace QuanLyThuVien.DAL
 
         public bool ThemKeSach(KeSach keSach)
         {
-            using (QLThuVienEntities ThuVienDS = new QLThuVienEntities())
+            using (var ThuVienDS = new QLThuVienEntities())
             {
                 ThuVienDS.KeSaches.Add(keSach);
+                ThuVienDS.SaveChanges();
             }
             return true;
         }
@@ -59,12 +60,12 @@ namespace QuanLyThuVien.DAL
             }
         }
 
-        public List<Sach> LocBanSaoTheoKe(string maKeSach)
+        public KeSach LayKeSachTheoMa(string maKeSach)
         {
             using (QLThuVienEntities ThuVienDS = new QLThuVienEntities())
             {
-                var listBanSao = from s in ThuVienDS.Saches where s.MaKeSach == maKeSach select s;
-                return listBanSao.ToList();
+                KeSach keSach = ThuVienDS.KeSaches.Find(maKeSach);                
+                return keSach;
             }
         }
     }

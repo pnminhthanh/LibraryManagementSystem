@@ -30,7 +30,7 @@ namespace QuanLyThuVien.BLL
             cbTheLoai.ValueMember = "MaTheLoai";
         }
 
-        public bool ThemtheLoai(TextBox txtMaTheLoai, TextBox txtTenTheLoai)
+        public bool ThemTheLoai(TextBox txtMaTheLoai, TextBox txtTenTheLoai)
         {
             TheLoai theLoai = new TheLoai();
             theLoai.MaTheLoai = txtMaTheLoai.Text;
@@ -51,6 +51,14 @@ namespace QuanLyThuVien.BLL
         public bool XoaTheLoai(TextBox txtMaTheLoai)
         {
             TheLoaiDAL.XoaTheLoai(txtMaTheLoai.Text);
+            return true;
+        }
+
+        public bool LayTLTheoMa(TextBox txtMaTheLoai, TextBox txtTenTheLoai, DataGridViewRow dgvrTL)
+        {
+            TheLoai theLoai = TheLoaiDAL.LayTLTheoMa(dgvrTL.Cells[1].Value.ToString());
+            txtMaTheLoai.Text = theLoai.MaTheLoai;
+            txtTenTheLoai.Text = theLoai.TenTheLoai;
             return true;
         }
     }

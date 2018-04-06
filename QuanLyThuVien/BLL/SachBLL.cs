@@ -35,7 +35,7 @@ namespace QuanLyThuVien.BLL
             dgvListSach.DataSource = sachDAL.LayDSSachTheoTheLoai(listMaTL);
         }
 
-        public bool ThemSachMoi(TextBox txtMaSach, TextBox txtTenSach, TextBox txtNXB, TextBox txtGia, TextBox txtNamXB, ComboBox cbTacGia, List<ComboBox> listCbTheLoai, TextBox txtTomTat, OpenFileDialog ofdBiaSach)
+        public bool ThemSachMoi(TextBox txtMaSach, TextBox txtTenSach, TextBox txtNXB, TextBox txtGia, TextBox txtNamXB, ComboBox cbTacGia, List<ComboBox> listCbTheLoai, RichTextBox rtxtTomTat, OpenFileDialog ofdBiaSach)
         {
             Sach sach = new Sach();
             sach.MaSach = txtMaSach.Text;
@@ -55,7 +55,7 @@ namespace QuanLyThuVien.BLL
                 theLoai.MaTheLoai = item.ValueMember;
                 sach.TheLoais.Add(theLoai);
             }
-            sach.TomTatNoiDung = txtTomTat.Text;
+            sach.TomTatNoiDung = rtxtTomTat.Text;
             if (ofdBiaSach.FileName != "openFileDialog1")
             {
                 string fileName = ofdBiaSach.FileName;
@@ -66,7 +66,7 @@ namespace QuanLyThuVien.BLL
             return true;
         }
 
-        public bool SuaThongTinSach(TextBox txtMaSach, TextBox txtTenSach, TextBox txtNXB, TextBox txtGia, TextBox txtNamXB, ComboBox cbTacGia, List<ComboBox> listCbTheLoai, TextBox txtTomTat, OpenFileDialog ofdBiaSach)
+        public bool SuaThongTinSach(TextBox txtMaSach, TextBox txtTenSach, TextBox txtNXB, TextBox txtGia, TextBox txtNamXB, ComboBox cbTacGia, List<ComboBox> listCbTheLoai, RichTextBox rtxtTomTat, OpenFileDialog ofdBiaSach)
         {
             Sach sach = new Sach();
             sach.MaSach = txtMaSach.Text;
@@ -85,7 +85,7 @@ namespace QuanLyThuVien.BLL
                 int i = 0;
                 item.MaTheLoai = listCbTheLoai[i].ValueMember;
             }
-            sach.TomTatNoiDung = txtTomTat.Text;
+            sach.TomTatNoiDung = rtxtTomTat.Text;
             if (ofdBiaSach.FileName != "openFileDialog1")
             {
                 string fileName = ofdBiaSach.FileName;

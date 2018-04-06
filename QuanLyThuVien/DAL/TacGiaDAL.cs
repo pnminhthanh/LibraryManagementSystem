@@ -22,6 +22,7 @@ namespace QuanLyThuVien.DAL
             using (QLThuVienEntities ThuVienDS = new QLThuVienEntities())
             {
                 ThuVienDS.TacGias.Add(tacGia);
+                ThuVienDS.SaveChanges();
             }
             return true;
         }
@@ -63,6 +64,15 @@ namespace QuanLyThuVien.DAL
                     listTacGia = listTacGia.Where<TacGia>(c => Convert.ToString(c.NgaySinh).Contains(tacGia.TenTacGia));
                 return listTacGia.ToList();
             }
+        }
+
+        public TacGia LayTGTheoMa(string maTacGia)
+        {
+            using (QLThuVienEntities ThuVienDS = new QLThuVienEntities())
+            {
+                TacGia tacGia = ThuVienDS.TacGias.Find(maTacGia);
+                return tacGia;
+            }            
         }
     }
 }
