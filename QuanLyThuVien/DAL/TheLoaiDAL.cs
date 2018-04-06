@@ -37,11 +37,11 @@ namespace QuanLyThuVien.DAL
             return true;
         }
 
-        public bool XoaTheLoai(TheLoai theLoai)
+        public bool XoaTheLoai(string maTheLoai)
         {
             using (QLThuVienEntities ThuVienDs = new QLThuVienEntities())
             {
-                var tLoai = ThuVienDs.TheLoais.Find(theLoai.MaTheLoai);
+                var tLoai = ThuVienDs.TheLoais.Find(maTheLoai);
                 ThuVienDs.TheLoais.Remove(tLoai);
                 ThuVienDs.SaveChanges();
             }

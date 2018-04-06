@@ -96,10 +96,9 @@ namespace QuanLyThuVien.BLL
             return true;
         }
 
-        public bool XoaSach(DataGridViewRow dgvrSach)
+        public bool XoaSach(TextBox txtMaSach)
         {
-            string maSach = dgvrSach.Cells[0].ToString();
-            sachDAL.XoaSach(maSach);
+            sachDAL.XoaSach(txtMaSach.Text);
             return true;
         }
     }

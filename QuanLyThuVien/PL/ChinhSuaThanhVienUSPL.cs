@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyThuVien.Components;
 
 namespace QuanLyThuVien.PL
 {
@@ -67,6 +68,36 @@ namespace QuanLyThuVien.PL
         public ChinhSuaThanhVienUSPL()
         {
             InitializeComponent();
+        }
+
+        private void btnTimAnh_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "Image Files(*.jpeg;*.bmp;*.png;*.jpg)|*.jpeg;*.bmp;*.png;*.jpg";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string fulllocimage = openFileDialog1.FileName;
+                pbHinhTV.ImageLocation = fulllocimage;
+            }
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            if (KtraDuLieu.CheckMa(txtMaThanhVien.Text))
+            {
+                if (rbtnNam.Checked || rbtnNu.Checked)
+                {
+                    if (dtpNgaySinh.Value.Date != DateTime.Now.Date)
+                    {
+                        if (KtraDuLieu.CheckSDT(txtSDT.Text))
+                        {
+
+                        }
+                    }
+                    else MessageBox.Show("Please try again! Error: Wrong type of information");
+                }
+                else MessageBox.Show("Please try again! Error: Wrong type of information");
+            }
+            else MessageBox.Show("Please try again! Error: Wrong type of information");
         }
     }
 }

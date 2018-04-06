@@ -65,10 +65,9 @@ namespace QuanLyThuVien.BLL
             return true;
         }
 
-        public bool XoaThuThu(DataGridViewRow dgvrThuThu)
-        {
-            string maThuthu = dgvrThuThu.Cells[0].ToString();
-            thuThuDAL.XoaThuThu(maThuthu);
+        public bool XoaThuThu(TextBox txtMaThuThu)
+        {            
+            thuThuDAL.XoaThuThu(txtMaThuThu.Text);
             return true;
         }
     }

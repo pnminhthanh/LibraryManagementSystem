@@ -69,4 +69,7 @@ C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\bin\Debug
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.TimKiemPhieu.resources
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.TimKiemSachPL.resources
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CopyComplete
-C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.csprojResolveAssemblyReference.cache
+C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.csprojResolveAssemblyReference.cache
+C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThongTinPhieuPL.resources
+C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThongTinTVPL.resources
+C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.TimKiemPhieu.resources

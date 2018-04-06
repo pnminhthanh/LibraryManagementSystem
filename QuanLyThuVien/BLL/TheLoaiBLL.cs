@@ -48,10 +48,9 @@ namespace QuanLyThuVien.BLL
             return true;
         }
 
-        public bool XoaKeSach(DataGridViewRow dgvrKeSach)
+        public bool XoaTheLoai(TextBox txtMaTheLoai)
         {
-            string maKeSach = dgvrKeSach.Cells[1].ToString();
-            TheLoaiDAL.XoaKeSach(maKeSach);
+            TheLoaiDAL.XoaTheLoai(txtMaTheLoai.Text);
             return true;
         }
     }
