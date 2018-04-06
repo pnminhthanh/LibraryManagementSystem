@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyThuVien.BLL;
+using QuanLyThuVien.Components;
 
 namespace QuanLyThuVien.PL
 {
@@ -154,8 +155,7 @@ namespace QuanLyThuVien.PL
         #region TabViTri
         private void btnThemKe_Click(object sender, EventArgs e)
         {
-            int outParse;
-            if (!int.TryParse(txtMaKe.Text, out outParse))
+            if (!KtraDuLieu.CheckMa(txtMaKe.Text))
             {
                 MessageBox.Show("Chỉ nhập số vào ô Mã Kệ!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -171,8 +171,7 @@ namespace QuanLyThuVien.PL
         }
         private void btnSuaKe_Click(object sender, EventArgs e)
         {
-            int outParse;
-            if (int.TryParse(txtMaKe.Text, out outParse))
+            if (KtraDuLieu.CheckMa(txtMaKe.Text))
             {
                 MessageBox.Show("Chỉ nhập số vào ô Mã Kệ!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -186,7 +185,7 @@ namespace QuanLyThuVien.PL
         }
         private void btnXoaKe_Click(object sender, EventArgs e)
         {
-            keSachBLL.XoaKeSach(row);
+            keSachBLL.XoaKeSach(txtMaKe);
             UpdateDGV();
         }
 

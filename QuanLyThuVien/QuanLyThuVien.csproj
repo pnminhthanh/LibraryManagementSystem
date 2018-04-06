@@ -142,7 +142,7 @@
     <Compile Include="PL\DSThanhVienUSPL.designer.cs">
       <DependentUpon>DSThanhVienUSPL.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\FormState.cs" />
+    <Compile Include="Components\FormState.cs" />
     <Compile Include="PL\LocThanhVienPS.cs">
       <SubType>UserControl</SubType>
     </Compile>
