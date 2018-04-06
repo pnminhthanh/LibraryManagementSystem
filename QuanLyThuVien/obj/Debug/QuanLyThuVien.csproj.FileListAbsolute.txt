@@ -69,3 +69,4 @@ C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\bin\Debug
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.TimKiemPhieu.resources
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.TimKiemSachPL.resources
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CopyComplete
+C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.csprojResolveAssemblyReference.cache

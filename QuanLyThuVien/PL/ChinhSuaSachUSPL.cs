@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyThuVien.BLL;
 
 namespace QuanLyThuVien.PL
 {
@@ -132,9 +133,16 @@ namespace QuanLyThuVien.PL
         }
         #endregion
         #endregion
+
+        DataGridViewRow row;
+        SachBLL sach = new SachBLL();
+        KeSachBLL keSachBLL = new KeSachBLL();
+        TacGiaBLL tacGiaBLL = new TacGiaBLL();
+        TheLoaiBLL theLoaiBLL = new TheLoaiBLL();
         public ChinhSuaSachUSPL()
         {
             InitializeComponent();
+
         }
         #region TabSach
         private void btnThem_Click(object sender, EventArgs e)
@@ -144,22 +152,56 @@ namespace QuanLyThuVien.PL
         #endregion
 
         #region TabViTri
+        private void btnThemKe_Click(object sender, EventArgs e)
+        {
+            int outParse;
+            if (!int.TryParse(txtMaKe.Text, out outParse))
+            {
+                MessageBox.Show("Chỉ nhập số vào ô Mã Kệ!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (keSachBLL.ThemKeMoi(txtMaKe, txtChuDe))
+                {
+                    MessageBox.Show("Thêm kệ thành công");
+                    UpdateDGV();
+                }
+                else MessageBox.Show("Thao tác thất bại! Mời nhập lại.");
+            }
+        }
+        private void btnSuaKe_Click(object sender, EventArgs e)
+        {
+            int outParse;
+            if (int.TryParse(txtMaKe.Text, out outParse))
+            {
+                MessageBox.Show("Chỉ nhập số vào ô Mã Kệ!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (keSachBLL.SuaThongTinSach(txtMaKe, txtChuDe))
+                    MessageBox.Show("Sửa kệ thành công");
+                else MessageBox.Show("Thao tác thất bại! Mời nhập lại.");
+            }
+            UpdateDGV();
+        }
+        private void btnXoaKe_Click(object sender, EventArgs e)
+        {
+            keSachBLL.XoaKeSach(row);
+            UpdateDGV();
+        }
+
+        private void UpdateDGV()
+        {
+            dgvDSKeSach.DataSource = null;
+            keSachBLL.HienThiDataGridView(dgvDSKeSach);
+        }
+
+        private void dgvDSKeSach_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            row = dgvDSKeSach.Rows[e.RowIndex];
+        }
 
         #endregion
 
-        private void btnThemKe_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSuaKe_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnXoaKe_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

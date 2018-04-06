@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabChinhSua = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.cbMaKe = new System.Windows.Forms.ComboBox();
@@ -552,6 +553,14 @@
             // dgvDSKeSach
             // 
             this.dgvDSKeSach.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDSKeSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDSKeSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDSKeSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STTKe,
@@ -560,8 +569,10 @@
             this.dgvDSKeSach.Location = new System.Drawing.Point(33, 273);
             this.dgvDSKeSach.Name = "dgvDSKeSach";
             this.dgvDSKeSach.RowHeadersVisible = false;
+            this.dgvDSKeSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDSKeSach.Size = new System.Drawing.Size(742, 212);
             this.dgvDSKeSach.TabIndex = 5;
+            this.dgvDSKeSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSKeSach_CellClick);
             // 
             // STTKe
             // 
