@@ -24,6 +24,23 @@ namespace QuanLyThuVien.BLL
             cbThuThu.ValueMember = "MaThuThu";
         }
 
+        public ThuThu LayThuThu(DataGridViewRow row)
+        {
+            ThuThu item = new ThuThu();
+            if (row.Cells[1].Value != null)
+            {
+                item.MaThuThu = row.Cells[1].Value.ToString();
+            }
+            else return item;
+            item.TenThuThu = "none";
+            item.GioiTinh = "none";
+            item.SoDienThoai = "none";
+            item.SoCMND = "none";
+            item.DiaChi = "none";
+            item.NgaySinh = Convert.ToDateTime(01 / 01 / 01);
+            return thuThuDAL.TimKiemThuThu(item)[0];
+        }
+
         public void TKthuThu(TextBox txtMaThuThu, TextBox txtTenThuThu, DateTimePicker dpNgaySinh, RadioButton rbGioiTinh, TextBox txtSDT, TextBox txtCMND, TextBox txtDiaChi, DataGridView dgvListThuThu)
         {
             ThuThu thuThu = new ThuThu();

@@ -36,15 +36,15 @@
             this.btnTimPhieu = new System.Windows.Forms.Button();
             this.btnTao = new System.Windows.Forms.Button();
             this.SidePanel = new System.Windows.Forms.Panel();
-            this.timKiemPhieu1 = new QuanLyThuVien.PL.TimKiemPhieu();
             this.chinhSuaPhieuMuonUSPL1 = new QuanLyThuVien.PL.ChinhSuaPhieuMuonUSPL();
+            this.timKiemPhieu1 = new QuanLyThuVien.PL.TimKiemPhieu();
             this.TopPanel.SuspendLayout();
             this.LeftPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // TopPanel
             // 
-            this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(93)))), ((int)(((byte)(96)))));
+            this.TopPanel.BackColor = System.Drawing.Color.Black;
             this.TopPanel.Controls.Add(this.btnBack);
             this.TopPanel.Controls.Add(this.btnThunho);
             this.TopPanel.Controls.Add(this.btnThoat);
@@ -91,7 +91,7 @@
             // 
             // LeftPanel
             // 
-            this.LeftPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(159)))), ((int)(((byte)(125)))));
+            this.LeftPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(96)))), ((int)(((byte)(135)))));
             this.LeftPanel.Controls.Add(this.btnTimPhieu);
             this.LeftPanel.Controls.Add(this.btnTao);
             this.LeftPanel.Controls.Add(this.SidePanel);
@@ -102,11 +102,11 @@
             // 
             // btnTimPhieu
             // 
-            this.btnTimPhieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(159)))), ((int)(((byte)(125)))));
+            this.btnTimPhieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(96)))), ((int)(((byte)(135)))));
             this.btnTimPhieu.FlatAppearance.BorderSize = 0;
             this.btnTimPhieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimPhieu.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimPhieu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(24)))), ((int)(((byte)(71)))));
+            this.btnTimPhieu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(201)))), ((int)(((byte)(220)))));
             this.btnTimPhieu.Location = new System.Drawing.Point(12, 235);
             this.btnTimPhieu.Name = "btnTimPhieu";
             this.btnTimPhieu.Size = new System.Drawing.Size(190, 100);
@@ -118,11 +118,11 @@
             // 
             // btnTao
             // 
-            this.btnTao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(159)))), ((int)(((byte)(125)))));
+            this.btnTao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(96)))), ((int)(((byte)(135)))));
             this.btnTao.FlatAppearance.BorderSize = 0;
             this.btnTao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTao.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(24)))), ((int)(((byte)(71)))));
+            this.btnTao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(201)))), ((int)(((byte)(220)))));
             this.btnTao.Location = new System.Drawing.Point(12, 135);
             this.btnTao.Name = "btnTao";
             this.btnTao.Size = new System.Drawing.Size(190, 100);
@@ -134,11 +134,22 @@
             // 
             // SidePanel
             // 
-            this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(64)))), ((int)(((byte)(103)))));
+            this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(42)))), ((int)(((byte)(65)))));
+            this.SidePanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(201)))), ((int)(((byte)(220)))));
             this.SidePanel.Location = new System.Drawing.Point(2, 135);
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(10, 100);
             this.SidePanel.TabIndex = 0;
+            // 
+            // chinhSuaPhieuMuonUSPL1
+            // 
+            this.chinhSuaPhieuMuonUSPL1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.chinhSuaPhieuMuonUSPL1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chinhSuaPhieuMuonUSPL1.Location = new System.Drawing.Point(200, 50);
+            this.chinhSuaPhieuMuonUSPL1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chinhSuaPhieuMuonUSPL1.Name = "chinhSuaPhieuMuonUSPL1";
+            this.chinhSuaPhieuMuonUSPL1.Size = new System.Drawing.Size(800, 550);
+            this.chinhSuaPhieuMuonUSPL1.TabIndex = 3;
             // 
             // timKiemPhieu1
             // 
@@ -149,20 +160,11 @@
             this.timKiemPhieu1.Size = new System.Drawing.Size(800, 550);
             this.timKiemPhieu1.TabIndex = 2;
             // 
-            // chinhSuaPhieuMuonUSPL1
-            // 
-            this.chinhSuaPhieuMuonUSPL1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.chinhSuaPhieuMuonUSPL1.Font = new System.Drawing.Font("Century Gothic", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chinhSuaPhieuMuonUSPL1.Location = new System.Drawing.Point(200, 50);
-            this.chinhSuaPhieuMuonUSPL1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.chinhSuaPhieuMuonUSPL1.Name = "chinhSuaPhieuMuonUSPL1";
-            this.chinhSuaPhieuMuonUSPL1.Size = new System.Drawing.Size(800, 550);
-            this.chinhSuaPhieuMuonUSPL1.TabIndex = 3;
-            // 
             // MuonTraSachPL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1000, 600);
             this.Controls.Add(this.chinhSuaPhieuMuonUSPL1);
             this.Controls.Add(this.timKiemPhieu1);

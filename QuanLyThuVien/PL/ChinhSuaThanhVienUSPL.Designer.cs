@@ -176,9 +176,10 @@
             // dtpNgaySinh
             // 
             this.dtpNgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgaySinh.Location = new System.Drawing.Point(172, 178);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.Size = new System.Drawing.Size(252, 22);
+            this.dtpNgaySinh.Size = new System.Drawing.Size(114, 22);
             this.dtpNgaySinh.TabIndex = 3;
             // 
             // label9
@@ -222,9 +223,9 @@
             this.btnTimAnh.FlatAppearance.BorderSize = 0;
             this.btnTimAnh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimAnh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimAnh.Location = new System.Drawing.Point(612, 252);
+            this.btnTimAnh.Location = new System.Drawing.Point(598, 252);
             this.btnTimAnh.Name = "btnTimAnh";
-            this.btnTimAnh.Size = new System.Drawing.Size(97, 35);
+            this.btnTimAnh.Size = new System.Drawing.Size(117, 35);
             this.btnTimAnh.TabIndex = 24;
             this.btnTimAnh.Text = "BROWSE FILE";
             this.btnTimAnh.UseVisualStyleBackColor = false;
@@ -274,9 +275,10 @@
             // dtpNgayBatDau
             // 
             this.dtpNgayBatDau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgayBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayBatDau.Location = new System.Drawing.Point(172, 353);
             this.dtpNgayBatDau.Name = "dtpNgayBatDau";
-            this.dtpNgayBatDau.Size = new System.Drawing.Size(252, 22);
+            this.dtpNgayBatDau.Size = new System.Drawing.Size(114, 22);
             this.dtpNgayBatDau.TabIndex = 3;
             // 
             // label12
@@ -292,9 +294,10 @@
             // dtpNgayKetThuc
             // 
             this.dtpNgayKetThuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgayKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayKetThuc.Location = new System.Drawing.Point(172, 388);
             this.dtpNgayKetThuc.Name = "dtpNgayKetThuc";
-            this.dtpNgayKetThuc.Size = new System.Drawing.Size(252, 22);
+            this.dtpNgayKetThuc.Size = new System.Drawing.Size(114, 22);
             this.dtpNgayKetThuc.TabIndex = 3;
             // 
             // label4

@@ -61,6 +61,7 @@ namespace QuanLyThuVien.PL
             set { dgvDSMuon = value; }
         }
         #endregion
+
         PhieuMuonBLL phieuMuonBLL = new PhieuMuonBLL();
         ThuThuBLL thuThuBLL = new ThuThuBLL();
         BanSaoBLL banSaoBLL = new BanSaoBLL();
@@ -120,12 +121,64 @@ namespace QuanLyThuVien.PL
 
         private void btnChinhSua_Click(object sender, EventArgs e)
         {
-
+            if (!string.IsNullOrEmpty(txtMaPhieuMuon.Text))
+            {
+                if (!KtraDuLieu.CheckMa(txtMaPhieuMuon.Text))
+                    MessageBox.Show("Chỉ nhập số vào ô!", "Mã phiếu mượn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                MessageBox.Show("Mã phiếu không được trống", "Mã phiếu mượn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (!string.IsNullOrEmpty(txtMaDocGia.Text))
+            {
+                if (!KtraDuLieu.CheckMa(txtMaDocGia.Text))
+                    MessageBox.Show("Chỉ nhập số vào ô!", "Mã độc giả", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                MessageBox.Show("Mã độc giả không được trống", "Mã độc giả", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (string.IsNullOrEmpty(cboThuThu.Text))
+                MessageBox.Show("Vui lòng chọn thủ thư", "Thủ thư", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            if (dgvDSMuon.DataSource == null)
+                MessageBox.Show("Danh sách mượn không được rỗng!", "Danh sách mượn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+            {
+                phieuMuonBLL.HienThiTienCoc(dgvDSMuon, txtTienCoc);
+                if (phieuMuonBLL.CapNhatPhieuMuon(txtMaPhieuMuon, txtMaDocGia, cboThuThu,dtpNgayMuon,dtpNgayHetHan,dtpNgayTra, dgvDSMuon,txtTienCoc))
+                {
+                    MessageBox.Show("Tạo phiểu thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Tạo phiếu không thành công, vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.ResetText();
+                }
+            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-
+            if (!string.IsNullOrEmpty(txtMaPhieuMuon.Text))
+            {
+                if (!KtraDuLieu.CheckMa(txtMaPhieuMuon.Text))
+                    MessageBox.Show("Chỉ nhập số vào ô!", "Mã phiếu mượn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                else
+                {
+                    if (phieuMuonBLL.XoaPhieuMuon(txtMaPhieuMuon))
+                        MessageBox.Show("Xóa phiếu thành công!");
+                    else
+                    {
+                        MessageBox.Show("Xóa phiếu thất bại.");
+                        this.ResetText();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Mã phiếu không được trống", "Mã phiếu mượn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnThemBS_Click(object sender, EventArgs e)
@@ -150,15 +203,15 @@ namespace QuanLyThuVien.PL
             }
         }
 
-        private void dgvDSMuon_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-
-        }
-
         private void cbSoNgayMuon_SelectedValueChanged(object sender, EventArgs e)
         {
             dtpNgayMuon.Value = DateTime.Now;
             dtpNgayHetHan.Value = dtpNgayMuon.Value.AddDays(20).Date;
+        }
+
+        public void LoadThongTin(PhieuMuonSach phieu)
+        {
+
         }
     }
 }

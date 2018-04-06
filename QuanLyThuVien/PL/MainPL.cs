@@ -54,5 +54,11 @@ namespace QuanLyThuVien
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void btnThuThu_Click(object sender, EventArgs e)
+        {
+            ThuThuPL form = new ThuThuPL();
+            form.Show();
+        }
     }
 }

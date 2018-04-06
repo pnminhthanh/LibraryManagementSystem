@@ -124,12 +124,6 @@
     <Compile Include="PL\ChinhSuaThanhVienUSPL.designer.cs">
       <DependentUpon>ChinhSuaThanhVienUSPL.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\DanhSachPhieuUSPL.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="PL\DanhSachPhieuUSPL.designer.cs">
-      <DependentUpon>DanhSachPhieuUSPL.cs</DependentUpon>
-    </Compile>
     <Compile Include="PL\DanhSachUSPL.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -191,17 +185,17 @@
     <Compile Include="PL\ThongTinSachPL.designer.cs">
       <DependentUpon>ThongTinSachPL.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\ThongTinTV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\ThongTinTV.designer.cs">
-      <DependentUpon>ThongTinTV.cs</DependentUpon>
-    </Compile>
     <Compile Include="PL\ThongTinTVPL.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PL\ThongTinTVPL.designer.cs">
       <DependentUpon>ThongTinTVPL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\ThuThuPL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\ThuThuPL.Designer.cs">
+      <DependentUpon>ThuThuPL.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\TimKiemPhieu.cs">
       <SubType>UserControl</SubType>
@@ -241,9 +235,6 @@
     <EmbeddedResource Include="PL\ChinhSuaThanhVienUSPL.resx">
       <DependentUpon>ChinhSuaThanhVienUSPL.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\DanhSachPhieuUSPL.resx">
-      <DependentUpon>DanhSachPhieuUSPL.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PL\DanhSachUSPL.resx">
       <DependentUpon>DanhSachUSPL.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,11 +265,11 @@
     <EmbeddedResource Include="PL\ThongTinSachPL.resx">
       <DependentUpon>ThongTinSachPL.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\ThongTinTV.resx">
-      <DependentUpon>ThongTinTV.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PL\ThongTinTVPL.resx">
       <DependentUpon>ThongTinTVPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\ThuThuPL.resx">
+      <DependentUpon>ThuThuPL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\TimKiemPhieu.resx">
       <DependentUpon>TimKiemPhieu.cs</DependentUpon>

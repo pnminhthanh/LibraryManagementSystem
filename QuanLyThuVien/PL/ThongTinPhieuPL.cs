@@ -12,7 +12,7 @@ namespace QuanLyThuVien.PL
 {
     public partial class ThongTinPhieuPL : Form
     {
-        public ThongTinPhieuPL()
+        public ThongTinPhieuPL(PhieuMuonSach item)
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;

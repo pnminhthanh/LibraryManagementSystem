@@ -11,12 +11,18 @@ using System.Windows.Forms;
 namespace QuanLyThuVien.PL
 {
     public partial class MuonTraSachPL : Form
-    {       
+    {
         public MuonTraSachPL()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             timKiemPhieu1.ShowChinhSua += new EventHandler(btnTao_Click);
+            timKiemPhieu1.XuatPhieu += HienThiPhieuCanSua;
+        }
+
+        private void HienThiPhieuCanSua(object sender, EventArgs e, PhieuMuonSach phieu)
+        {
+            chinhSuaPhieuMuonUSPL1.LoadThongTin(phieu);
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -50,3 +56,4 @@ namespace QuanLyThuVien.PL
         }
     }
 }
+

@@ -40,14 +40,35 @@ namespace QuanLyThuVien.BLL
             txtTienCoc.Text = String.Format("{0:#,#}", tienCoc);
         }
 
-        public void TKPhieuMuon(TextBox txtMaPhieuMuon, TextBox txtMaNguoiMuon, ComboBox cbThuThu, DateTimePicker dpNgayMuon, DateTimePicker dpNgayTra, DateTimePicker dpHanTra, DataGridView dgvListPhieuMuon)
+        public PhieuMuonSach LayPhieuMuonDGV(DataGridViewRow row)
+        {
+            PhieuMuonSach item = new PhieuMuonSach();
+            if (row.Cells[1].Value != null)
+            {
+                item.MaNguoiMuon = row.Cells[0].Value.ToString();
+            }
+            else return item;
+            item.MaNguoiMuon = "none";
+            item.NgayMuonSach = Convert.ToDateTime(01 / 01 / 01);
+            item.HanTraSach = Convert.ToDateTime(01 / 01 / 01);
+            return phieuMuonDAL.TimKiemPhieuMuon(item)[0];
+        }
+
+        public bool TraPhieuMuon(DataGridViewRow row)
+        {
+            PhieuMuonSach item = LayPhieuMuonDGV(row);
+            item.HanTraSach = DateTime.Now.Date;
+            phieuMuonDAL.CapNhatPhieuMuon(item);
+            return true;
+        }
+
+        public void TKPhieuMuon(TextBox txtMaPhieuMuon, TextBox txtMaNguoiMuon, DateTimePicker dpNgayMuon, DateTime ngayTra , DateTimePicker dpHanTra, DataGridView dgvListPhieuMuon)
         {
             PhieuMuonSach phieuMuon = new PhieuMuonSach();
             phieuMuon.MaPhieuMuon = txtMaPhieuMuon.Text;
             phieuMuon.MaNguoiMuon = txtMaNguoiMuon.Text;
-            phieuMuon.MaThuThu = cbThuThu.ValueMember;
             phieuMuon.NgayMuonSach = dpNgayMuon.Value.Date;
-            phieuMuon.NgayTraSach = dpNgayTra.Value.Date;
+            phieuMuon.NgayTraSach = ngayTra;
             phieuMuon.HanTraSach = dpHanTra.Value.Date;
             dgvListPhieuMuon.DataSource = phieuMuonDAL.TimKiemPhieuMuon(phieuMuon);
         }
@@ -72,7 +93,7 @@ namespace QuanLyThuVien.BLL
             return true;
         }
 
-        public bool CapNhatPhieuMuon(TextBox txtMaPhieuMuon, TextBox txtMaNguoiMuon, ComboBox cbThuThu, DateTimePicker dpNgayMuon, DateTimePicker dpNgayTra, DateTimePicker dpHanTra, DataGridView dgvListBanSao)
+        public bool CapNhatPhieuMuon(TextBox txtMaPhieuMuon, TextBox txtMaNguoiMuon, ComboBox cbThuThu, DateTimePicker dpNgayMuon, DateTimePicker dpNgayTra, DateTimePicker dpHanTra, DataGridView dgvListBanSao,TextBox txtTienCoc)
         {
             PhieuMuonSach phieuMuon = new PhieuMuonSach();
             phieuMuon.MaPhieuMuon = txtMaPhieuMuon.Text;
@@ -87,6 +108,8 @@ namespace QuanLyThuVien.BLL
                 banSao.MaBanSao = dgvListBanSao.Rows[i].Cells[0].ToString();
                 phieuMuon.BanSaos.Add(banSao);
             }
+            decimal tienCoc = decimal.Parse(txtTienCoc.Text, System.Globalization.NumberStyles.AllowThousands);
+            phieuMuon.TienDatCoc = Math.Round(Convert.ToDecimal(txtTienCoc.Text), 0);
             phieuMuonDAL.CapNhatPhieuMuon(phieuMuon);
             return true;
         }

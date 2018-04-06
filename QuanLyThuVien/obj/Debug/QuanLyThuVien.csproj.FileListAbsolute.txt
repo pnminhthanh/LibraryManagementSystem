@@ -41,7 +41,6 @@ C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\Quan
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ChinhSuaPhieuMuonUSPL.resources
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ChinhSuaSachUSPL.resources
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ChinhSuaThanhVienUSPL.resources
-C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.DanhSachPhieuUSPL.resources
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.DanhSachUSPL.resources
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.DSThanhVienUSPL.resources
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.LocThanhVienPS.resources
@@ -51,7 +50,6 @@ C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThemBanSaoPL.resources
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThongTinPhieuPL.resources
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThongTinSachPL.resources
-C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThongTinTV.resources
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThongTinTVPL.resources
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.Properties.Resources.resources
 C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.GenerateResource.cache
@@ -73,4 +71,5 @@ C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\Quan
 C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThongTinPhieuPL.resources
 C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThongTinTVPL.resources
 C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.TimKiemPhieu.resources
-C:\Users\Minh Thanh\Source\Repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.csprojResolveAssemblyReference.cache
+C:\Users\Minh Thanh\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThuThuPL.resources
+C:\Users\Minh Thanh\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.csprojResolveAssemblyReference.cache
