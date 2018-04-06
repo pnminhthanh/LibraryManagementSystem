@@ -12,28 +12,42 @@ namespace QuanLyThuVien.BLL
     {
         private BanSaoDAL banSaoDAL = new BanSaoDAL();
 
-        public void HienThiDatagridView(DataGridView dgvBanSao)
+        public void HienThiDatagridView(DataGridView dgvBanSao, string maSach)
         {
-            dgvBanSao.DataSource = banSaoDAL.LayDSBanSao();
+            List<BanSao> listBanSao = banSaoDAL.LocBSTheoSach(maSach);
+            for (int i = 0; i < listBanSao.Count; i++)
+            {
+                dgvBanSao.Rows[i].Cells[0].Value = (i + 1).ToString();
+                dgvBanSao.Rows[i].Cells[1].Value = listBanSao[i].MaBanSao;
+                dgvBanSao.Rows[i].Cells[2].Value = listBanSao[i].TrangThai.ToString();
+            }
         }
 
-        public void HienThiDataGridViewPhieuMuon(DataGridView dgvBanSao, TextBox txtMaBanSao)
+        public void HienThiDGVTrongPhieuMuon(DataGridView dgvBanSao, TextBox txtMaBanSao)
         {
             var banSao = banSaoDAL.TKBanSaoTheoMa(txtMaBanSao.Text);
             int newRowIndex = dgvBanSao.NewRowIndex;
-            dgvBanSao.Rows[newRowIndex].Cells[0].Value = banSao.MaBanSao;
-            dgvBanSao.Rows[newRowIndex].Cells[1].Value = banSao.Sach.TenSach;
-            dgvBanSao.Rows[newRowIndex].Cells[2].Value = banSao.Sach.GiaTien;
+            dgvBanSao.Rows[newRowIndex].Cells[1].Value = (newRowIndex + 1).ToString();
+            dgvBanSao.Rows[newRowIndex].Cells[1].Value = banSao.MaBanSao;
+            dgvBanSao.Rows[newRowIndex].Cells[2].Value = banSao.Sach.TenSach;
+            dgvBanSao.Rows[newRowIndex].Cells[3].Value = banSao.Sach.GiaTien;
         }
 
-        public void HienThiBSTheoSach(DataGridView dgvBanSao, DataGridViewRow dgvrBanSao)
+        public void LocBSCoSan(DataGridView dgvBanSao, CheckBox chbCoSan, TextBox txtMaSach)
         {
-            dgvBanSao.DataSource = banSaoDAL.LocBSTheoSach(dgvrBanSao.Cells[0].ToString());
+
+            List<BanSao> listBanSao = banSaoDAL.LocBanSaoCoSan(txtMaSach.Text);
+            for (int i = 0; i < listBanSao.Count; i++)
+            {
+                dgvBanSao.Rows[i].Cells[0].Value = (i + 1).ToString();
+                dgvBanSao.Rows[i].Cells[1].Value = listBanSao[i].MaBanSao;
+                dgvBanSao.Rows[i].Cells[2].Value = listBanSao[i].TrangThai.ToString();
+            }
         }
 
         public bool ThemBanSao(TextBox txtMaSach, TextBox txtSoLuongBS)
         {
-            int maBanSao = banSaoDAL.LocBSTheoSach(txtMaSach.Text).Count;
+            int maBanSao = Convert.ToInt16(banSaoDAL.LayMaBanSaoMax(txtMaSach.Text));
             List<BanSao> listBanSao = new List<BanSao>();
             int soLuong = Convert.ToInt16(txtSoLuongBS.Text);
             for (int i = 0; i < soLuong; i++)

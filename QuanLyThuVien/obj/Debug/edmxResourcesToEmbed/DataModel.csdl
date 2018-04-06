@@ -6,7 +6,7 @@
     </Key>
     <Property Name="MaBanSao" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
     <Property Name="MaSach" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-    <Property Name="TrangThai" Type="String" Nullable="false" />
+    <Property Name="TrangThai" Type="QLThuVienModel.ETrangThai" Nullable="false" />
     <NavigationProperty Name="Sach" Relationship="Self.FK_BanSao_Sach" FromRole="BanSao" ToRole="Sach" />
     <NavigationProperty Name="PhieuMuonSaches" Relationship="Self.ChiTietPhieuMuon" FromRole="BanSao" ToRole="PhieuMuonSach" />
   </EntityType>
@@ -16,14 +16,14 @@
     </Key>
     <Property Name="MaDocGia" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
     <Property Name="TenDocGia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NgaySinh" Type="DateTime" Precision="0" />
     <Property Name="GioiTinh" Type="String" MaxLength="9" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="SoDienThoai" Type="String" Nullable="false" MaxLength="11" Unicode="true" FixedLength="true" />
-    <Property Name="SoCMND" Type="String" Nullable="false" MaxLength="11" Unicode="true" FixedLength="true" />
+    <Property Name="SoDienThoai" Type="String" MaxLength="11" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="SoCMND" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
     <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="NgayBatDau" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="NgayKetThuc" Type="DateTime" Nullable="false" Precision="0" />
     <NavigationProperty Name="PhieuMuonSaches" Relationship="Self.FK_PhieuMuonSach_DocGia" FromRole="DocGia" ToRole="PhieuMuonSach" />
-    <Property Name="NgaySinh" Type="DateTime" Precision="0" />
   </EntityType>
   <EntityType Name="KeSach">
     <Key>
@@ -42,12 +42,11 @@
     <Property Name="MaThuThu" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
     <Property Name="NgayMuonSach" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="HanTraSach" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="NgayTraSach" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="TienDatCoc" Type="Int32" Nullable="false" />
+    <Property Name="NgayTraSach" Type="DateTime" Precision="0" />
+    <Property Name="PhiThue" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="TienDatCoc" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
     <NavigationProperty Name="DocGia" Relationship="Self.FK_PhieuMuonSach_DocGia" FromRole="PhieuMuonSach" ToRole="DocGia" />
-    <NavigationProperty Name="ThuThu" Relationship="Self.FK_PhieuMuonSach_ThuThu" FromRole="PhieuMuonSach" ToRole="ThuThu" />
     <NavigationProperty Name="BanSaos" Relationship="Self.ChiTietPhieuMuon" FromRole="PhieuMuonSach" ToRole="BanSao" />
-    <Property Name="PhiThue" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
   </EntityType>
   <EntityType Name="Sach">
     <Key>
@@ -55,18 +54,16 @@
     </Key>
     <Property Name="MaSach" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
     <Property Name="TenSach" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaTacGia" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
     <Property Name="MaKeSach" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-    <Property Name="GiaTien" Type="Int32" Nullable="false" />
-    <Property Name="TomTatNoiDung" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="NamXuatBan" Type="Int32" Nullable="false" />
-    <Property Name="NgonNgu" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="GiaTien" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="TomTatNoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NamXuatBan" Type="Int32" />
     <Property Name="NhaXuatBan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="BanSaos" Relationship="Self.FK_BanSao_Sach" FromRole="Sach" ToRole="BanSao" />
     <NavigationProperty Name="KeSach" Relationship="Self.FK_Sach_KeSach" FromRole="Sach" ToRole="KeSach" />
+    <NavigationProperty Name="TacGia" Relationship="Self.FK_Sach_TacGia" FromRole="Sach" ToRole="TacGia" />
     <NavigationProperty Name="TheLoais" Relationship="Self.ChiTietTheLoai" FromRole="Sach" ToRole="TheLoai" />
-    <Property Name="TenAnhBia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="MaTacGia" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-    <NavigationProperty Name="TacGia" Relationship="QLThuVienModel.FK_Sach_TacGia" FromRole="Sach" ToRole="TacGia" />
   </EntityType>
   <EntityType Name="sysdiagram">
     <Key>
@@ -86,7 +83,7 @@
     <Property Name="TenTacGia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="GioiTinh" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
     <Property Name="NgaySinh" Type="DateTime" Precision="0" />
-    <NavigationProperty Name="Saches1" Relationship="QLThuVienModel.FK_Sach_TacGia" FromRole="TacGia" ToRole="Sach" />
+    <NavigationProperty Name="Saches" Relationship="Self.FK_Sach_TacGia" FromRole="TacGia" ToRole="Sach" />
   </EntityType>
   <EntityType Name="TheLoai">
     <Key>
@@ -104,10 +101,9 @@
     <Property Name="TenThuThu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="GioiTinh" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="SoDienThoai" Type="String" Nullable="false" MaxLength="11" Unicode="true" FixedLength="true" />
-    <Property Name="SoCMND" Type="String" Nullable="false" MaxLength="11" Unicode="true" FixedLength="true" />
+    <Property Name="SoDienThoai" Type="String" MaxLength="11" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="SoCMND" Type="String" MaxLength="11" FixedLength="true" Unicode="true" Nullable="false" />
     <Property Name="DiaChi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="PhieuMuonSaches" Relationship="Self.FK_PhieuMuonSach_ThuThu" FromRole="ThuThu" ToRole="PhieuMuonSach" />
   </EntityType>
   <Association Name="FK_BanSao_Sach">
     <End Role="Sach" Type="Self.Sach" Multiplicity="1" />
@@ -145,15 +141,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_PhieuMuonSach_ThuThu">
-    <End Role="ThuThu" Type="Self.ThuThu" Multiplicity="1" />
-    <End Role="PhieuMuonSach" Type="Self.PhieuMuonSach" Multiplicity="*" />
+  <Association Name="FK_Sach_TacGia">
+    <End Role="TacGia" Type="Self.TacGia" Multiplicity="1" />
+    <End Role="Sach" Type="Self.Sach" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="ThuThu">
-        <PropertyRef Name="MaThuThu" />
+      <Principal Role="TacGia">
+        <PropertyRef Name="MaTacGia" />
       </Principal>
-      <Dependent Role="PhieuMuonSach">
-        <PropertyRef Name="MaThuThu" />
+      <Dependent Role="Sach">
+        <PropertyRef Name="MaTacGia" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -187,9 +183,9 @@
       <End Role="KeSach" EntitySet="KeSaches" />
       <End Role="Sach" EntitySet="Saches" />
     </AssociationSet>
-    <AssociationSet Name="FK_PhieuMuonSach_ThuThu" Association="Self.FK_PhieuMuonSach_ThuThu">
-      <End Role="ThuThu" EntitySet="ThuThus" />
-      <End Role="PhieuMuonSach" EntitySet="PhieuMuonSaches" />
+    <AssociationSet Name="FK_Sach_TacGia" Association="Self.FK_Sach_TacGia">
+      <End Role="TacGia" EntitySet="TacGias" />
+      <End Role="Sach" EntitySet="Saches" />
     </AssociationSet>
     <AssociationSet Name="ChiTietPhieuMuon" Association="Self.ChiTietPhieuMuon">
       <End Role="BanSao" EntitySet="BanSaos" />
@@ -199,21 +195,10 @@
       <End Role="Sach" EntitySet="Saches" />
       <End Role="TheLoai" EntitySet="TheLoais" />
     </AssociationSet>
-    <AssociationSet Name="FK_Sach_TacGia" Association="QLThuVienModel.FK_Sach_TacGia">
-      <End Role="TacGia" EntitySet="TacGias" />
-      <End Role="Sach" EntitySet="Saches" />
-    </AssociationSet>
   </EntityContainer>
-  <Association Name="FK_Sach_TacGia">
-    <End Type="QLThuVienModel.TacGia" Role="TacGia" Multiplicity="0..1" />
-    <End Type="QLThuVienModel.Sach" Role="Sach" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TacGia">
-        <PropertyRef Name="MaTacGia" />
-      </Principal>
-      <Dependent Role="Sach">
-        <PropertyRef Name="MaTacGia" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
+  <EnumType Name="ETrangThai">
+    <Member Name="DaChoThue" Value="1" />
+    <Member Name="CoSan" Value="2" />
+    <Member Name="None" Value="3" />
+  </EnumType>
 </Schema>

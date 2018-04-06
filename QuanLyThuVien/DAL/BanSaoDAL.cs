@@ -81,5 +81,23 @@ namespace QuanLyThuVien.DAL
                 return listBanSao.ToList();
             }
         }
+
+        public List<BanSao> LocBanSaoCoSan(string maSach)
+        {
+            using (QLThuVienEntities ThuVienDS = new QLThuVienEntities())
+            {
+                var ListBanSao = ThuVienDS.BanSaos.Where<BanSao>(c => c.TrangThai == ETrangThai.CoSan && c.MaSach == maSach);
+                return ListBanSao.ToList();
+            }
+        }
+
+        public string LayMaBanSaoMax(string maSach)
+        {
+            using (QLThuVienEntities ThuVienDS = new QLThuVienEntities())
+            {
+                string banSao = ThuVienDS.BanSaos.Where<BanSao>(c => c.MaSach == maSach).Select(c => c.MaBanSao).Max();
+                return banSao;
+            }
+        }
     }
 }

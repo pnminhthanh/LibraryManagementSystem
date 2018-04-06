@@ -14,7 +14,19 @@ namespace QuanLyThuVien.BLL
 
         public void HienThiDSPhieuMuon(DataGridView dgvListPhieuMuon)
         {
-            dgvListPhieuMuon.DataSource = phieuMuonDAL.LayDSPhieuMuon();
+            List<PhieuMuonSach> listPhieuMuon = phieuMuonDAL.LayDSPhieuMuon();
+            for (int i = 0; i < listPhieuMuon.Count; i++)
+            {
+                dgvListPhieuMuon.Rows[i].Cells[0].Value = (i + 1).ToString();
+                dgvListPhieuMuon.Rows[i].Cells[1].Value = listPhieuMuon[i].MaPhieuMuon;
+                dgvListPhieuMuon.Rows[i].Cells[2].Value = listPhieuMuon[i].DocGia.TenDocGia;
+                dgvListPhieuMuon.Rows[i].Cells[3].Value = listPhieuMuon[i].NgayMuonSach;
+                dgvListPhieuMuon.Rows[i].Cells[4].Value = listPhieuMuon[i].HanTraSach;
+                if (listPhieuMuon[i].NgayTraSach != DateTime.MinValue)
+                {
+                    dgvListPhieuMuon.Rows[i].Cells[5].Selected = true;
+                }                
+            }
         }
         
         public void HienThiTienCoc(DataGridView dgvBanSao, TextBox txtTienCoc)
@@ -25,7 +37,7 @@ namespace QuanLyThuVien.BLL
                 int giaTien = Convert.ToInt16(dgvBanSao.Rows[i].Cells[3].ToString());
                 tienCoc = +giaTien * 0.6;
             }
-            txtTienCoc.Text = tienCoc.ToString();
+            txtTienCoc.Text = String.Format("{0:#,#}", tienCoc);
         }
 
         public void TKPhieuMuon(TextBox txtMaPhieuMuon, TextBox txtMaNguoiMuon, ComboBox cbThuThu, DateTimePicker dpNgayMuon, DateTimePicker dpNgayTra, DateTimePicker dpHanTra, DataGridView dgvListPhieuMuon)
@@ -52,9 +64,9 @@ namespace QuanLyThuVien.BLL
             {
                 BanSao banSao = new BanSao();
                 banSao.MaBanSao = dgvListBanSao.Rows[i].Cells[0].ToString();
-
                 phieuMuon.BanSaos.Add(banSao);
             }
+            decimal tienCoc = decimal.Parse(txtTienCoc.Text, System.Globalization.NumberStyles.AllowThousands);
             phieuMuon.TienDatCoc = Math.Round(Convert.ToDecimal(txtTienCoc.Text), 0);
             phieuMuonDAL.ThemPhieuMuon(phieuMuon);
             return true;

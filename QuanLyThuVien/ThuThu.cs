@@ -14,12 +14,6 @@ namespace QuanLyThuVien
     
     public partial class ThuThu
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ThuThu()
-        {
-            this.PhieuMuonSaches = new HashSet<PhieuMuonSach>();
-        }
-    
         public string MaThuThu { get; set; }
         public string TenThuThu { get; set; }
         public string GioiTinh { get; set; }
@@ -27,8 +21,5 @@ namespace QuanLyThuVien
         public string SoDienThoai { get; set; }
         public string SoCMND { get; set; }
         public string DiaChi { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PhieuMuonSach> PhieuMuonSaches { get; set; }
     }
 }

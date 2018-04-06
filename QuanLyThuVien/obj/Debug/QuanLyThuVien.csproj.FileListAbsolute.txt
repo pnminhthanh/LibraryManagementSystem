@@ -10,19 +10,15 @@ C:\Users\Minh Thanh\Documents\Visual Studio 2017\Projects\QuanLyThuVien\QuanLyTh
 C:\Users\Minh Thanh\Documents\Visual Studio 2017\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.DanhSachUSPL.resources
 C:\Users\Minh Thanh\Documents\Visual Studio 2017\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.SachPL.resources
 C:\Users\Minh Thanh\Documents\Visual Studio 2017\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ChinhSuaSachUSPL.resources
-C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.csprojResolveAssemblyReference.cache
 C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ChinhSuaPhieuMuonUSPL.resources
 C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ChinhSuaSachUSPL.resources
 C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ChinhSuaThanhVienUSPL.resources
 C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.DanhSachPhieuUSPL.resources
 C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.DanhSachUSPL.resources
-C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.DanhSachViPhamPL.resources
 C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.DSThanhVienUSPL.resources
 C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.MainForm.resources
 C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.MuonTraSachPL.resources
 C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.SachPL.resources
-C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.TaoPhieuViPhamPL.resources
-C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.LeftPanel.resources
 C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThemBanSaoPL.resources
 C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.Properties.Resources.resources
 C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.GenerateResource.cache
@@ -37,3 +33,8 @@ C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\bin\Debug\Enti
 C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\bin\Debug\EntityFramework.xml
 C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CopyComplete
+C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.LocThanhVienPS.resources
+C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThanhVienPL.resources
+C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThongTinSachPL.resources
+C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.ThongTinTV.resources
+C:\Users\01635\source\repos\LibraryManagementSystem\QuanLyThuVien\obj\Debug\QuanLyThuVien.PL.TimKiemSachPL.resources

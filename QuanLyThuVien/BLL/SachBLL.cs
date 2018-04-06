@@ -12,7 +12,17 @@ namespace QuanLyThuVien.BLL
 
         public void HienThiDSSach(DataGridView  dgvListSach)
         {
-            dgvListSach.DataSource = sachDAL.LayDSSach();
+            List<Sach> listSach = sachDAL.LayDSSach();
+            for (int i = 0; i < listSach.Count; i++)
+            {
+                dgvListSach.Rows[i].Cells[0].Value = (i + 1).ToString();
+                dgvListSach.Rows[i].Cells[1].Value = listSach[i].MaSach;
+                dgvListSach.Rows[i].Cells[2].Value = listSach[i].TenSach;
+                dgvListSach.Rows[i].Cells[3].Value = listSach[i].TacGia.TenTacGia;
+                dgvListSach.Rows[i].Cells[4].Value = listSach[i].NamXuatBan;
+                dgvListSach.Rows[i].Cells[5].Value = listSach[i].NhaXuatBan;
+                dgvListSach.Rows[i].Cells[5].Value = String.Format("{0:#,#}", listSach[i].GiaTien);
+            }
         }
 
         public void HienThiDSSachTheoTacGia(DataGridView dgvListSach, TextBox txtMaTacGia)
@@ -62,7 +72,6 @@ namespace QuanLyThuVien.BLL
                 string fileName = ofdBiaSach.FileName;
                 string location = Path.Combine("..\\pic", Path.GetFileName(fileName));
                 File.Copy(fileName, location, true);
-                sach.TenAnhBia = fileName;
             }
             sachDAL.ThemSach(sach);
             return true;
@@ -93,7 +102,6 @@ namespace QuanLyThuVien.BLL
                 string fileName = ofdBiaSach.FileName;
                 string location = Path.Combine("..\\pic", Path.GetFileName(fileName));
                 File.Copy(fileName, location, true);
-                sach.TenAnhBia = fileName;
             }
             sachDAL.CapNhatSach(sach);
             return true;

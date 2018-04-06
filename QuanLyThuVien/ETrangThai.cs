@@ -11,7 +11,7 @@ namespace QuanLyThuVien
 {
     using System;
     
-    public enum ETrangThai : short
+    public enum ETrangThai : int
     {
         DaChoThue = 1,
         CoSan = 2,

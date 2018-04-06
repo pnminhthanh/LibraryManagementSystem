@@ -14,7 +14,16 @@ namespace QuanLyThuVien.BLL
 
         public void HienThiDSDocGia(DataGridView dgvListDocGia)
         {
-            dgvListDocGia.DataSource = docGiaDAL.LayDSDocGia();
+            List<DocGia> listDocGia = docGiaDAL.LayDSDocGia();
+            for (int i = 0; i < listDocGia.Count; i++)
+            {
+                dgvListDocGia.Rows[i].Cells[0].Value = (i + 1).ToString();
+                dgvListDocGia.Rows[i].Cells[1].Value = listDocGia[i].MaDocGia;
+                dgvListDocGia.Rows[i].Cells[2].Value = listDocGia[i].TenDocGia.ToString();
+                dgvListDocGia.Rows[i].Cells[3].Value = listDocGia[i].GioiTinh.ToString();
+                dgvListDocGia.Rows[i].Cells[4].Value = listDocGia[i].NgaySinh.ToString();                
+                dgvListDocGia.Rows[i].Cells[5].Value = listDocGia[i].SoDienThoai;
+            }
         }
 
         public void TKDocGia(TextBox txtMaDocGia, TextBox txtTenDocGia, DateTimePicker dpNgaySinh, RadioButton rbGioiTinh, TextBox txtSDT, TextBox txtCMND, TextBox txtDiaChi, DateTimePicker dpBatDau, DateTimePicker dpKetThuc, DataGridView dgvListDocGia)
@@ -48,7 +57,7 @@ namespace QuanLyThuVien.BLL
             return true;
         }
 
-        public bool CapNhatDocGia(TextBox txtMaDocGia, TextBox txtTenDocGia, DateTimePicker dpNgaySinh, RadioButton rbGioiTinh, TextBox txtSDT, TextBox txtCMND, TextBox txtDiaChi)
+        public bool CapNhatDocGia(TextBox txtMaDocGia, TextBox txtTenDocGia, DateTimePicker dpNgaySinh, RadioButton rbGioiTinh, TextBox txtSDT, TextBox txtCMND, TextBox txtDiaChi, DateTimePicker dpBatDau)
         {
             DocGia docGia = new DocGia();
             docGia.MaDocGia = txtMaDocGia.Text;
@@ -58,7 +67,7 @@ namespace QuanLyThuVien.BLL
             docGia.SoDienThoai = txtSDT.Text;
             docGia.SoCMND = txtCMND.Text;
             docGia.DiaChi = txtDiaChi.Text;
-            docGia.NgayBatDau = DateTime.Now.Date;
+            docGia.NgayBatDau = dpBatDau.Value.Date;
             docGia.NgayKetThuc = docGia.NgayBatDau.AddYears(1).Date;
             docGiaDAL.CapNhatDocGia(docGia);
             return true;

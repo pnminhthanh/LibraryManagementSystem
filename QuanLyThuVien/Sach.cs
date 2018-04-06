@@ -23,20 +23,18 @@ namespace QuanLyThuVien
     
         public string MaSach { get; set; }
         public string TenSach { get; set; }
-        public string MaKeSach { get; set; }
-        public int GiaTien { get; set; }
-        public string TomTatNoiDung { get; set; }
-        public int NamXuatBan { get; set; }
-        public string NgonNgu { get; set; }
-        public string NhaXuatBan { get; set; }
-        public string TenAnhBia { get; set; }
         public string MaTacGia { get; set; }
+        public string MaKeSach { get; set; }
+        public decimal GiaTien { get; set; }
+        public string TomTatNoiDung { get; set; }
+        public Nullable<int> NamXuatBan { get; set; }
+        public string NhaXuatBan { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BanSao> BanSaos { get; set; }
         public virtual KeSach KeSach { get; set; }
+        public virtual TacGia TacGia { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TheLoai> TheLoais { get; set; }
-        public virtual TacGia TacGia { get; set; }
     }
 }

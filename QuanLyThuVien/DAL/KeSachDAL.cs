@@ -37,11 +37,11 @@ namespace QuanLyThuVien.DAL
             return true;
         }
 
-        public bool XoaKeSach(KeSach keSach)
+        public bool XoaKeSach(string maKeSach)
         {
             using (QLThuVienEntities ThuVienDs = new QLThuVienEntities())
             {
-                var ke = ThuVienDs.KeSaches.Find(keSach.MaKeSach);
+                var ke = ThuVienDs.KeSaches.Find(maKeSach);
                 ThuVienDs.KeSaches.Remove(ke);
                 ThuVienDs.SaveChanges();
             }

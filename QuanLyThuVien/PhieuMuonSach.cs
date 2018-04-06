@@ -25,12 +25,11 @@ namespace QuanLyThuVien
         public string MaThuThu { get; set; }
         public System.DateTime NgayMuonSach { get; set; }
         public System.DateTime HanTraSach { get; set; }
-        public System.DateTime NgayTraSach { get; set; }
-        public decimal TienDatCoc { get; set; }
+        public Nullable<System.DateTime> NgayTraSach { get; set; }
         public Nullable<decimal> PhiThue { get; set; }
+        public decimal TienDatCoc { get; set; }
     
         public virtual DocGia DocGia { get; set; }
-        public virtual ThuThu ThuThu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BanSao> BanSaos { get; set; }
     }
