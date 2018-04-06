@@ -88,7 +88,6 @@
             this.TenTacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtNamSinh = new System.Windows.Forms.TextBox();
             this.txtTenTacGia = new System.Windows.Forms.TextBox();
             this.txtMaTacGia = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
@@ -109,6 +108,7 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.tabChinhSua.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBiaSach)).BeginInit();
@@ -634,6 +634,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.dtpNgaySinh);
             this.tabPage3.Controls.Add(this.rbtnNu);
             this.tabPage3.Controls.Add(this.rbtnNam);
             this.tabPage3.Controls.Add(this.btnXoaTG);
@@ -641,7 +642,6 @@
             this.tabPage3.Controls.Add(this.btnThemTG);
             this.tabPage3.Controls.Add(this.label22);
             this.tabPage3.Controls.Add(this.dgvDSTacGia);
-            this.tabPage3.Controls.Add(this.txtNamSinh);
             this.tabPage3.Controls.Add(this.txtTenTacGia);
             this.tabPage3.Controls.Add(this.txtMaTacGia);
             this.tabPage3.Controls.Add(this.label27);
@@ -692,6 +692,7 @@
             this.btnXoaTG.TabIndex = 15;
             this.btnXoaTG.Text = "XÓA";
             this.btnXoaTG.UseVisualStyleBackColor = false;
+            this.btnXoaTG.Click += new System.EventHandler(this.btnXoaTG_Click);
             // 
             // btnSuaTG
             // 
@@ -705,6 +706,7 @@
             this.btnSuaTG.TabIndex = 16;
             this.btnSuaTG.Text = "SỬA";
             this.btnSuaTG.UseVisualStyleBackColor = false;
+            this.btnSuaTG.Click += new System.EventHandler(this.btnSuaTG_Click);
             // 
             // btnThemTG
             // 
@@ -718,6 +720,7 @@
             this.btnThemTG.TabIndex = 14;
             this.btnThemTG.Text = "THÊM";
             this.btnThemTG.UseVisualStyleBackColor = false;
+            this.btnThemTG.Click += new System.EventHandler(this.btnThemTG_Click);
             // 
             // label22
             // 
@@ -747,6 +750,7 @@
             this.dgvDSTacGia.RowHeadersVisible = false;
             this.dgvDSTacGia.Size = new System.Drawing.Size(384, 196);
             this.dgvDSTacGia.TabIndex = 4;
+            this.dgvDSTacGia.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSTacGia_CellClick);
             // 
             // STT
             // 
@@ -777,14 +781,6 @@
             this.GioiTinh.HeaderText = "Giới Tính";
             this.GioiTinh.Name = "GioiTinh";
             this.GioiTinh.Width = 60;
-            // 
-            // txtNamSinh
-            // 
-            this.txtNamSinh.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNamSinh.Location = new System.Drawing.Point(183, 123);
-            this.txtNamSinh.Name = "txtNamSinh";
-            this.txtNamSinh.Size = new System.Drawing.Size(164, 23);
-            this.txtNamSinh.TabIndex = 3;
             // 
             // txtTenTacGia
             // 
@@ -981,6 +977,14 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // dtpNgaySinh
+            // 
+            this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgaySinh.Location = new System.Drawing.Point(183, 118);
+            this.dtpNgaySinh.Name = "dtpNgaySinh";
+            this.dtpNgaySinh.Size = new System.Drawing.Size(164, 23);
+            this.dtpNgaySinh.TabIndex = 19;
+            // 
             // ChinhSuaSachUSPL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1056,7 +1060,6 @@
         private System.Windows.Forms.Button btnXoaKe;
         private System.Windows.Forms.Button btnSuaKe;
         private System.Windows.Forms.Button btnThemKe;
-        private System.Windows.Forms.TextBox txtNamSinh;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Button btnXoaTG;
@@ -1088,5 +1091,6 @@
         private System.Windows.Forms.TextBox txtSoBanSao;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnTaoBanSao;
+        private System.Windows.Forms.DateTimePicker dtpNgaySinh;
     }
 }

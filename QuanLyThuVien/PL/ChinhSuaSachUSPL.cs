@@ -95,10 +95,10 @@ namespace QuanLyThuVien.PL
             get { return txtTenTacGia; }
             set { txtTenTacGia = value; }
         }
-        public TextBox TxtNamSinh
+        public DateTimePicker DtpNgaySinh
         {
-            get { return txtNamSinh; }
-            set { txtNamSinh = value; }
+            get { return dtpNgaySinh; }
+            set { dtpNgaySinh = value; }
         }
         public RadioButton RbtnNam
         {
@@ -151,7 +151,6 @@ namespace QuanLyThuVien.PL
 
         }
         #endregion
-
         #region TabViTri
         private void btnThemKe_Click(object sender, EventArgs e)
         {
@@ -188,19 +187,60 @@ namespace QuanLyThuVien.PL
             keSachBLL.XoaKeSach(txtMaKe);
             UpdateDGV();
         }
-
         private void UpdateDGV()
         {
             dgvDSKeSach.DataSource = null;
             keSachBLL.HienThiDataGridView(dgvDSKeSach);
         }
-
         private void dgvDSKeSach_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             row = dgvDSKeSach.Rows[e.RowIndex];
         }
-
         #endregion
+
+        //Thieu kiem tra ngay sinh
+        #region TabTacGia
+        private void btnThemTG_Click(object sender, EventArgs e)
+        {
+            if (!KtraDuLieu.CheckMa(txtMaTacGia.Text))
+            {
+                MessageBox.Show("Chỉ nhập số vào ô Mã Kệ!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            //Kiem tra ngay sinh
+            //else if ()
+            else
+            {
+                //if (tacGiaBLL.ThemTacGia(txtMaTacGia,txtTenTacGia,dtpNgaySinh,)
+                //{
+                //    MessageBox.Show("Thêm thành công");
+                //    UpdateDGVTG();
+                //}
+                //else MessageBox.Show("Thao tác thất bại! Mời nhập lại.");
+            }
+        }
+
+        private void btnSuaTG_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnXoaTG_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvDSTacGia_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void UpdateDGVTG()
+        {
+            dgvDSTacGia.DataSource = null;
+            tacGiaBLL.HienThiDSTacGia(dgvDSTacGia);
+        }
+        #endregion
+
 
     }
 }

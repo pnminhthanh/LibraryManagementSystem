@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnTraSach = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaBanSao = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,19 +59,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSMuon)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnTraSach
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkRed;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button1.Location = new System.Drawing.Point(549, 196);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 41);
-            this.button1.TabIndex = 68;
-            this.button1.Text = "Đã trả";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnTraSach.BackColor = System.Drawing.Color.DarkRed;
+            this.btnTraSach.FlatAppearance.BorderSize = 0;
+            this.btnTraSach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTraSach.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTraSach.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnTraSach.Location = new System.Drawing.Point(549, 196);
+            this.btnTraSach.Name = "btnTraSach";
+            this.btnTraSach.Size = new System.Drawing.Size(148, 41);
+            this.btnTraSach.TabIndex = 68;
+            this.btnTraSach.Text = "Đã trả";
+            this.btnTraSach.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -125,6 +125,7 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(565, 150);
@@ -329,7 +330,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(766, 484);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnTraSach);
             this.Controls.Add(this.txtTienCoc);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dateTimePicker1);
@@ -364,7 +365,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnTraSach;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaBanSao;
